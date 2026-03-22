@@ -1,4 +1,4 @@
-﻿@model HomeViewModel
+@model HomeViewModel
 @using FPTPlay.ViewModels
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
 
         .movie-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 16px;
             padding: 0 8px;
         }
@@ -48,6 +48,7 @@
             transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.25s ease;
             will-change: transform, box-shadow;
             cursor: pointer;
+            min-width: 0;
         }
 
             .movie-card:hover {
@@ -111,20 +112,6 @@
                 display: block;
             }
 
-        .movie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* tự động 2-3-4-5-6 cột tùy màn hình */
-            gap: 16px;
-            padding: 0 8px;
-        }
-
-        
-        .movie-grid img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 2 / 3; /* giữ tỷ lệ poster phim */
-            object-fit: cover;
-        }
     </style>
 </head>
 <body>

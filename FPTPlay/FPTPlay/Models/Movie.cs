@@ -12,5 +12,7 @@
         public bool IsPersonalized { get; set; }
         public int VideoCount { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public string? VideoUrl { get; set; }     // đường dẫn video: /videos/ten-video.mp4
+        public int? Duration { get; set; }
     }
 }

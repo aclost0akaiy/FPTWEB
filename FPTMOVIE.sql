@@ -60,3 +60,24 @@ INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, VideoCount, IsPe
 
 -- (Tùy chọn) Thêm ảnh mặc định nếu thiếu
 -- Tạo file wwwroot/images/default-poster.jpg (ảnh placeholder đen với text "Poster")
+
+-- Thêm cột VideoUrl (nvarchar(500) để lưu đường dẫn)
+ALTER TABLE Movies
+ADD VideoUrl NVARCHAR(500) NULL;
+
+-- (Tùy chọn) Thêm cột Duration (thời lượng video, giây)
+ALTER TABLE Movies
+ADD Duration INT NULL;  -- ví dụ: 7200 giây = 2 giờ
+
+-- (Tùy chọn) Cập nhật một số phim mẫu để test
+UPDATE Movies
+SET VideoUrl = '/videos/thien-duong-mau.mp4'
+WHERE Title = N'Thiên Đường Máu';
+
+UPDATE Movies
+SET VideoUrl = '/videos/me-cun-bo-meo.mp4'
+WHERE Title = N'Mẹ Cún Bố Mèo';
+
+SELECT Id, Title, VideoUrl 
+FROM Movies 
+WHERE VideoUrl IS NOT NULL;

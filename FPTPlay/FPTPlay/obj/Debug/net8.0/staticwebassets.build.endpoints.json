@@ -249,6 +249,170 @@
       ]
     },
     {
+      "Route": "images/posters/bo-me-con-cun.jpg",
+      "AssetFile": "images/posters/bo-me-con-cun.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6caW5RDhc4yLDVyTksFtVZC+aaYGKyS/12ALEDnOTqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Mar 2026 03:27:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6caW5RDhc4yLDVyTksFtVZC+aaYGKyS/12ALEDnOTqk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/bo-me-con-cun.zdiw8bsp2h.jpg",
+      "AssetFile": "images/posters/bo-me-con-cun.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9236"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6caW5RDhc4yLDVyTksFtVZC+aaYGKyS/12ALEDnOTqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Mar 2026 03:27:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zdiw8bsp2h"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6caW5RDhc4yLDVyTksFtVZC+aaYGKyS/12ALEDnOTqk="
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/bo-me-con-cun.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/thien-duong-mau.jpg",
+      "AssetFile": "images/posters/thien-duong-mau.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pQA8P/mueGDP3YTl+Uj7+hXUdrwuxbgGlQlPhhzMM3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Mar 2026 03:25:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pQA8P/mueGDP3YTl+Uj7+hXUdrwuxbgGlQlPhhzMM3g="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/thien-duong-mau.jux8e1zw5s.jpg",
+      "AssetFile": "images/posters/thien-duong-mau.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pQA8P/mueGDP3YTl+Uj7+hXUdrwuxbgGlQlPhhzMM3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Mar 2026 03:25:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jux8e1zw5s"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pQA8P/mueGDP3YTl+Uj7+hXUdrwuxbgGlQlPhhzMM3g="
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/thien-duong-mau.jpg"
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "js/site.js",
       "Selectors": [],
@@ -5001,6 +5165,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
+        }
+      ]
+    },
+    {
+      "Route": "videos/thien-duong-mau.5nbiv3d1zh.mp4",
+      "AssetFile": "videos/thien-duong-mau.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2789565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cYawyfpP6Pc6jy8F+tr8EGb1SWDwJT5iej4lWWI+DdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Mar 2026 01:45:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5nbiv3d1zh"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cYawyfpP6Pc6jy8F+tr8EGb1SWDwJT5iej4lWWI+DdA="
+        },
+        {
+          "Name": "label",
+          "Value": "videos/thien-duong-mau.mp4"
+        }
+      ]
+    },
+    {
+      "Route": "videos/thien-duong-mau.mp4",
+      "AssetFile": "videos/thien-duong-mau.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2789565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cYawyfpP6Pc6jy8F+tr8EGb1SWDwJT5iej4lWWI+DdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Mar 2026 01:45:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cYawyfpP6Pc6jy8F+tr8EGb1SWDwJT5iej4lWWI+DdA="
         }
       ]
     }
