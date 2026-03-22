@@ -81,3 +81,129 @@ WHERE Title = N'Mẹ Cún Bố Mèo';
 SELECT Id, Title, VideoUrl 
 FROM Movies 
 WHERE VideoUrl IS NOT NULL;
+
+USE FPTPlayDemo;
+GO
+
+-- Phần 1: Thêm category nếu chưa tồn tại (an toàn, tránh lỗi duplicate)
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay')
+BEGIN
+    INSERT INTO Categories (Name, Slug)
+    VALUES (N'Cày phim hay mỗi ngày', 'cay-phim-hay-moi-ngay');
+    PRINT 'Đã thêm category mới: Cày phim hay mỗi ngày';
+END
+ELSE
+BEGIN
+    PRINT 'Category "Cày phim hay mỗi ngày" đã tồn tại, bỏ qua insert.';
+END
+GO
+
+-- Phần 2: Insert 6 phim mới - KHÔNG dùng biến @CatId, lấy Id trực tiếp bằng subquery
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, VideoCount, CreatedDate)
+SELECT 
+    N'Gia Đình Là Số 1 (Phần 3)', '/images/posters/gia-dinh-la-so-1-phan-3.jpg', Id, 0, 0, GETDATE()
+FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay'
+UNION ALL
+SELECT 
+    N'Gái Cộc Chồng Vẫn Phù', '/images/posters/gai-coc-chong-van-phu.jpg', Id, 0, 0, GETDATE()
+FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay'
+UNION ALL
+SELECT 
+    N'Tiên Tri Thần Thám', '/images/posters/tien-tri-than-tham.jpg', Id, 0, 0, GETDATE()
+FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay'
+UNION ALL
+SELECT 
+    N'Chuyện Tình Bắc Kinh', '/images/posters/chuyen-tinh-bac-kinh.jpg', Id, 0, 0, GETDATE()
+FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay'
+UNION ALL
+SELECT 
+    N'Mười Năm Yêu Em', '/images/posters/muoi-nam-yeu-em.jpg', Id, 0, 0, GETDATE()
+FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay'
+UNION ALL
+SELECT 
+    N'Công Thức Hạnh Phúc', '/images/posters/cong-thuc-hanh-phuc.jpg', Id, 0, 0, GETDATE()
+FROM Categories WHERE Slug = 'cay-phim-hay-moi-ngay';
+GO
+
+-- Phần 3: Kiểm tra kết quả insert (xem 6 phim mới nhất của category này)
+SELECT TOP 6 
+    m.Id,
+    m.Title,
+    m.PosterUrl,
+    c.Name AS CategoryName,
+    m.CreatedDate
+FROM Movies m
+INNER JOIN Categories c ON m.CategoryId = c.Id
+WHERE c.Slug = 'cay-phim-hay-moi-ngay'
+ORDER BY m.CreatedDate DESC;
+GO
+
+
+---  
+
+
+USE FPTPlayDemo;
+GO
+
+-- 1. Thêm 2 category mới nếu chưa có
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'the-thao')
+BEGIN
+    INSERT INTO Categories (Name, Slug) VALUES (N'Thể thao', 'the-thao');
+END
+
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao')
+BEGIN
+    INSERT INTO Categories (Name, Slug) VALUES (N'Điện ảnh Âu Mỹ đỉnh cao', 'dien-anh-au-my-dinh-cao');
+END
+GO
+
+-- 2. Lấy CategoryId cho hai category (không dùng biến, dùng subquery trực tiếp)
+-- Phần Thể thao (6 highlight trận đấu mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, VideoCount, CreatedDate)
+SELECT 
+    N'Bản tin Thể thao 24+ ngày 22/3', '/images/posters/the-thao-24h.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'the-thao'
+UNION ALL
+SELECT 
+    N'Everton - Chelsea Fan Highlights', '/images/posters/everton-chelsea.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'the-thao'
+UNION ALL
+SELECT 
+    N'Everton - Chelsea Highlights', '/images/posters/everton-chelsea-highlights.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'the-thao'
+UNION ALL
+SELECT 
+    N'Leeds United - Brentford Highlights', '/images/posters/leeds-brentford.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'the-thao'
+UNION ALL
+SELECT 
+    N'Fulham - Burnley Highlights', '/images/posters/fulham-burnley.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'the-thao'
+UNION ALL
+SELECT 
+    N'Brighton & Hove Albion - Liverpool Fan Highlights', '/images/posters/brighton-liverpool.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'the-thao';
+GO
+
+-- Phần Điện ảnh Âu Mỹ đỉnh cao (6 phim Hollywood mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, VideoCount, CreatedDate)
+SELECT 
+    N'Kẻ Thù Quốc Gia', '/images/posters/ke-thu-quoc-gia.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao'
+UNION ALL
+SELECT 
+    N'Bảo Mẫu Phù Thủy 2', '/images/posters/bao-mau-phu-thuy-2.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao'
+UNION ALL
+SELECT 
+    N'Giáng Sinh Năm Ấy', '/images/posters/giang-sinh-nam-ay.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao'
+UNION ALL
+SELECT 
+    N'Madagascar 2: Tẩu Thoát Đến Châu Phi', '/images/posters/madagascar-2.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao'
+UNION ALL
+SELECT 
+    N'Chuyến Đi Thú Vị', '/images/posters/chuyen-di-thu-vi.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao'
+UNION ALL
+SELECT 
+    N'Chúng Ta', '/images/posters/chung-ta.jpg', Id, 0, 0, GETDATE() FROM Categories WHERE Slug = 'dien-anh-au-my-dinh-cao';
+GO
+
+-- Kiểm tra kết quả (chạy riêng nếu muốn xem)
+SELECT TOP 6 Title, PosterUrl, c.Name AS CategoryName
+FROM Movies m
+INNER JOIN Categories c ON m.CategoryId = c.Id
+WHERE c.Slug IN ('the-thao', 'dien-anh-au-my-dinh-cao')
+ORDER BY m.CreatedDate DESC;
+GO

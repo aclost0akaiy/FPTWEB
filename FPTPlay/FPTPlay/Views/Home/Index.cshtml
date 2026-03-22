@@ -62,7 +62,6 @@
                 height: 100%;
                 object-fit: cover;
                 display: block;
-                image-rendering: -webkit-optimize-contrast;
             }
 
         .title-overlay {
@@ -111,12 +110,121 @@
                 margin: 20px auto;
                 display: block;
             }
+        /* Carousel cho phần Cày phim hay mỗi ngày */
+        .highlight-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 16px;
+            padding: 0 8px;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+        }
 
+        .highlight-card {
+            flex: 0 0 220px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #111;
+            aspect-ratio: 2 / 3;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+            .highlight-card:hover {
+                transform: scale(1.05);
+            }
+
+            .highlight-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .highlight-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 20px 12px 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+            .carousel-arrow.right {
+                right: 10px;
+            }
+        /* Modal chi tiết phim (giống ảnh) */
+        .modal-content {
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 10;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .movie-detail-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 20px;
+        }
+
+        .btn-watch {
+            background: var(--primary-red);
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+            .btn-watch:hover {
+                background: #c00;
+            }
+
+        .rating-star {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header (giữ nguyên) -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid px-3 px-md-4">
             <a class="navbar-brand" href="/">
@@ -140,7 +248,6 @@
                         </ul>
                     </li>
                 </ul>
-
                 <div class="d-flex align-items-center gap-3">
                     <input class="form-control bg-dark text-white border-0" type="search" placeholder="Tìm kiếm..." style="max-width: 180px;" />
                     <i class="fas fa-bell fa-lg text-white"></i>
@@ -163,12 +270,12 @@
         <div class="movie-grid">
             @foreach (var movie in Model.NewReleases)
             {
-                <div class="movie-card">
-                    <img loading="lazy"
-                         width="300" height="450"
-                         src="@movie.PosterUrl"
-                         alt="@movie.Title"
-                         onerror="this.src='/images/default-poster.jpg'" />
+                <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal"
+                     data-title="@movie.Title"
+                     data-poster="@movie.PosterUrl"
+                     data-desc="@(movie.Description ?? "Không có mô tả")"
+                     data-rating="5.0" data-year="2026" data-episodes="2/10" data-lang="Hàn Quốc" data-quality="FULLHD">
+                    <img loading="lazy" width="300" height="450" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
                     <div class="title-overlay">@movie.Title</div>
                     @if (movie.VideoCount > 0)
                     {
@@ -186,15 +293,78 @@
         <div class="movie-grid">
             @foreach (var movie in Model.Personalized)
             {
-                <div class="movie-card">
-                    <img loading="lazy"
-                         width="300" height="450"
-                         src="@movie.PosterUrl"
-                         alt="@movie.Title"
-                         onerror="this.src='/images/default-poster.jpg'" />
+                <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal"
+                     data-title="@movie.Title"
+                     data-poster="@movie.PosterUrl"
+                     data-desc="@(movie.Description ?? "Không có mô tả")"
+                     data-rating="5.0" data-year="2026" data-episodes="2/10" data-lang="Hàn Quốc" data-quality="FULLHD">
+                    <img loading="lazy" width="300" height="450" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
                     <div class="title-overlay">@movie.Title</div>
                 </div>
             }
+        </div>
+
+        <!-- Phần Cày phim hay mỗi ngày -->
+        <h4 class="section-title mt-5">Cày phim hay mỗi ngày <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
+        <div class="position-relative">
+            <div class="highlight-carousel" id="highlightCarousel">
+                @foreach (var movie in Model.DailyHighlights)
+                {
+                    <div class="highlight-card" data-bs-toggle="modal" data-bs-target="#movieModal"
+                         data-title="@movie.Title"
+                         data-poster="@movie.PosterUrl"
+                         data-desc="@(movie.Description ?? "Không có mô tả")"
+                         data-rating="3.3" data-year="2012" data-episodes="39/39" data-lang="Trung Quốc" data-quality="FULLHD">
+                        <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                        <div class="highlight-title">@movie.Title</div>
+                    </div>
+                }
+            </div>
+            <button class="carousel-arrow right" onclick="document.getElementById('highlightCarousel').scrollBy({left: 240, behavior: 'smooth'})">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Phần mới 1: Thể thao -->
+        <h4 class="section-title mt-5">Thể thao <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
+        <div class="position-relative">
+            <div class="highlight-carousel" id="sportsCarousel">
+                @foreach (var match in Model.SportsHighlights)
+                {
+                    <div class="highlight-card" style="width: 320px; aspect-ratio: 16/9;" data-bs-toggle="modal" data-bs-target="#movieModal"
+                         data-title="@match.Title"
+                         data-poster="@match.PosterUrl"
+                         data-desc="Ngoại hạng Anh • 2025/26 • 9 phút • Highlights trận đấu"
+                         data-rating="4.8" data-year="2026" data-episodes="" data-lang="Premier League" data-quality="4K">
+                        <img loading="lazy" src="@match.PosterUrl" alt="@match.Title" onerror="this.src='/images/default-poster.jpg'" />
+                        <div class="highlight-title" style="font-size: 0.95rem;">@match.Title</div>
+                    </div>
+                }
+            </div>
+            <button class="carousel-arrow right" onclick="document.getElementById('sportsCarousel').scrollBy({left: 340, behavior: 'smooth'})">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Phần mới 2: Điện ảnh Âu Mỹ đỉnh cao -->
+        <h4 class="section-title mt-5">Điện ảnh Âu Mỹ đỉnh cao <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
+        <div class="position-relative">
+            <div class="highlight-carousel" id="hollywoodCarousel">
+                @foreach (var movie in Model.HollywoodTop)
+                {
+                    <div class="highlight-card" data-bs-toggle="modal" data-bs-target="#movieModal"
+                         data-title="@movie.Title"
+                         data-poster="@movie.PosterUrl"
+                         data-desc="@(movie.Description ?? "Phim Hollywood đỉnh cao, FULLHD, 4K")"
+                         data-rating="5.0" data-year="2010" data-episodes="1h49p" data-lang="Anh" data-quality="FULLHD">
+                        <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                        <div class="highlight-title">@movie.Title</div>
+                    </div>
+                }
+            </div>
+            <button class="carousel-arrow right" onclick="document.getElementById('hollywoodCarousel').scrollBy({left: 240, behavior: 'smooth'})">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
 
         <!-- QR section -->
@@ -205,6 +375,51 @@
         </div>
     </div>
 
+    <!-- Modal chi tiết phim (giống ảnh bạn gửi) -->
+    <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 position-absolute top-0 end-0 z-10">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="modalPoster" class="movie-detail-img" src="" alt="Poster phim">
+                    <div class="movie-info">
+                        <h2 id="modalTitle" class="mb-3"></h2>
+                        <div class="mb-4">
+                            <span class="rating-star me-3"><i class="fas fa-star"></i> <span id="modalRating"></span></span>
+                            <span id="modalQuality" class="me-3 fw-bold"></span>
+                            <span id="modalYear"></span> • <span id="modalEpisodes"></span> • <span id="modalLang"></span>
+                        </div>
+                        <p id="modalDesc" class="lead"></p>
+                        <div class="d-flex gap-4 mt-5">
+                            <button class="btn btn-watch btn-lg"><i class="fas fa-play me-2"></i>Xem ngay</button>
+                            <button class="btn btn-outline-light btn-lg"><i class="fas fa-heart me-2"></i>Yêu thích</button>
+                            <button class="btn btn-outline-light btn-lg"><i class="fas fa-share-alt me-2"></i>Chia sẻ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // JS để điền dữ liệu vào modal khi click card
+        document.querySelectorAll('.movie-card, .highlight-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const modal = document.getElementById('movieModal');
+                modal.querySelector('#modalTitle').textContent = this.dataset.title;
+                modal.querySelector('#modalPoster').src = this.dataset.poster;
+                modal.querySelector('#modalDesc').textContent = this.dataset.desc;
+                modal.querySelector('#modalRating').textContent = this.dataset.rating;
+                modal.querySelector('#modalYear').textContent = this.dataset.year;
+                modal.querySelector('#modalEpisodes').textContent = this.dataset.episodes;
+                modal.querySelector('#modalLang').textContent = this.dataset.lang;
+                modal.querySelector('#modalQuality').textContent = this.dataset.quality;
+            });
+        });
+    </script>
 </body>
 </html>

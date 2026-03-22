@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using FPTPlay.Data;
 using FPTPlay.Models;
 using FPTPlay.ViewModels;
@@ -29,6 +29,24 @@ namespace FPTPlay.Controllers
                 Personalized = await _context.Movies
                     .Where(m => m.IsPersonalized)
                     .Take(8)
+                    .ToListAsync(),
+
+                // Phần mới: Lấy phim thuộc category "Cày phim hay mỗi ngày"
+                DailyHighlights = await _context.Movies
+                    .Where(m => m.Category.Slug == "cay-phim-hay-moi-ngay")
+                    .Take(6)
+                    .ToListAsync(),
+
+                // Phần mới: Thể thao
+                SportsHighlights = await _context.Movies
+                    .Where(m => m.Category.Slug == "the-thao")
+                    .Take(6)
+                    .ToListAsync(),
+
+                // Phần mới: Điện ảnh Âu Mỹ đỉnh cao
+                HollywoodTop = await _context.Movies
+                    .Where(m => m.Category.Slug == "dien-anh-au-my-dinh-cao")
+                    .Take(6)
                     .ToListAsync(),
 
                 Categories = await _context.Categories.ToListAsync()

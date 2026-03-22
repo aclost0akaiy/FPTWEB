@@ -13,12 +13,124 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\bo-me-con-cun.jpg",
-      "PackagePath": "staticwebassets\\images\\posters\\bo-me-con-cun.jpg"
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\bao-mau-phu-thuy-2.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\bao-mau-phu-thuy-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\brighton-liverpool.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\brighton-liverpool.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chung-ta.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\chung-ta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chuyen-di-thu-vi.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\chuyen-di-thu-vi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chuyen-tinh-bac-kinh.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\chuyen-tinh-bac-kinh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\con-ra-the-thong-gi-nua.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\con-ra-the-thong-gi-nua.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cong-thuc-hanh-phuc.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\cong-thuc-hanh-phuc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cuc-han.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\cuc-han.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\dao-hai-tac.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\dao-hai-tac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\dieu-con-dang-do.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\dieu-con-dang-do.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\everton-chelsea-highlights.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\everton-chelsea-highlights.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\everton-chelsea.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\everton-chelsea.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\fulham-burnley.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\fulham-burnley.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gai-coc-chong-van-phu.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\gai-coc-chong-van-phu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gia-dinh-la-so-1-phan-3.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\gia-dinh-la-so-1-phan-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\giang-sinh-nam-ay.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\giang-sinh-nam-ay.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ke-thu-quoc-gia.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\ke-thu-quoc-gia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\leeds-brentford.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\leeds-brentford.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\liverpool-tottenham.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\liverpool-tottenham.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\long-sau-lo.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\long-sau-lo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\luat-bong-ma.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\luat-bong-ma.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\madagascar-2.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\madagascar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\manu-aston-villa.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\manu-aston-villa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\me-cun-bo-meo.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\me-cun-bo-meo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\muoi-nam-yeu-em.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\muoi-nam-yeu-em.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tac-pham-thu-hai.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\tac-pham-thu-hai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tay-trang-deirdre.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\tay-trang-deirdre.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\the-thao-24h.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\the-thao-24h.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\thien-duong-mau.jpg",
       "PackagePath": "staticwebassets\\images\\posters\\thien-duong-mau.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tien-tri-than-tham.jpg",
+      "PackagePath": "staticwebassets\\images\\posters\\tien-tri-than-tham.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\js\\site.js",
