@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xrXg4C61no9JJBOHDiAQcRC192p1jpClg3zwGrWMzoc=",
+  "Hash": "qCF3fTKZcM/Vfq1ZiUlW7IqChztdq/3hBI+RSD+ZYls=",
   "Source": "FPTPlay",
   "BasePath": "_content/FPTPlay",
   "Mode": "Default",
@@ -1947,6 +1947,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\cuc-han.mp4",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "videos/cuc-han#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ttokmaiqqc",
+      "Integrity": "sZgYKxlfQkAKmh8feATnYYhFrubyJCEuADFXV/3lSx8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\videos\\cuc-han.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\me-cun-bo-meo.mp4",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "videos/me-cun-bo-meo#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wv9ddb1pcw",
+      "Integrity": "TPzqdWtFmUE2LUQJ0MPzWDnIQMDf1JjmdSvzlODXx8c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\videos\\me-cun-bo-meo.mp4"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\thien-duong-mau.mp4",
@@ -9512,6 +9554,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "videos/cuc-han.mp4",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\cuc-han.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sZgYKxlfQkAKmh8feATnYYhFrubyJCEuADFXV/3lSx8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Mar 2026 14:34:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sZgYKxlfQkAKmh8feATnYYhFrubyJCEuADFXV/3lSx8="
+        }
+      ]
+    },
+    {
+      "Route": "videos/cuc-han.ttokmaiqqc.mp4",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\cuc-han.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sZgYKxlfQkAKmh8feATnYYhFrubyJCEuADFXV/3lSx8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Mar 2026 14:34:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ttokmaiqqc"
+        },
+        {
+          "Name": "label",
+          "Value": "videos/cuc-han.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sZgYKxlfQkAKmh8feATnYYhFrubyJCEuADFXV/3lSx8="
+        }
+      ]
+    },
+    {
+      "Route": "videos/me-cun-bo-meo.mp4",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\me-cun-bo-meo.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "672878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TPzqdWtFmUE2LUQJ0MPzWDnIQMDf1JjmdSvzlODXx8c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Mar 2026 14:34:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TPzqdWtFmUE2LUQJ0MPzWDnIQMDf1JjmdSvzlODXx8c="
+        }
+      ]
+    },
+    {
+      "Route": "videos/me-cun-bo-meo.wv9ddb1pcw.mp4",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\me-cun-bo-meo.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "672878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TPzqdWtFmUE2LUQJ0MPzWDnIQMDf1JjmdSvzlODXx8c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 22 Mar 2026 14:34:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wv9ddb1pcw"
+        },
+        {
+          "Name": "label",
+          "Value": "videos/me-cun-bo-meo.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TPzqdWtFmUE2LUQJ0MPzWDnIQMDf1JjmdSvzlODXx8c="
         }
       ]
     },
