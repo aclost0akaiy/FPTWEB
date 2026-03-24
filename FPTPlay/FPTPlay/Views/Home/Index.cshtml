@@ -266,7 +266,7 @@
 <body>
 
     <!-- Header (giữ nguyên) -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container-fluid px-3 px-md-4">
             <a class="navbar-brand" href="/">
                 <strong style="color: #e50914; font-size: 1.6rem;">FPT Play</strong>
@@ -276,16 +276,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Truyền hình</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Phim bộ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Thiếu nhi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ngoại hạng Anh</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/TruyenHinh">Truyền hình</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=phim-bo&name=Phim bộ">Phim bộ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi">Thiếu nhi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh">Ngoại hạng Anh</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Xem thêm</a>
                         <ul class="dropdown-menu bg-dark border-0">
-                            <li><a class="dropdown-item text-white" href="#">Phim lẻ</a></li>
-                            <li><a class="dropdown-item text-white" href="#">Anime</a></li>
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -451,7 +451,9 @@
                             <a id="watchNowBtn" class="btn btn-watch btn-lg" href="#">
                                 <i class="fas fa-play me-2"></i>Xem ngay
                             </a>
-                            <button class="btn btn-outline-light btn-lg"><i class="fas fa-heart me-2"></i>Yêu thích</button>
+                            <button id="btnFavorite" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-heart me-2"></i>Yêu thích
+                            </button>
                             <button class="btn btn-outline-light btn-lg"><i class="fas fa-share-alt me-2"></i>Chia sẻ</button>
                         </div>
                     </div>
@@ -463,10 +465,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
+        let currentMovieId = 0;
+
         // JS để điền dữ liệu vào modal khi click card
         document.querySelectorAll('.movie-card, .highlight-card').forEach(card => {
             card.addEventListener('click', function () {
                 const modal = document.getElementById('movieModal');
+                currentMovieId = parseInt(this.dataset.movieId) || 0;
+
                 modal.querySelector('#modalTitle').textContent = this.dataset.title;
                 modal.querySelector('#modalPoster').src = this.dataset.poster;
                 modal.querySelector('#modalDesc').textContent = this.dataset.desc;
@@ -478,8 +484,13 @@
 
                 // Lưu id phim và cập nhật link Xem ngay
                 const watchBtn = modal.querySelector('#watchNowBtn');
-                const movieId = this.dataset.movieId || '0';
-                watchBtn.href = '/Movies/Details/' + movieId;
+                watchBtn.href = '/Movies/Details/' + currentMovieId;
+
+                // Cập nhật nút Yêu thích
+                const favBtn = modal.querySelector('#btnFavorite');
+                favBtn.onclick = function() {
+                    window.location.href = '/Favorites/Add/' + currentMovieId;
+                };
             });
         });
 

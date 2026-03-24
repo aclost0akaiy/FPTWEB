@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using FPTPlay.Data;
 using FPTPlay.Models;
 using FPTPlay.ViewModels;
@@ -53,6 +53,45 @@ namespace FPTPlay.Controllers
             };
 
             return View(model);
+        }
+
+        public async Task<IActionResult> TruyenHinh(string tab = "noi-bat")
+        {
+            ViewBag.CurrentTab = tab;
+
+            if (tab == "noi-bat")
+            {
+                var movies = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "truyen-hinh")
+                    .ToListAsync();
+                return View(movies);
+            }
+
+            List<Movie> channels = new List<Movie>();
+            if (tab == "tat-ca") 
+            {
+                channels = await _context.Movies
+                    .Where(m => m.Category != null && (m.Category.Slug == "kenh-co-ban" || m.Category.Slug == "kenh-dia-phuong" || m.Category.Slug == "kenh-quoc-te"))
+                    .ToListAsync();
+            } 
+            else 
+            {
+                channels = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == tab)
+                    .ToListAsync();
+            }
+
+            return View(channels);
+        }
+
+        public async Task<IActionResult> Category(string slug, string name)
+        {
+            var movies = await _context.Movies
+                .Where(m => m.Category != null && m.Category.Slug == slug)
+                .ToListAsync();
+
+            ViewBag.CategoryName = name;
+            return View(movies);
         }
 
         public IActionResult Privacy()

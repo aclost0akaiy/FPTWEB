@@ -1,0 +1,922 @@
+@model List<FPTPlay.Models.Movie>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPT Play - @ViewBag.CategoryName</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <style>
+        :root { 
+            --primary-red: #e50914;
+            --bg-dark: #000;
+            --text-light: #e5e5e5;
+        }
+
+        body {
+            background: #0c0c0c;
+            color: var(--text-light);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .user-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .user-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: #111;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            z-index: 1055;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+            .user-dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                transition: background 0.2s;
+            }
+
+                .user-dropdown-content a:hover {
+                    background: #222;
+                }
+
+                .user-dropdown-content a i {
+                    margin-right: 10px;
+                }
+        
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .btn-return {
+            background-color: #ff3c00;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 25px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-return:hover {
+            background-color: #cc3000;
+            color: white;
+        }
+
+        .library-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+            padding: 0 20px;
+        }
+
+        .movie-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #111;
+            aspect-ratio: 2 / 3;
+            transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.25s ease;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.08) translateZ(0);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            z-index: 5;
+            color: white;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .title-overlay {
+            position: absolute;
+            inset: 0 0 0 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 12px 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        .empty-icon-wrapper {
+            position: relative; 
+            width: 80px; 
+            height: 80px; 
+            margin-bottom: 2rem;
+            opacity: 0.4;
+        }
+
+        .empty-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Truyền hình specific styles */
+        .movie-grid-landscape {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px 16px;
+            padding: 0 20px;
+        }
+
+        .landscape-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card-landscape {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #111;
+            aspect-ratio: 16 / 9;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .movie-card-landscape:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+            z-index: 5;
+        }
+
+        .movie-card-landscape img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .badge-live {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background: #e50914;
+            color: white;
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .badge-time {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .landscape-title {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+
+        /* Sub-navbar styles */
+        .sub-nav {
+            display: flex;
+            gap: 24px;
+            padding: 0 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sub-nav-link {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding-bottom: 12px;
+            position: relative;
+        }
+
+        .sub-nav-link:hover {
+            color: #fff;
+        }
+
+        .sub-nav-link.active {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .sub-nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #f36f21; 
+        }
+
+        /* Channel specific styles */
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 0 20px;
+        }
+
+        .channel-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .channel-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255,255,255,0.2);
+            z-index: 5;
+        }
+
+        .channel-card img {
+            max-width: 90%;
+            max-height: 80%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Phim Bộ specific styles */
+        .hero-banner {
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px;
+            margin-top: -100px; /* pull up under navbar */
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, transparent 100%),
+                        linear-gradient(to top, var(--bg-dark) 0%, transparent 20%);
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+        .hero-content {
+            max-width: 600px;
+            margin-top: 60px;
+        }
+        .hero-logo {
+            max-width: 80%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+        }
+        .meta-tags {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        .meta-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        .btn-play-hero {
+            background: var(--primary-red);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+        .btn-play-hero:hover { background: #c00; color: white; }
+        .btn-icon-circle {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .btn-icon-circle:hover { background: rgba(255,255,255,0.3); color: white; }
+
+        .section-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 16px;
+            padding: 10px 0 20px 0;
+            scrollbar-width: none;
+        }
+        .section-carousel::-webkit-scrollbar { display: none; }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 30px 0 10px 0;
+        }
+
+        .top10-card {
+            flex: 0 0 160px;
+            position: relative;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            margin-left: 20px;
+            aspect-ratio: 2/3;
+        }
+        .top10-card:hover { transform: scale(1.05); }
+        .top10-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .top10-number {
+            position: absolute;
+            bottom: -15px;
+            left: -20px;
+            font-size: 6rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            line-height: 1;
+            font-style: italic;
+        }
+        .top10-title {
+            position: absolute;
+            bottom: 0px;
+            left: 0; right: 0;
+            padding: 30px 10px 10px 40px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .genre-card {
+            flex: 0 0 220px;
+            height: 120px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        .genre-card:hover { transform: scale(1.05); }
+        .genre-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+        .genre-title {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .ls-card {
+            flex: 0 0 280px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            text-decoration: none;
+            transition: 0.3s;
+            display: block;
+        }
+        .ls-card:hover { transform: scale(1.05); z-index: 2; }
+        .ls-card img { width: 100%; height: 100%; object-fit: cover; }
+        .ls-title {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .ls-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        .vert-card {
+            flex: 0 0 160px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 2/3;
+            text-decoration: none;
+            transition: 0.3s;
+            display: block;
+        }
+        .vert-card:hover { transform: scale(1.05); z-index: 2; }
+        .vert-card img { width: 100%; height: 100%; object-fit: cover; }
+        .vert-title {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .vert-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 160px;
+            flex-shrink: 0;
+        }
+
+        .vip-badge {
+            position: absolute;
+            top: 8px; left: 8px;
+            background: #e50914;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 4px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header FPT Play -->
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid px-3 px-md-4">
+            <a class="navbar-brand" href="/">
+                <strong style="color: #e50914; font-size: 1.6rem;">FPT Play</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="/" style="color: rgba(255,255,255,0.7);">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=truyen-hinh&name=Truyền hình" style="color: rgba(255,255,255,0.7);">Truyền hình</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=phim-bo&name=Phim bộ" style="color: rgba(255,255,255,0.7);">Phim bộ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi" style="color: rgba(255,255,255,0.7);">Thiếu nhi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh" style="color: rgba(255,255,255,0.7);">Ngoại hạng Anh</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: rgba(255,255,255,0.7);">Xem thêm</a>
+                        <ul class="dropdown-menu bg-dark border-0">
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <input id="searchInput" class="form-control bg-dark text-white border-0" type="search" placeholder="Tìm kiếm..." style="max-width: 180px;" />
+                    <i class="fas fa-bell fa-lg text-white" style="cursor: pointer;"></i>
+
+                    <!-- Icon người dùng + dropdown -->
+                    <div class="user-dropdown">
+                        <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
+                        <div id="userDropdownContent" class="user-dropdown-content">
+                            <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-danger btn-sm px-3">Mua gói</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row w-100 m-0" style="padding-top: 100px;">
+        <div class="col-12 px-md-5">
+            @{
+                var isTvCategory = ViewBag.CategoryName == "Truyền hình" || 
+                                   ViewBag.CategoryName == "Kênh cơ bản" || 
+                                   ViewBag.CategoryName == "Tất cả các kênh" || 
+                                   ViewBag.CategoryName == "Kênh địa phương" || 
+                                   ViewBag.CategoryName == "Kênh quốc tế";
+            }
+
+            @if (isTvCategory)
+            {
+                <div class="sub-nav">
+                    <a href="/Home/Category?slug=truyen-hinh&name=Truyền hình" class="sub-nav-link @(ViewBag.CategoryName == "Truyền hình" ? "active" : "")"><i class="fas fa-search me-2"></i>Chương trình nổi bật</a>
+                    <a href="/Home/Category?slug=kenh-co-ban&name=Kênh cơ bản" class="sub-nav-link @(ViewBag.CategoryName == "Kênh cơ bản" ? "active" : "")">Kênh cơ bản</a>
+                    <a href="/Home/Category?slug=tat-ca-cac-kenh&name=Tất cả các kênh" class="sub-nav-link @(ViewBag.CategoryName == "Tất cả các kênh" ? "active" : "")">Tất cả các kênh</a>
+                    <a href="/Home/Category?slug=kenh-dia-phuong&name=Kênh địa phương" class="sub-nav-link @(ViewBag.CategoryName == "Kênh địa phương" ? "active" : "")">Kênh địa phương</a>
+                    <a href="/Home/Category?slug=kenh-quoc-te&name=Kênh quốc tế" class="sub-nav-link @(ViewBag.CategoryName == "Kênh quốc tế" ? "active" : "")">Kênh quốc tế</a>
+                </div>
+            }
+            else
+            {
+                <h2 class="library-title">@ViewBag.CategoryName</h2>
+            }
+
+            @if (ViewBag.CategoryName == "Phim bộ")
+            {
+                <!-- Hero Banner -->
+                <div class="hero-banner" style="background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <h1 style="font-size: 3.5rem; font-weight: 900; font-family: 'Arial Black', IMPACT, sans-serif; text-transform: uppercase; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1;">ASH VÀ MA CÂY<br><span style="font-size: 2rem;">PHẦN 1</span></h1>
+                            <div class="meta-tags">
+                                <span class="rating" style="color: #ffc107; font-weight: bold;"><i class="fas fa-star" style="color: #ff7b00;"></i> 5.0 (1)</span>
+                                <span class="meta-tag">Đa ngôn ngữ</span>
+                                <span class="meta-tag" style="border: 1px solid rgba(255,255,255,0.4); background: transparent;">FULLHD</span>
+                            </div>
+                            <div class="movie-info-text mb-4" style="font-size: 1.1rem; font-weight: 500;">
+                                2015 • T18 • 10/10 tập • Mỹ
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="btn-play-hero"><i class="fas fa-play me-1"></i>Xem ngay</a>
+                                <a href="#" class="btn-icon-circle"><i class="fas fa-heart"></i></a>
+                                <a href="#" class="btn-icon-circle"><i class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top 10 phim bộ xu hướng -->
+                <h4 class="section-title">Top 10 phim bộ xu hướng</h4>
+                <div class="section-carousel pb-4">
+                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);">
+                        <img src="/images/posters/kamen-rider.jpg" alt="Kamen Rider" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                        <div class="top10-number">1</div>
+                        <div class="top10-title" style="background: transparent;">Kamen Rider Zezts</div>
+                    </a>
+                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #11998e 0%, #38ef7d 100%);">
+                        <img src="/images/posters/tan-tuyet-dai.jpg" alt="Tân Tuyệt Đại Song Kiều" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                        <div class="top10-number">2</div>
+                        <div class="top10-title" style="background: transparent;">Tân Tuyệt Đại Song Kiều</div>
+                    </a>
+                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);">
+                        <img src="/images/posters/luat-su.jpg" alt="Luật Sư Bóng Ma" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                        <div class="top10-number">3</div>
+                        <div class="top10-title" style="background: transparent;">Luật Sư Bóng Ma</div>
+                    </a>
+                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #ff0844 0%, #ffb199 100%);">
+                        <img src="/images/posters/cuc-han.jpg" alt="Cực Hạn" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                        <div class="top10-number">4</div>
+                        <div class="top10-title" style="background: transparent;">Cực Hạn</div>
+                    </a>
+                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #a18cd1 0%, #fbc2eb 100%);">
+                        <img src="/images/posters/con-ra-the.jpg" alt="Còn Ra Thế Thống Gì Nữa" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                        <div class="top10-number">5</div>
+                        <div class="top10-title" style="background: transparent;">Còn Ra Thế Thống Gì Nữa</div>
+                    </a>
+                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #f6d365 0%, #fda085 100%);">
+                        <img src="/images/posters/han-so.jpg" alt="Hán Sở Tranh Hùng" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                        <div class="top10-number">6</div>
+                        <div class="top10-title" style="background: transparent;">Hán Sở Tranh Hùng</div>
+                    </a>
+                </div>
+
+                <!-- Thể loại -->
+                <h4 class="section-title">Thể loại</h4>
+                <div class="section-carousel">
+                    <a href="#" class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1543362141-86f37fd446c7?q=80&w=400" alt="Hoa Ngữ">
+                        <div class="genre-title">Hoa Ngữ</div>
+                    </a>
+                    <a href="#" class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1534954452178-57bd430be70b?q=80&w=400" alt="Hàn Quốc">
+                        <div class="genre-title">Hàn Quốc</div>
+                    </a>
+                    <a href="#" class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400" alt="Việt Nam">
+                        <div class="genre-title">Việt Nam</div>
+                    </a>
+                    <a href="#" class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=400" alt="Âu Mỹ">
+                        <div class="genre-title">Âu Mỹ</div>
+                    </a>
+                    <a href="#" class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=400" alt="Thái Lan">
+                        <div class="genre-title">Thái Lan</div>
+                    </a>
+                    <a href="#" class="genre-card">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400" alt="Quốc gia khác">
+                        <div class="genre-title">Quốc gia khác</div>
+                    </a>
+                </div>
+
+                <!-- Dành riêng cho bạn -->
+                <h4 class="section-title mt-4">Dành riêng cho bạn <i class="fas fa-chevron-right ms-2" style="font-size: 1rem; color: #888;"></i></h4>
+                <div class="section-carousel">
+                    <div class="ls-wrapper">
+                        <a href="#" class="ls-card">
+                            <img src="/images/posters/luat-su-ls.jpg" alt="Luật Sư Bóng Ma" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> PHÁT SONG SONG</span>
+                        </a>
+                        <a href="#" class="ls-title fw-bold mt-2">Luật Sư Bóng Ma</a>
+                    </div>
+                    <div class="ls-wrapper">
+                        <a href="#" class="ls-card">
+                            <img src="/images/posters/cuc-han-ls.jpg" alt="Cực Hạn" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> PHÁT SONG SONG</span>
+                        </a>
+                        <a href="#" class="ls-title fw-bold mt-2">Cực Hạn</a>
+                    </div>
+                    <div class="ls-wrapper">
+                        <a href="#" class="ls-card">
+                            <img src="/images/posters/con-ra-the-ls.jpg" alt="Còn Ra Thế Thống Gì Nữa" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> ĐỘC QUYỀN</span>
+                        </a>
+                        <a href="#" class="ls-title fw-bold mt-2">Còn Ra Thể Thống Gì Nữa</a>
+                    </div>
+                    <div class="ls-wrapper">
+                        <a href="#" class="ls-card">
+                            <img src="/images/posters/huong-vi.jpg" alt="Hương Vị Tình Nhân" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> PHÁT SONG SONG</span>
+                        </a>
+                        <a href="#" class="ls-title fw-bold mt-2">Hương Vị Tình Nhân</a>
+                    </div>
+                    <div class="ls-wrapper">
+                        <a href="#" class="ls-card">
+                            <img src="/images/posters/dieu-con.jpg" alt="Điều Còn Dang Dở" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> MÁY CHIẾU</span>
+                        </a>
+                        <a href="#" class="ls-title fw-bold mt-2">Điều Còn Dang Dở</a>
+                    </div>
+                    <div class="ls-wrapper">
+                        <a href="#" class="ls-card">
+                            <img src="/images/posters/hau-cung.jpg" alt="Hậu Cung Chân Hoàn Truyện" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="ls-title fw-bold mt-2">Hậu Cung Chân Hoàn Truyện</a>
+                    </div>
+                </div>
+
+                <!-- TVB chất như nước cất -->
+                <h4 class="section-title mt-4">TVB chất như nước cất <button class="btn btn-dark rounded-circle ms-2 px-2 py-1"><i class="fas fa-chevron-right text-white"></i></button></h4>
+                <div class="section-carousel">
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/ho-so-trinh-sat.jpg" alt="Hồ Sơ Trinh Sát II" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Hồ Sơ Trinh Sát II</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/nghich-thien.jpg" alt="Nghịch Thiên Kỳ Án" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Nghịch Thiên Kỳ Án</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/song-gio.jpg" alt="Sóng Gió Gia Tộc III" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Sóng Gió Gia Tộc III</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/mai-am.jpg" alt="Mái Ấm Gia Đình (Phần 4)" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Mái Ấm Gia Đình (Phần 4)</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/ho-ve.jpg" alt="Hộ Vệ Thầm Lặng" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Hộ Vệ Thầm Lặng</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/quyen-vuong.jpg" alt="Quyền Vương" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Quyền Vương</a>
+                    </div>
+                </div>
+
+                <!-- Phim bộ Việt Nam đặc sắc -->
+                <h4 class="section-title mt-4">Phim bộ Việt Nam đặc sắc <button class="btn btn-dark rounded-circle ms-2 px-2 py-1"><i class="fas fa-chevron-right text-white"></i></button></h4>
+                <div class="section-carousel mb-5">
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/tinh-tham.jpg" alt="Tình Thắm Duyên Xuân" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Tình Thắm Duyên Xuân</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/nhung-ngoi-nha.jpg" alt="Những Ngôi Nhà Trong Hẻm" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Những Ngôi Nhà Trong Hẻm</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/hanh-phuc.jpg" alt="Hạnh Phúc Bị Đánh Cắp" onerror="this.src='/images/default-poster.jpg'">
+                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Hạnh Phúc Bị Đánh Cắp</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/khep-lai.jpg" alt="Khép Lại Quá Khứ" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Khép Lại Quá Khứ</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/nha-co.jpg" alt="Nhà Có Rồng Có Cọp" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Nhà Có Rồng Có Cọp</a>
+                    </div>
+                    <div class="vert-wrapper">
+                        <a href="#" class="vert-card">
+                            <img src="/images/posters/tam-thai-tu.jpg" alt="Tam Thái Tử" onerror="this.src='/images/default-poster.jpg'">
+                        </a>
+                        <a href="#" class="vert-title fw-bold">Tam Thái Tử</a>
+                    </div>
+                </div>
+            }
+            else if (Model == null || !Model.Any())
+            {
+                <div class="empty-state">
+                    <!-- SVG Icon mô phỏng "Không có dữ liệu" -->
+                    <div class="empty-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        <!-- Kính lúp -->
+                        <svg style="position: absolute; bottom: -10px; right: -15px; width: 40px; height: 40px; background: #0c0c0c; border-radius: 50%; padding: 4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <!-- Dấu X trong kính lúp -->
+                            <line x1="8" y1="8" x2="14" y2="14" stroke="#ff3c00"></line>
+                            <line x1="14" y1="8" x2="8" y2="14" stroke="#ff3c00"></line>
+                        </svg>
+                        <i class="fas fa-times" style="position: absolute; top: -10px; right: -20px; font-size: 10px; color: #ff3c00; opacity: 0.8;"></i>
+                        <i class="fas fa-times" style="position: absolute; bottom: 10px; left: -20px; font-size: 8px; color: #ff3c00; opacity: 0.8;"></i>
+                    </div>
+
+                    <h6 class="fw-bold mb-3 mt-3" style="font-size: 1rem;">Mục này chưa có phim nào!</h6>
+                    <a href="/" class="btn-return">Khám phá nội dung khác</a>
+                </div>
+            }
+            else
+            {
+                if (ViewBag.CategoryName == "Truyền hình")
+                {
+                    <div class="movie-grid-landscape">
+                        @foreach (var movie in Model)
+                        {
+                            <div class="landscape-wrapper">
+                                <a href="/Movies/Details/@movie.Id" class="movie-card-landscape">
+                                    <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                                    <!-- Hiển thị badge LIVE nếu có từ "LIVE" trong description, ngược lại là Hôm nay -->
+                                    @if (!string.IsNullOrEmpty(movie.Description) && movie.Description.Contains("LIVE"))
+                                    {
+                                        <span class="badge-live">LIVE</span>
+                                    }
+                                    else if (!string.IsNullOrEmpty(movie.Description))
+                                    {
+                                        <span class="badge-time">Hôm nay lúc @movie.Description</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-time">Hôm nay lúc 12:00</span>
+                                    }
+                                </a>
+                                <a href="/Movies/Details/@movie.Id" class="landscape-title">@movie.Title</a>
+                            </div>
+                        }
+                    </div>
+                }
+                else if (isTvCategory)
+                {
+                    <div class="channel-grid">
+                        @foreach (var movie in Model)
+                        {
+                            <a href="/Movies/Details/@movie.Id" class="channel-card">
+                                <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                            </a>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="movie-grid">
+                        @foreach (var movie in Model)
+                        {
+                            <a href="/Movies/Details/@movie.Id" class="movie-card">
+                                <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                                <div class="title-overlay">@movie.Title</div>
+                            </a>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle dropdown khi click icon user
+        const userIcon = document.getElementById('userIcon');
+        const dropdownContent = document.getElementById('userDropdownContent');
+
+        if (userIcon && dropdownContent) {
+            userIcon.addEventListener('click', function(e) {
+                e.stopPropagation(); // Ngăn click lan ra ngoài
+                const isVisible = dropdownContent.style.display === 'block';
+                dropdownContent.style.display = isVisible ? 'none' : 'block';
+            });
+
+            // Ẩn dropdown khi click ra ngoài
+            document.addEventListener('click', function(e) {
+                if (!userIcon.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

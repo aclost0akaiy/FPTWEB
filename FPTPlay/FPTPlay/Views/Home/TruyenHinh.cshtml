@@ -1,0 +1,451 @@
+@model List<FPTPlay.Models.Movie>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPT Play - Truyền hình</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary-red: #e50914;
+            --bg-dark: #0a0a0a;
+            --text-light: #e5e5e5;
+            --orange: #f36f21;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar chính */
+        .navbar {
+            background: #141414;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .navbar-brand strong {
+            color: var(--primary-red);
+            font-size: 1.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.6) !important;
+            font-size: 0.95rem;
+            margin-right: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #fff !important;
+        }
+
+        /* User Dropdown */
+        .user-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .user-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background: #111;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            z-index: 1055;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .user-dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .user-dropdown-content a:hover {
+            background: #222;
+        }
+
+        .user-dropdown-content a i {
+            margin-right: 10px;
+        }
+
+        /* Main Content Padding */
+        .main-content {
+            padding-top: 80px; /* Space for fixed navbar */
+        }
+
+        /* Sub-navbar (Chương trình nổi bật, Kênh cơ bản...) */
+        .sub-nav-container {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .sub-nav {
+            display: flex;
+            gap: 24px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .sub-nav-link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 12px 0 16px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        .sub-nav-link:hover {
+            color: #fff;
+        }
+
+        .sub-nav-link.active {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .sub-nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--orange); 
+        }
+
+        /* CSS Render 6 cột cho danh sách truyền hình */
+        .tv-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px 16px;
+            padding: 0 20px 40px 20px;
+        }
+
+        .tv-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            min-width: 0; /* Sửa lỗi tự giãn khung grid khi text quá dài */
+        }
+
+        .tv-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1a1a1a;
+            aspect-ratio: 16 / 9; /* Ảnh tỷ lệ ngang */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: block;
+        }
+
+        .tv-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+            z-index: 5;
+        }
+
+        .tv-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Bagde góc dưới trái (LIVE hoặc Giờ Lịch chiếu) */
+        .badge-live {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            background-color: #e50914;
+            color: white;
+            font-size: 0.65rem;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+        
+        .badge-time {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #ddd;
+            font-size: 0.7rem;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+            z-index: 2;
+        }
+
+        .tv-title {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-decoration: none;
+            transition: color 0.2s;
+            line-height: 1.4;
+        }
+
+        .tv-card-wrapper:hover .tv-title {
+            color: var(--orange);
+        }
+
+        /* Empty state - nút Về trang chủ khi rỗng */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* --- CSS CHO CÁC KÊNH (Channel Cards) --- */
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px 16px;
+            padding: 0 20px 40px 20px;
+        }
+
+        .channel-card {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .channel-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+            z-index: 5;
+            background-color: #fff;
+        }
+
+        .channel-card img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+
+        .channel-badge-top {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background-color: #cc0000;
+            color: #ffcc00;
+            border-radius: 4px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .channel-badge-bottom {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            background-color: transparent;
+            border: 1.5px solid var(--orange);
+            color: var(--orange);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bắt đầu Navbar FPT Play -->
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid px-3 px-md-4">
+            <a class="navbar-brand" href="/">
+                <strong>FPT Play</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/Home/TruyenHinh">Truyền hình</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=phim-bo&name=Phim bộ">Phim bộ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi">Thiếu nhi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh">Ngoại hạng Anh</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Xem thêm</a>
+                        <ul class="dropdown-menu bg-dark border-0">
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <input class="form-control bg-dark text-white border-0" type="search" placeholder="Tìm kiếm..." style="max-width: 180px;" />
+                    <i class="fas fa-bell fa-lg text-white" style="cursor: pointer;"></i>
+
+                    <!-- Dropdown User -->
+                    <div class="user-dropdown">
+                        <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
+                        <div id="userDropdownContent" class="user-dropdown-content">
+                            <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-danger btn-sm px-3">Mua gói</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Kết thúc Navbar -->
+
+    <div class="main-content">
+        <!-- Sub-menu Truyền hình -->
+        <div class="sub-nav-container">
+            <div class="container-fluid px-md-4">
+                <div class="sub-nav">
+                    <a href="/Home/TruyenHinh?tab=noi-bat" class="sub-nav-link @(ViewBag.CurrentTab == "noi-bat" ? "active" : "")"><i class="fas fa-search me-2" style="font-size:0.85rem"></i>Chương trình nổi bật</a>
+                    <a href="/Home/TruyenHinh?tab=kenh-co-ban" class="sub-nav-link @(ViewBag.CurrentTab == "kenh-co-ban" ? "active" : "")">Kênh cơ bản</a>
+                    <a href="/Home/TruyenHinh?tab=tat-ca" class="sub-nav-link @(ViewBag.CurrentTab == "tat-ca" ? "active" : "")">Tất cả các kênh</a>
+                    <a href="/Home/TruyenHinh?tab=kenh-dia-phuong" class="sub-nav-link @(ViewBag.CurrentTab == "kenh-dia-phuong" ? "active" : "")">Kênh địa phương</a>
+                    <a href="/Home/TruyenHinh?tab=kenh-quoc-te" class="sub-nav-link @(ViewBag.CurrentTab == "kenh-quoc-te" ? "active" : "")">Kênh quốc tế</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid px-md-4">
+            @if (Model == null || !Model.Any())
+            {
+                <div class="empty-state">
+                    <h5 class="text-white">Hiện chưa có dữ liệu mảng này!</h5>
+                    <p class="text-muted">Vui lòng chạy script để nạp file SQL cho đúng tab nhé.</p>
+                </div>
+            }
+            else
+            {
+                if (ViewBag.CurrentTab == "noi-bat")
+                {
+                    <!-- Danh sách Truyền hình Grid 6 cột -->
+                    <div class="tv-grid">
+                        @foreach (var movie in Model)
+                        {
+                            <a href="/Movies/Details/@movie.Id" class="tv-card-wrapper">
+                                <div class="tv-card">
+                                    <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                                    
+                                    <!-- Label góc dưới ảnh -->
+                                    @if (!string.IsNullOrEmpty(movie.Description))
+                                    {
+                                        if (movie.Description.ToUpper().Contains("LIVE"))
+                                        {
+                                            <span class="badge-live">LIVE</span>
+                                        }
+                                        else if (movie.Description.Contains("Còn") || movie.Description.Contains("phút") || movie.Description.Contains("Đã kết thúc"))
+                                        {
+                                            <span class="badge-time">@movie.Description</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge-time">Hôm nay lúc @movie.Description</span>
+                                        }
+                                    }
+                                </div>
+                                <!-- Tiêu đề dưới thẻ -->
+                                <div class="tv-title" title="@movie.Title">@movie.Title</div>
+                            </a>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <!-- Kênh truyền hình (Logo trắng) Grid 6 cột -->
+                    <div class="channel-grid">
+                        @foreach (var channel in Model)
+                        {
+                            <a href="/Movies/Details/@channel.Id" class="channel-card" title="@channel.Title">
+                                <img loading="lazy" src="@channel.PosterUrl" alt="@channel.Title" onerror="this.src='/images/default-poster.jpg'" />
+                                
+                                <!-- Icon khiên VIP hiển thị mặc định trên các kênh (như trên mockups FPT) -->
+                                <div class="channel-badge-top"><i class="fas fa-gem"></i></div>
+
+                                @if (!string.IsNullOrEmpty(channel.Description))
+                                {
+                                    <div class="channel-badge-bottom">@channel.Description</div>
+                                }
+                            </a>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JS mờ cho Dropdown User
+        const userIcon = document.getElementById('userIcon');
+        const dropdownContent = document.getElementById('userDropdownContent');
+
+        if (userIcon && dropdownContent) {
+            userIcon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isVisible = dropdownContent.style.display === 'block';
+                dropdownContent.style.display = isVisible ? 'none' : 'block';
+            });
+            document.addEventListener('click', function(e) {
+                if (!userIcon.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

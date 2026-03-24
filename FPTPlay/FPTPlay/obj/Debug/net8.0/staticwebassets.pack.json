@@ -365,10 +365,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\cuc-han.mp4",
-      "PackagePath": "staticwebassets\\videos\\cuc-han.mp4"
-    },
-    {
       "Id": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\videos\\me-cun-bo-meo.mp4",
       "PackagePath": "staticwebassets\\videos\\me-cun-bo-meo.mp4"
     },

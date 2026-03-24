@@ -1,10 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;                    // ← Bắt buộc cho UseSqlServer
+using Microsoft.EntityFrameworkCore;                    // ← Bắt buộc cho UseSqlServer
 using FPTPlay.Data;                                     // ← Namespace của FPTPlayContext
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 // Đăng ký DbContext với SQL Server
 builder.Services.AddDbContext<FPTPlayContext>(options =>
@@ -29,6 +36,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

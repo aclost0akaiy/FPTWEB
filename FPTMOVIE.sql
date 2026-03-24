@@ -1,4 +1,4 @@
-﻿-- Tạo database (nếu chưa có)
+-- Tạo database (nếu chưa có)
 CREATE DATABASE FPTPlayDemo;
 GO
 
@@ -250,4 +250,385 @@ WHERE Title = N'Cực Hạn';
 SELECT Id, Title, VideoUrl, Duration
 FROM Movies
 WHERE VideoUrl IS NOT NULL;
+GO
+
+
+
+USE FPTPlayDemo;
+GO
+
+-- 1. Đảm bảo category "Truyền hình" tồn tại
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'truyen-hinh')
+BEGIN
+    INSERT INTO Categories (Name, Slug)
+    VALUES (N'Truyền hình', 'truyen-hinh');
+    PRINT 'Đã thêm category Truyền hình.';
+END
+ELSE
+BEGIN
+    PRINT 'Category Truyền hình đã tồn tại.';
+END
+GO
+
+-- 2. Insert các chương trình Truyền hình (không dùng biến @TVCategoryId)
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT 
+    N'Tiến Về Phía Trước', 
+    '/images/posters/tien-ve-phia-truoc.jpg', 
+    'LIVE - 10:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Tiến Về Phía Trước')
+
+UNION ALL
+SELECT 
+    N'Golden State Warriors - Dallas Mavericks', 
+    '/images/posters/gsw-dal.jpg', 
+    'LIVE', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Golden State Warriors - Dallas Mavericks')
+
+UNION ALL
+SELECT 
+    N'Cô Dâu Của Thần Rắn', 
+    '/images/posters/co-dau-than-ran.jpg', 
+    '10:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Cô Dâu Của Thần Rắn')
+
+UNION ALL
+SELECT 
+    N'Vòng Xoáy Tình Thù', 
+    '/images/posters/vong-xoay-tinh-thu.jpg', 
+    '10:31', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Vòng Xoáy Tình Thù')
+
+UNION ALL
+SELECT 
+    N'Chạm Tay Vào Nỗi Nhớ', 
+    '/images/posters/cham-tay-vao-noi-nho.jpg', 
+    '11:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Chạm Tay Vào Nỗi Nhớ')
+
+UNION ALL
+SELECT 
+    N'7 Lá Bài', 
+    '/images/posters/7-la-bai.jpg', 
+    '11:32', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'7 Lá Bài')
+
+UNION ALL
+SELECT 
+    N'Món Quà Của Cha', 
+    '/images/posters/mon-qua-cua-cha.jpg', 
+    '11:37', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Món Quà Của Cha')
+
+UNION ALL
+SELECT 
+    N'Lỡ Hẹn Với Ngày Xanh', 
+    '/images/posters/lo-hen-voi-ngay-xanh.jpg', 
+    '12:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Lỡ Hẹn Với Ngày Xanh')
+
+UNION ALL
+SELECT 
+    N'Ấm Áp Và Ngọt Ngào', 
+    '/images/posters/am-ap-va-ngot-ngao.jpg', 
+    '12:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Ấm Áp Và Ngọt Ngào')
+
+UNION ALL
+SELECT 
+    N'Chung Quỳ Bắt Yêu', 
+    '/images/posters/chung-quy-bat-yeu.jpg', 
+    '12:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Chung Quỳ Bắt Yêu')
+
+UNION ALL
+SELECT 
+    N'Nàng Dâu Bất Đắc Dĩ', 
+    '/images/posters/nang-dau-bat-dac-di.jpg', 
+    '12:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Nàng Dâu Bất Đắc Dĩ')
+
+UNION ALL
+SELECT 
+    N'Ải Trần Gian', 
+    '/images/posters/ai-tran-gian.jpg', 
+    '12:05', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Ải Trần Gian')
+
+UNION ALL
+SELECT 
+    N'Trường Tương Tư', 
+    '/images/posters/truong-tuong-tu.jpg', 
+    '12:05', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Trường Tương Tư')
+
+UNION ALL
+SELECT 
+    N'Cửa Hàng Tạp Hóa', 
+    '/images/posters/cua-hang-tap-hoa.jpg', 
+    '12:15', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Cửa Hàng Tạp Hóa')
+
+UNION ALL
+SELECT 
+    N'Vòng Xoáy Tình Yêu', 
+    '/images/posters/vong-xoay-tinh-yeu.jpg', 
+    '13:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Vòng Xoáy Tình Yêu')
+
+UNION ALL
+SELECT 
+    N'Người Tình Bố Già', 
+    '/images/posters/nguoi-tinh-bo-gia.jpg', 
+    '13:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Người Tình Bố Già')
+
+UNION ALL
+SELECT 
+    N'Chuyện Của Trái Tim', 
+    '/images/posters/chuyen-cua-trai-tim.jpg', 
+    '13:05', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Chuyện Của Trái Tim')
+
+UNION ALL
+SELECT 
+    N'Khách Sạn 5 Sao', 
+    '/images/posters/khach-san-5-sao.jpg', 
+    '13:50', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Khách Sạn 5 Sao')
+
+UNION ALL
+SELECT 
+    N'Nữ Luật Sư', 
+    '/images/posters/nu-luat-su.jpg', 
+    '14:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Nữ Luật Sư')
+
+UNION ALL
+SELECT 
+    N'Kế Hoạch Hoàn Hảo', 
+    '/images/posters/ke-hoach-hoan-hao.jpg', 
+    '15:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Kế Hoạch Hoàn Hảo')
+
+UNION ALL
+SELECT 
+    N'Nắng Khuya', 
+    '/images/posters/nang-khuya.jpg', 
+    '16:00', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Nắng Khuya')
+
+UNION ALL
+SELECT 
+    N'Chúng Ta Phải Hạnh Phúc', 
+    '/images/posters/chung-ta-phai-hanh-phuc.jpg', 
+    '16:01', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Chúng Ta Phải Hạnh Phúc')
+
+UNION ALL
+SELECT 
+    N'Gia Đình Mình Vui Bất Thình Lình', 
+    '/images/posters/gia-dinh-minh-vui-bat-thinh-linh.jpg', 
+    '16:12', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Gia Đình Mình Vui Bất Thình Lình')
+
+UNION ALL
+SELECT 
+    N'Trường An Tam Quái Thám', 
+    '/images/posters/truong-an-tam-quai-tham.jpg', 
+    '16:45', 
+    Id, 0, 0, 1, GETDATE()
+FROM Categories 
+WHERE Slug = 'truyen-hinh'
+AND NOT EXISTS (SELECT 1 FROM Movies WHERE Title = N'Trường An Tam Quái Thám');
+GO
+
+-- 4. Kiểm tra kết quả
+SELECT 
+    m.Id, 
+    m.Title, 
+    m.Description AS TimeOrStatus, 
+    c.Name AS CategoryName
+FROM Movies m
+INNER JOIN Categories c ON m.CategoryId = c.Id
+WHERE c.Slug = 'truyen-hinh'
+ORDER BY m.Title;
+GO
+
+-- 5. Thêm các Category cho tab Truyền hình (Kênh)
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'kenh-co-ban')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Kênh cơ bản', 'kenh-co-ban');
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'tat-ca-cac-kenh')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Tất cả các kênh', 'tat-ca-cac-kenh');
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'kenh-dia-phuong')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Kênh địa phương', 'kenh-dia-phuong');
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'kenh-quoc-te')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Kênh quốc tế', 'kenh-quoc-te');
+GO
+
+-- 6. Insert Kênh cơ bản (Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'FPT Play', '/images/posters/fpt-play.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'VTV1 HD', '/images/posters/vtv1-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'VTV2 HD', '/images/posters/vtv2-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'VTV3 HD', '/images/posters/vtv3-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'VTV4 HD', '/images/posters/vtv4-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'VTV5 HD', '/images/posters/vtv5-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'HTV7 HD', '/images/posters/htv7-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'HTV9 HD', '/images/posters/htv9-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'THVL1 HD', '/images/posters/thvl1-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban' UNION ALL
+SELECT N'THVL2 HD', '/images/posters/thvl2-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-co-ban';
+GO
+
+-- 7. Insert Kênh địa phương (Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'ATV2', '/images/posters/atv2.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-dia-phuong' UNION ALL
+SELECT N'ATV3', '/images/posters/atv3.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-dia-phuong' UNION ALL
+SELECT N'BTV', '/images/posters/btv.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-dia-phuong' UNION ALL
+SELECT N'GTV', '/images/posters/gtv.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-dia-phuong' UNION ALL
+SELECT N'CTV HD', '/images/posters/ctv-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-dia-phuong' UNION ALL
+SELECT N'DRT', '/images/posters/drt.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-dia-phuong';
+GO
+
+-- 8. Insert Kênh quốc tế (Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Da Vinci', '/images/posters/da-vinci.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'afn HD', '/images/posters/afn-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'Outdoor Channel', '/images/posters/outdoor.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'FRANCE 24', '/images/posters/france-24.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'arirang', '/images/posters/arirang.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'NHK WORLD JAPAN', '/images/posters/nhk.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'CNA', '/images/posters/cna.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'KBS WORLD', '/images/posters/kbs.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'CNBC', '/images/posters/cnbc.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te' UNION ALL
+SELECT N'DW', '/images/posters/dw.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'kenh-quoc-te';
+GO
+
+-- 9. Insert Tất cả các kênh (minh họa)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'FPT Play', '/images/posters/fpt-play.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tat-ca-cac-kenh' UNION ALL
+SELECT N'VTV1 HD', '/images/posters/vtv1-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tat-ca-cac-kenh' UNION ALL
+SELECT N'VTV2 HD', '/images/posters/vtv2-hd.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tat-ca-cac-kenh' UNION ALL
+SELECT N'ATV2', '/images/posters/atv2.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tat-ca-cac-kenh' UNION ALL
+SELECT N'Da Vinci', '/images/posters/da-vinci.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tat-ca-cac-kenh';
+GO
+
+-- 10. Thêm các Category cho tab Phim Bộ
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'phim-bo-xu-huong')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Top 10 phim bộ xu hướng', 'phim-bo-xu-huong');
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'danh-rieng-phim-bo')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Dành riêng cho bạn (Phim bộ)', 'danh-rieng-phim-bo');
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'tvb')
+    INSERT INTO Categories (Name, Slug) VALUES (N'TVB chất như nước cất', 'tvb');
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'phim-bo-vn')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Phim bộ Việt Nam đặc sắc', 'phim-bo-vn');
+GO
+
+-- 11. Insert Top 10 phim bộ xu hướng (Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Kamen Rider Zezts', '/images/posters/kamen-rider.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-xu-huong' UNION ALL
+SELECT N'Tân Tuyệt Đại Song Kiều', '/images/posters/tan-tuyet-dai.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-xu-huong' UNION ALL
+SELECT N'Luật Sư Bóng Ma', '/images/posters/luat-su.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-xu-huong' UNION ALL
+SELECT N'Cực Hạn', '/images/posters/cuc-han.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-xu-huong' UNION ALL
+SELECT N'Còn Ra Thể Thống Gì Nữa', '/images/posters/con-ra-the.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-xu-huong' UNION ALL
+SELECT N'Hán Sở Tranh Hùng', '/images/posters/han-so.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-xu-huong';
+GO
+
+-- 12. Insert Dành riêng cho bạn (Phim bộ - Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Luật Sư Bóng Ma', '/images/posters/luat-su-ls.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Cực Hạn', '/images/posters/cuc-han-ls.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Còn Ra Thể Thống Gì Nữa', '/images/posters/con-ra-the-ls.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Hương Vị Tình Nhân', '/images/posters/huong-vi.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Điều Còn Dang Dở', '/images/posters/dieu-con.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Hậu Cung Chân Hoàn Truyện', '/images/posters/hau-cung.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo';
+GO
+
+-- 13. Insert TVB chất như nước cất (Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Hồ Sơ Trinh Sát II', '/images/posters/ho-so-trinh-sat.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tvb' UNION ALL
+SELECT N'Nghịch Thiên Kỳ Án', '/images/posters/nghich-thien.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tvb' UNION ALL
+SELECT N'Sóng Gió Gia Tộc III', '/images/posters/song-gio.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tvb' UNION ALL
+SELECT N'Mái Ấm Gia Đình (Phần 4)', '/images/posters/mai-am.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tvb' UNION ALL
+SELECT N'Hộ Vệ Thầm Lặng', '/images/posters/ho-ve.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tvb' UNION ALL
+SELECT N'Quyền Vương', '/images/posters/quyen-vuong.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'tvb';
+GO
+
+-- 14. Insert Phim bộ Việt Nam đặc sắc (Mẫu)
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Tình Thắm Duyên Xuân', '/images/posters/tinh-tham.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn' UNION ALL
+SELECT N'Những Ngôi Nhà Trong Hẻm', '/images/posters/nhung-ngoi-nha.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn' UNION ALL
+SELECT N'Hạnh Phúc Bị Đánh Cắp', '/images/posters/hanh-phuc.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn' UNION ALL
+SELECT N'Khép Lại Quá Khứ', '/images/posters/khep-lai.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn' UNION ALL
+SELECT N'Nhà Có Rồng Có Cọp', '/images/posters/nha-co.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn' UNION ALL
+SELECT N'Tam Thái Tử', '/images/posters/tam-thai-tu.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn';
 GO
