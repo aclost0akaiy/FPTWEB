@@ -49,5 +49,21 @@ namespace FPTPlay.Controllers
             // Quay lại trang thư viện để xem
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public IActionResult Remove(int id)
+        {
+            var sessionIds = HttpContext.Session.GetString("FavoriteMovieIds") ?? "[]";
+            var ids = JsonSerializer.Deserialize<List<int>>(sessionIds) ?? new List<int>();
+
+            if (ids.Contains(id))
+            {
+                ids.Remove(id);
+                HttpContext.Session.SetString("FavoriteMovieIds", JsonSerializer.Serialize(ids));
+                return Json(new { success = true });
+            }
+
+            return Json(new { success = false, message = "Không tìm thấy phim trong danh sách yêu thích" });
+        }
     }
 }

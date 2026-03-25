@@ -244,10 +244,15 @@
                 <div class="movie-grid">
                     @foreach (var movie in Model)
                     {
-                        <a href="/Movies/Details/@movie.Id" class="movie-card">
-                            <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
-                            <div class="title-overlay">@movie.Title</div>
-                        </a>
+                        <div class="movie-item-wrapper" id="favorite-item-@movie.Id" style="display: flex; flex-direction: column; gap: 8px;">
+                            <a href="/Movies/Details/@movie.Id" class="movie-card">
+                                <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                                <div class="title-overlay">@movie.Title</div>
+                            </a>
+                            <button class="btn btn-outline-danger btn-sm remove-favorite-btn" data-movie-id="@movie.Id" style="border-radius: 8px;">
+                                <i class="fas fa-trash-alt"></i> Bỏ yêu thích
+                            </button>
+                        </div>
                     }
                 </div>
             }
@@ -274,6 +279,42 @@
                 }
             });
         }
+
+        // Gắn sự kiện cho các nút bỏ yêu thích
+        const removeButtons = document.querySelectorAll('.remove-favorite-btn');
+        removeButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const movieId = this.getAttribute('data-movie-id');
+                if (confirm('Bạn có chắc muốn bỏ yêu thích phim này?')) {
+                    fetch('/Favorites/Remove/' + movieId, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const item = document.getElementById('favorite-item-' + movieId);
+                            if (item) item.remove();
+                            
+                            // Nếu không còn phim nào, reload để hiện trạng thái trống
+                            const grid = document.querySelector('.movie-grid');
+                            if (grid && grid.children.length === 0) {
+                                location.reload();
+                            }
+                        } else {
+                            alert(data.message || 'Có lỗi xảy ra!');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Có lỗi xảy ra!');
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
