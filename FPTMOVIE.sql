@@ -632,3 +632,24 @@ SELECT N'Khép Lại Quá Khứ', '/images/posters/khep-lai.jpg', Id, 0, 0, 1, G
 SELECT N'Nhà Có Rồng Có Cọp', '/images/posters/nha-co.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn' UNION ALL
 SELECT N'Tam Thái Tử', '/images/posters/tam-thai-tu.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn';
 GO
+
+
+--admin--
+
+USE FPTPlayDemo;
+GO
+
+CREATE TABLE Users (
+    Id INT IDENTITY PRIMARY KEY,
+    Email NVARCHAR(100),
+    Password NVARCHAR(100),
+    Role NVARCHAR(20) -- 'Admin' hoặc 'Customer'
+)
+GO
+
+-- Dữ liệu test
+INSERT INTO Users (Email, Password, Role)
+VALUES 
+('admin@gmail.com', '123', 'Admin'),
+('user@gmail.com', '123', 'Customer')
+GO
