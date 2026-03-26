@@ -1,6 +1,6 @@
 @model HomeViewModel
 @using FPTPlay.ViewModels
-
+@using Microsoft.AspNetCore.Http
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -297,7 +297,14 @@
                     <div class="user-dropdown">
                         <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
                         <div id="userDropdownContent" class="user-dropdown-content">
-                            <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            @if (Context.Session.GetString("UserEmail") != null)
+                            {
+                                <a href="/Account/Logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                            }
+                            else
+                            {
+                                <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            }
                             <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
                         </div>
                     </div>

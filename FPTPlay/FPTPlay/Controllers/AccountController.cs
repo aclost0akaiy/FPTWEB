@@ -42,5 +42,12 @@ namespace FPTPlay.Controllers
             ViewBag.Error = "Email hoặc mật khẩu không chính xác.";
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

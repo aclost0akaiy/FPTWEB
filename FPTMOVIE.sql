@@ -605,11 +605,11 @@ GO
 
 -- 12. Insert Dành riêng cho bạn (Phim bộ - Mẫu)
 INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
-SELECT N'Luật Sư Bóng Ma', '/images/posters/luat-su-ls.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
-SELECT N'Cực Hạn', '/images/posters/cuc-han-ls.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
-SELECT N'Còn Ra Thể Thống Gì Nữa', '/images/posters/con-ra-the-ls.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Luật Sư Bóng Ma', '/images/posters/luat-bong-ma2.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Cực Hạn', '/images/posters/cuc-han2.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Còn Ra Thể Thống Gì Nữa', '/images/posters/con-ra-the-thong-gi-nua2.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
 SELECT N'Hương Vị Tình Nhân', '/images/posters/huong-vi.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
-SELECT N'Điều Còn Dang Dở', '/images/posters/dieu-con.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
+SELECT N'Điều Còn Dang Dở', '/images/posters/dieu-con-dang-do2.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo' UNION ALL
 SELECT N'Hậu Cung Chân Hoàn Truyện', '/images/posters/hau-cung.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'danh-rieng-phim-bo';
 GO
 
