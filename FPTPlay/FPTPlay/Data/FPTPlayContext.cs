@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using FPTPlay.Models;
 
 namespace FPTPlay.Data
@@ -9,5 +9,6 @@ namespace FPTPlay.Data
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

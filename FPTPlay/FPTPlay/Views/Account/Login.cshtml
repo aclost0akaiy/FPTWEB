@@ -201,9 +201,13 @@
         <div class="login-box">
             <div class="login-title">Đăng nhập hoặc đăng ký</div>
             
-            <form action="/" method="post">
-                <input type="email" class="form-control-custom" placeholder="Email" required />
-                <input type="password" class="form-control-custom" placeholder="Mật khẩu" required style="margin-bottom: 25px;" />
+            <form action="/Account/Login" method="post">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger" style="border-radius: 20px; font-size: 0.9rem; padding: 10px;">@ViewBag.Error</div>
+                }
+                <input type="email" name="email" class="form-control-custom" placeholder="Email" required />
+                <input type="password" name="password" class="form-control-custom" placeholder="Mật khẩu" required style="margin-bottom: 25px;" />
                 
                 <button type="submit" class="btn-continue">Đăng nhập</button>
                 
