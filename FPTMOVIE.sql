@@ -633,6 +633,20 @@ SELECT N'Nhà Có Rồng Có Cọp', '/images/posters/nha-co.jpg', Id, 0, 0, 1, 
 SELECT N'Tam Thái Tử', '/images/posters/tam-thai-tu.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-vn';
 GO
 
+-- 15. Thêm Data Phim Bộ Thể Loại
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'phim-bo-the-loai')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Phim bộ - Thể loại', 'phim-bo-the-loai');
+GO
+
+INSERT INTO Movies (Title, PosterUrl, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Hoa Ngữ', '/images/posters/hoa-ngu.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-the-loai' UNION ALL
+SELECT N'Hàn Quốc', '/images/posters/hoan-quoc.jpg', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-the-loai' UNION ALL
+SELECT N'Việt Nam', 'https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-the-loai' UNION ALL
+SELECT N'Âu Mỹ', 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=400', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-the-loai' UNION ALL
+SELECT N'Thái Lan', 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=400', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-the-loai' UNION ALL
+SELECT N'Quốc gia khác', 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-bo-the-loai';
+GO
+
 
 --admin--
 
@@ -652,4 +666,124 @@ INSERT INTO Users (Email, Password, Role)
 VALUES 
 ('admin@gmail.com', '123', 'Admin'),
 ('user@gmail.com', '123', 'Customer')
+GO
+
+-- Thêm Data Thiếu nhi
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'thieu-nhi-xu-huong')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Top 10 thiếu nhi xu hướng', 'thieu-nhi-xu-huong');
+
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'dac-sac-thang-3')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Đặc sắc tháng 3', 'dac-sac-thang-3');
+GO
+
+-- Insert Movies cho "Top 10 thiếu nhi xu hướng"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Wolfoo (Phần 26)', '/images/posters/wolfoo-26.jpg', N'Wolfoo là chú sói nhỏ đáng yêu luôn mang đến tiếng cười cho mọi người.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'thieu-nhi-xu-huong' UNION ALL
+SELECT N'Cocomelon - Giai Điệu Hạnh Phúc (Phần 5)', '/images/posters/cocomelon-5.jpg', N'Cùng bé học bằng những bài hát vui nhộn.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'thieu-nhi-xu-huong' UNION ALL
+SELECT N'Ấu Trùng Tinh Nghịch (Phần 3)', '/images/posters/au-trung-3.jpg', N'Những câu chuyện ngắn không có lời thoại của hai chú ấu trùng tinh nghịch lúc thì ngây thơ ngốc nghếch, lúc lại ranh mãnh tinh quái luôn tràn ngập tiếng cười.', Id, 0, 0, 104, GETDATE() FROM Categories WHERE Slug = 'thieu-nhi-xu-huong' UNION ALL
+SELECT N'Ấu Trùng Tinh Nghịch (Phần 1)', '/images/posters/au-trung-1.jpg', N'Phần 1 đầy thú vị của những chú ấu trùng.', Id, 0, 0, 50, GETDATE() FROM Categories WHERE Slug = 'thieu-nhi-xu-huong' UNION ALL
+SELECT N'Wolfoo (Phần 27)', '/images/posters/wolfoo-27.jpg', N'Cuộc hành trình mới của Wolfoo.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'thieu-nhi-xu-huong' UNION ALL
+SELECT N'Cocomelon - Thế Giới Âm Nhạc (Phần 1)', '/images/posters/cocomelon-1.jpg', N'Khám phá thế giới âm nhạc.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'thieu-nhi-xu-huong';
+GO
+
+-- Insert Movies cho "Đặc sắc tháng 3"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Angry Birds: Vũ Trụ Sáng Tạo', '/images/posters/angry-birds-2.jpg', N'Chim giận dữ với sáng tạo mới.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'dac-sac-thang-3' UNION ALL
+SELECT N'Nhân Tài Đất Việt', '/images/posters/nhan-tai.jpg', N'Câu chuyện cổ tích dân gian Việt Nam đầy ý nghĩa.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'dac-sac-thang-3' UNION ALL
+SELECT N'Wolfoo (Phần 3)', '/images/posters/wolfoo-3.jpg', N'Wolfoo cùng bạn bè khám phá thế giới xung quanh.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'dac-sac-thang-3' UNION ALL
+SELECT N'Quái Vật Đáng Yêu', '/images/posters/quai-vat.jpg', N'Những con quái vật dễ thương như thế nào?', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'dac-sac-thang-3' UNION ALL
+SELECT N'Ốc Đảo Của Oscar', '/images/posters/oc-dao.jpg', N'Một ốc đảo vui nhộn.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'dac-sac-thang-3' UNION ALL
+SELECT N'Angry Birds: Chú Chim Giận Dữ', '/images/posters/angry-birds.jpg', N'Bộ phim truyền hình đình đám.', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'dac-sac-thang-3';
+GO
+
+-- Thêm Data Ngoại hạng Anh
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'nha-highlights')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Highlights', 'nha-highlights');
+
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'nha-tran-dau')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Trận đấu', 'nha-tran-dau');
+
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'nha-tap-chi')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Tạp chí', 'nha-tap-chi');
+GO
+
+-- Insert Movies cho "Highlights"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Aston Villa - West Ham United Highlights', '/images/posters/avl-whu-hl.jpg', N'Highlights vòng 31', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-highlights' UNION ALL
+SELECT N'Aston Villa - West Ham United: Bình luận tương tác Highlights', '/images/posters/avl-whu-hl-bltt.jpg', N'Highlights vòng 31', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-highlights' UNION ALL
+SELECT N'Tottenham Hotspur - Nottingham Forest Highlights', '/images/posters/tot-nfo.jpg', N'Highlights vòng 31', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-highlights' UNION ALL
+SELECT N'Newcastle United - Sunderland: Data Zone Highlights', '/images/posters/new-sun-data.jpg', N'Highlights vòng 31', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-highlights' UNION ALL
+SELECT N'Newcastle United - Sunderland Highlights', '/images/posters/new-sun.jpg', N'Highlights vòng 31', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-highlights' UNION ALL
+SELECT N'Leeds United - Brentford Highlights', '/images/posters/lee-bre.jpg', N'Highlights vòng 31', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-highlights';
+GO
+
+-- Insert Movies cho "Trận đấu"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Aston Villa - West Ham United: Bình luận tương tác: Phát lại', '/images/posters/avl-whu.jpg', N'Chủ Nhật lúc 16:00', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tran-dau' UNION ALL
+SELECT N'Everton - Chelsea: Fan cứng: Phát lại', '/images/posters/eve-che-fan.jpg', N'Chủ Nhật lúc 08:30', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tran-dau' UNION ALL
+SELECT N'Everton - Chelsea: Phát lại', '/images/posters/eve-che.jpg', N'Còn 51 phút nữa', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tran-dau' UNION ALL
+SELECT N'Newcastle United - Sunderland Data Zone: Phát lại', '/images/posters/new-sun-full.jpg', N'Đang phát', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tran-dau' UNION ALL
+SELECT N'Aston Villa - West Ham United: Bình luận tương tác', '/images/posters/avl-whu-xem-lai(1).jpg', N'XEM LẠI TRẬN ĐẤU', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tran-dau' UNION ALL
+SELECT N'Aston Villa - West Ham United', '/images/posters/avl-whu-xem-lai(2).jpg', N'XEM LẠI TRẬN ĐẤU', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tran-dau';
+GO
+
+-- Insert Movies cho "Tạp chí"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Hồi ức Ngoại hạng: Jimmy Floyd Hasselbaink', '/images/posters/hoi-uc.jpg', N'Tạp chí bóng đá', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tap-chi' UNION ALL
+SELECT N'Bàn thắng Ngoại hạng Anh - Vòng 31', '/images/posters/ban-thang.jpg', N'Tạp chí bóng đá', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tap-chi' UNION ALL
+SELECT N'Thứ 2 Ngoại hạng vòng 31', '/images/posters/thu-2.jpg', N'Tạp chí bóng đá', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tap-chi' UNION ALL
+SELECT N'Tổng hợp Ngoại hạng Anh sau vòng 31', '/images/posters/tong-hop-sau.jpg', N'Tạp chí bóng đá', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tap-chi' UNION ALL
+SELECT N'Tổng hợp Ngoại hạng Anh trước vòng 31', '/images/posters/tong-hop-truoc.jpg', N'Tạp chí bóng đá', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tap-chi' UNION ALL
+SELECT N'Khai cuộc Ngoại hạng vòng 31', '/images/posters/khai-cuoc.jpg', N'Tạp chí bóng đá', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'nha-tap-chi';
+GO
+
+-- Thêm Data Phim lẻ
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'phim-le-tuyen-tap')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Tuyển tập của những tuyển tập', 'phim-le-tuyen-tap');
+
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'phim-le-thuyet-minh')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Phim lẻ có Thuyết minh - Lồng tiếng', 'phim-le-thuyet-minh');
+
+IF NOT EXISTS (SELECT 1 FROM Categories WHERE Slug = 'phim-le-hollywood')
+    INSERT INTO Categories (Name, Slug) VALUES (N'Đại lộ danh vọng Hollywood', 'phim-le-hollywood');
+GO
+
+-- Insert Movies cho "Tuyển tập của những tuyển tập"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Tuyển Tập Sự Nổi Loạn Hoàn Hảo', '/images/posters/tuyen-tap-noi-loan.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-tuyen-tap' UNION ALL
+SELECT N'Tuyển Tập Bánh Mỹ', '/images/posters/tuyen-tap-banh-my.jpg', N'4 videos', Id, 0, 0, 4, GETDATE() FROM Categories WHERE Slug = 'phim-le-tuyen-tap' UNION ALL
+SELECT N'Tuyển Tập Bí Kíp Luyện Rồng', '/images/posters/tuyen-tap-bi-kip.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-tuyen-tap' UNION ALL
+SELECT N'Tuyển Tập Kung Fu Panda', '/images/posters/tuyen-tap-kung-fu.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-tuyen-tap' UNION ALL
+SELECT N'Tuyển Tập Dan Brown', '/images/posters/tuyen-tap-dan-brown.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-tuyen-tap' UNION ALL
+SELECT N'Tuyển Tập Jumanji', '/images/posters/tuyen-tap-jumanji.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-tuyen-tap';
+GO
+
+-- Insert Movies cho "Phim lẻ có Thuyết minh - Lồng tiếng"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Những Cô Gái Khi Yêu', '/images/posters/nhung-co-gai-khi-yeu.jpg', N'', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-le-thuyet-minh' UNION ALL
+SELECT N'Đơn Thân Nam Nữ', '/images/posters/don-than-nam-nu.jpg', N'', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-le-thuyet-minh' UNION ALL
+SELECT N'Hổ Cánh Cụt Và Biệt Đội Rừng Xanh 2', '/images/posters/ho-canh-cut.jpg', N'', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-le-thuyet-minh' UNION ALL
+SELECT N'Giáng Sinh Ở Alaska', '/images/posters/giang-sinh-alaska.jpg', N'', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-le-thuyet-minh' UNION ALL
+SELECT N'Quỷ Lùn Tinh Nghịch', '/images/posters/quy-lun.jpg', N'', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-le-thuyet-minh' UNION ALL
+SELECT N'Hiệp Sĩ Mặt Nạ: Hỗn Chiến Thời Gian', '/images/posters/hiep-si-mat-na.jpg', N'', Id, 0, 0, 1, GETDATE() FROM Categories WHERE Slug = 'phim-le-thuyet-minh';
+GO
+
+-- Insert Movies cho "Đại lộ danh vọng Hollywood"
+INSERT INTO Movies (Title, PosterUrl, Description, CategoryId, IsNewRelease, IsPersonalized, VideoCount, CreatedDate)
+SELECT N'Tuyển Tập Jim Carrey', '/images/posters/jim-carrey.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-hollywood' UNION ALL
+SELECT N'Tuyển Tập Matt Damon', '/images/posters/matt-damon.jpg', N'6 videos', Id, 0, 0, 6, GETDATE() FROM Categories WHERE Slug = 'phim-le-hollywood' UNION ALL
+SELECT N'Tuyển Tập Vin Diesel', '/images/posters/vin-diesel.jpg', N'10 videos', Id, 0, 0, 10, GETDATE() FROM Categories WHERE Slug = 'phim-le-hollywood' UNION ALL
+SELECT N'Tuyển Tập Brad Pitt', '/images/posters/brad-pitt.jpg', N'9 videos', Id, 0, 0, 9, GETDATE() FROM Categories WHERE Slug = 'phim-le-hollywood' UNION ALL
+SELECT N'Tuyển Tập Chiwetel Ejiofor', '/images/posters/chiwetel.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-hollywood' UNION ALL
+SELECT N'Tuyển Tập Kate Beckinsale', '/images/posters/kate-beckinsale.jpg', N'3 videos', Id, 0, 0, 3, GETDATE() FROM Categories WHERE Slug = 'phim-le-hollywood';
+GO
+
+DELETE FROM Users;
+GO
+
+-- Thêm lại dữ liệu
+INSERT INTO Users (Email, Password, Role)
+VALUES 
+('admin@gmail.com', '123', 'Admin'),
+('user@gmail.com', '123', 'Customer');
 GO

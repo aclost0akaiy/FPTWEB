@@ -1,0 +1,41 @@
+@model FPTPlay.Models.User
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Tài Khoản";
+    Layout = "_AdminLayout";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card bg-dark border-warning">
+            <div class="card-header border-warning text-warning">
+                <h5 class="mb-0">Chỉnh sửa thông tin: @Model.Email</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Role" /> <!-- Chỉ cho sửa User role -->
+                    
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label text-white">Email / Tài khoản nhận diện</label>
+                        <input asp-for="Email" type="email" class="form-control bg-dark text-white border-secondary" required />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label text-white">Sửa mật khẩu mới (Nếu có)</label>
+                        <input asp-for="Password" type="text" class="form-control bg-dark text-white border-secondary" required />
+                    </div>
+                    
+                    <div class="alert alert-info bg-dark border-info text-info mt-3">
+                        <strong>Lưu ý quan trọng:</strong> Bạn đang thay đổi thông tin người dùng được lưu trong SQL Server.
+                        Tài khoản này có vai trò mặc định là <b>User</b>.
+                    </div>
+
+                    <div class="mt-4 pt-3 border-top border-secondary">
+                        <button type="submit" class="btn btn-warning"><i class="fas fa-save"></i> Cập nhật User</button>
+                        <a asp-action="Index" class="btn btn-outline-light ms-2">Hủy bỏ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

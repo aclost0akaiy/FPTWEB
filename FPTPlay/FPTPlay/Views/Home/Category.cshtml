@@ -1,4 +1,5 @@
 @model List<FPTPlay.Models.Movie>
+@using Microsoft.AspNetCore.Http
 
 @{
     Layout = null;
@@ -523,6 +524,80 @@
             align-items: center;
             gap: 4px;
         }
+
+        /* Kids Popup Styles */
+        .kids-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 360px;
+            background: #181818;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            z-index: 1060;
+            overflow: hidden;
+            color: white;
+            text-align: left;
+            cursor: default;
+        }
+        .kids-popup.active {
+            display: block;
+        }
+        .kids-popup img.kids-popup-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #333;
+        }
+        .kids-popup-body {
+            padding: 20px;
+        }
+        .kids-popup-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .kids-popup-btn {
+            background: #e50914;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .kids-popup-btn:hover { background: #c00; color: white; }
+        .kids-popup-meta {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .kids-popup-desc {
+            font-size: 0.9rem;
+            color: #ddd;
+            line-height: 1.5;
+        }
+        .overlay-bg {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(2px);
+            z-index: 1050;
+        }
+        .overlay-bg.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -544,8 +619,8 @@
                     <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi" style="color: rgba(255,255,255,0.7);">Thiếu nhi</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh" style="color: rgba(255,255,255,0.7);">Ngoại hạng Anh</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: rgba(255,255,255,0.7);">Xem thêm</a>
-                        <ul class="dropdown-menu bg-dark border-0">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgba(255,255,255,0.7);">Xem thêm</a>
+                        <ul class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
                             <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
                         </ul>
@@ -559,12 +634,20 @@
                     <div class="user-dropdown">
                         <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
                         <div id="userDropdownContent" class="user-dropdown-content">
-                            <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
-                            <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                            @if (Context.Session.GetString("UserEmail") != null)
+                            {
+                                <a href="/Account/Logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                                <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                                <a href="/Home/Profile"><i class="fas fa-info-circle"></i> Thông tin tài khoản</a>
+                            }
+                            else
+                            {
+                                <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            }
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn-danger btn-sm px-3">Mua gói</a>
+                    <a href="/Home/MuaGoi" class="btn btn-danger btn-sm px-3">Mua gói</a>
                 </div>
             </div>
         </div>
@@ -597,224 +680,456 @@
 
             @if (ViewBag.CategoryName == "Phim bộ")
             {
+                var top10PhimBoHero = ViewBag.PhimBoXuHuong as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                var phimBoHero = top10PhimBoHero.FirstOrDefault();
+
+                if (phimBoHero != null) {
                 <!-- Hero Banner -->
                 <div class="hero-banner" style="background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
                     <div class="hero-overlay">
                         <div class="hero-content">
-                            <h1 style="font-size: 3.5rem; font-weight: 900; font-family: 'Arial Black', IMPACT, sans-serif; text-transform: uppercase; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1;">ASH VÀ MA CÂY<br><span style="font-size: 2rem;">PHẦN 1</span></h1>
+                            <h1 style="font-size: 3.5rem; font-weight: 900; font-family: 'Arial Black', IMPACT, sans-serif; text-transform: uppercase; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1;">@phimBoHero.Title</h1>
                             <div class="meta-tags">
                                 <span class="rating" style="color: #ffc107; font-weight: bold;"><i class="fas fa-star" style="color: #ff7b00;"></i> 5.0 (1)</span>
                                 <span class="meta-tag">Đa ngôn ngữ</span>
                                 <span class="meta-tag" style="border: 1px solid rgba(255,255,255,0.4); background: transparent;">FULLHD</span>
                             </div>
                             <div class="movie-info-text mb-4" style="font-size: 1.1rem; font-weight: 500;">
-                                2015 • T18 • 10/10 tập • Mỹ
+                                2026 • T18 • @phimBoHero.VideoCount/@phimBoHero.VideoCount tập • Việt Nam
                             </div>
                             <div class="d-flex gap-3">
-                                <a href="#" class="btn-play-hero"><i class="fas fa-play me-1"></i>Xem ngay</a>
+                                <a href="/Movies/Details/@phimBoHero.Id" class="btn-play-hero"><i class="fas fa-play me-1"></i>Xem ngay</a>
                                 <a href="#" class="btn-icon-circle"><i class="fas fa-heart"></i></a>
                                 <a href="#" class="btn-icon-circle"><i class="fas fa-share-alt"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                }
 
                 <!-- Top 10 phim bộ xu hướng -->
                 <h4 class="section-title">Top 10 phim bộ xu hướng</h4>
                 <div class="section-carousel pb-4">
-                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);">
-                        <img src="/images/posters/kamen-rider.jpg" alt="Kamen Rider" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
-                        <div class="top10-number">1</div>
-                        <div class="top10-title" style="background: transparent;">Kamen Rider Zezts</div>
-                    </a>
-                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #11998e 0%, #38ef7d 100%);">
-                        <img src="/images/posters/tan-tuyet-dai.jpg" alt="Tân Tuyệt Đại Song Kiều" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
-                        <div class="top10-number">2</div>
-                        <div class="top10-title" style="background: transparent;">Tân Tuyệt Đại Song Kiều</div>
-                    </a>
-                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);">
-                        <img src="/images/posters/luat-su.jpg" alt="Luật Sư Bóng Ma" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
-                        <div class="top10-number">3</div>
-                        <div class="top10-title" style="background: transparent;">Luật Sư Bóng Ma</div>
-                    </a>
-                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #ff0844 0%, #ffb199 100%);">
-                        <img src="/images/posters/cuc-han.jpg" alt="Cực Hạn" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
-                        <div class="top10-number">4</div>
-                        <div class="top10-title" style="background: transparent;">Cực Hạn</div>
-                    </a>
-                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #a18cd1 0%, #fbc2eb 100%);">
-                        <img src="/images/posters/con-ra-the.jpg" alt="Còn Ra Thế Thống Gì Nữa" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
-                        <div class="top10-number">5</div>
-                        <div class="top10-title" style="background: transparent;">Còn Ra Thế Thống Gì Nữa</div>
-                    </a>
-                    <a href="#" class="top10-card" style="background: linear-gradient(180deg, #f6d365 0%, #fda085 100%);">
-                        <img src="/images/posters/han-so.jpg" alt="Hán Sở Tranh Hùng" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
-                        <div class="top10-number">6</div>
-                        <div class="top10-title" style="background: transparent;">Hán Sở Tranh Hùng</div>
-                    </a>
+                    @{
+                        var top10PhimBo = ViewBag.PhimBoXuHuong as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        int idxPb = 1;
+                        var bgGradientsPb = new string[] {
+                            "linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)",
+                            "linear-gradient(180deg, #11998e 0%, #38ef7d 100%)",
+                            "linear-gradient(180deg, #4facfe 0%, #00f2fe 100%)",
+                            "linear-gradient(180deg, #ff0844 0%, #ffb199 100%)",
+                            "linear-gradient(180deg, #a18cd1 0%, #fbc2eb 100%)",
+                            "linear-gradient(180deg, #f6d365 0%, #fda085 100%)"
+                        };
+                        foreach(var m in top10PhimBo) {
+                            var bg = bgGradientsPb[(idxPb - 1) % bgGradientsPb.Length];
+                            <a href="/Movies/Details/@m.Id" class="top10-card" style="background: @bg;">
+                                <img src="@m.PosterUrl" alt="@m.Title" style="height: 80%; object-fit: cover;" onerror="this.src='/images/default-poster.jpg'">
+                                <div class="top10-number">@idxPb</div>
+                                <div class="top10-title" style="background: transparent;">@m.Title</div>
+                            </a>
+                            idxPb++;
+                        }
+                    }
                 </div>
 
                 <!-- Thể loại -->
                 <h4 class="section-title">Thể loại</h4>
                 <div class="section-carousel">
-                    <a href="#" class="genre-card">
-                        <img src="/images/posters/hoa-ngu.jpg" alt="Hoa Ngữ">
-                        <div class="genre-title">Hoa Ngữ</div>
-                    </a>
-                    <a href="#" class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1534954452178-57bd430be70b?q=80&w=400" alt="Hàn Quốc">
-                        <div class="genre-title">Hàn Quốc</div>
-                    </a>
-                    <a href="#" class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=400" alt="Việt Nam">
-                        <div class="genre-title">Việt Nam</div>
-                    </a>
-                    <a href="#" class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=400" alt="Âu Mỹ">
-                        <div class="genre-title">Âu Mỹ</div>
-                    </a>
-                    <a href="#" class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=400" alt="Thái Lan">
-                        <div class="genre-title">Thái Lan</div>
-                    </a>
-                    <a href="#" class="genre-card">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400" alt="Quốc gia khác">
-                        <div class="genre-title">Quốc gia khác</div>
-                    </a>
+                    @{
+                        var theLoai = ViewBag.PhimBoTheLoai as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in theLoai) {
+                            <a href="/Movies/Details/@m.Id" class="genre-card">
+                                <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                <div class="genre-title">@m.Title</div>
+                            </a>
+                        }
+                    }
                 </div>
 
                 <!-- Dành riêng cho bạn -->
                 <h4 class="section-title mt-4">Dành riêng cho bạn <i class="fas fa-chevron-right ms-2" style="font-size: 1rem; color: #888;"></i></h4>
                 <div class="section-carousel">
-                    <div class="ls-wrapper">
-                        <a href="#" class="ls-card">
-                            <img src="/images/posters/luat-su-ls.jpg" alt="Luật Sư Bóng Ma" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> PHÁT SONG SONG</span>
-                        </a>
-                        <a href="#" class="ls-title fw-bold mt-2">Luật Sư Bóng Ma</a>
-                    </div>
-                    <div class="ls-wrapper">
-                        <a href="#" class="ls-card">
-                            <img src="/images/posters/cuc-han-ls.jpg" alt="Cực Hạn" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> PHÁT SONG SONG</span>
-                        </a>
-                        <a href="#" class="ls-title fw-bold mt-2">Cực Hạn</a>
-                    </div>
-                    <div class="ls-wrapper">
-                        <a href="#" class="ls-card">
-                            <img src="/images/posters/con-ra-the-ls.jpg" alt="Còn Ra Thế Thống Gì Nữa" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> ĐỘC QUYỀN</span>
-                        </a>
-                        <a href="#" class="ls-title fw-bold mt-2">Còn Ra Thể Thống Gì Nữa</a>
-                    </div>
-                    <div class="ls-wrapper">
-                        <a href="#" class="ls-card">
-                            <img src="/images/posters/huong-vi.jpg" alt="Hương Vị Tình Nhân" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> PHÁT SONG SONG</span>
-                        </a>
-                        <a href="#" class="ls-title fw-bold mt-2">Hương Vị Tình Nhân</a>
-                    </div>
-                    <div class="ls-wrapper">
-                        <a href="#" class="ls-card">
-                            <img src="/images/posters/dieu-con.jpg" alt="Điều Còn Dang Dở" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i> MÁY CHIẾU</span>
-                        </a>
-                        <a href="#" class="ls-title fw-bold mt-2">Điều Còn Dang Dở</a>
-                    </div>
-                    <div class="ls-wrapper">
-                        <a href="#" class="ls-card">
-                            <img src="/images/posters/hau-cung.jpg" alt="Hậu Cung Chân Hoàn Truyện" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="ls-title fw-bold mt-2">Hậu Cung Chân Hoàn Truyện</a>
-                    </div>
+                    @{
+                        var danhRieng = ViewBag.DanhRieng as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in danhRieng) {
+                            <div class="ls-wrapper">
+                                <a href="/Movies/Details/@m.Id" class="ls-card">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                    @if (!string.IsNullOrEmpty(m.Description))
+                                    {
+                                        <span class="vip-badge"><i class="fas fa-gem text-warning"></i> @m.Description</span>
+                                    }
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2">@m.Title</a>
+                            </div>
+                        }
+                    }
                 </div>
 
                 <!-- TVB chất như nước cất -->
                 <h4 class="section-title mt-4">TVB chất như nước cất <button class="btn btn-dark rounded-circle ms-2 px-2 py-1"><i class="fas fa-chevron-right text-white"></i></button></h4>
                 <div class="section-carousel">
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/ho-so-trinh-sat.jpg" alt="Hồ Sơ Trinh Sát II" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Hồ Sơ Trinh Sát II</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/nghich-thien.jpg" alt="Nghịch Thiên Kỳ Án" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Nghịch Thiên Kỳ Án</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/song-gio.jpg" alt="Sóng Gió Gia Tộc III" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Sóng Gió Gia Tộc III</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/mai-am.jpg" alt="Mái Ấm Gia Đình (Phần 4)" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Mái Ấm Gia Đình (Phần 4)</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/ho-ve.jpg" alt="Hộ Vệ Thầm Lặng" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Hộ Vệ Thầm Lặng</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/quyen-vuong.jpg" alt="Quyền Vương" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Quyền Vương</a>
-                    </div>
+                    @{
+                        var tvb = ViewBag.TVB as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in tvb) {
+                            <div class="vert-wrapper">
+                                <a href="/Movies/Details/@m.Id" class="vert-card">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="vert-title fw-bold">@m.Title</a>
+                            </div>
+                        }
+                    }
                 </div>
 
                 <!-- Phim bộ Việt Nam đặc sắc -->
                 <h4 class="section-title mt-4">Phim bộ Việt Nam đặc sắc <button class="btn btn-dark rounded-circle ms-2 px-2 py-1"><i class="fas fa-chevron-right text-white"></i></button></h4>
                 <div class="section-carousel mb-5">
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/tinh-tham.jpg" alt="Tình Thắm Duyên Xuân" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Tình Thắm Duyên Xuân</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/nhung-ngoi-nha.jpg" alt="Những Ngôi Nhà Trong Hẻm" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Những Ngôi Nhà Trong Hẻm</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/hanh-phuc.jpg" alt="Hạnh Phúc Bị Đánh Cắp" onerror="this.src='/images/default-poster.jpg'">
-                            <span class="vip-badge"><i class="fas fa-gem text-warning"></i></span>
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Hạnh Phúc Bị Đánh Cắp</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/khep-lai.jpg" alt="Khép Lại Quá Khứ" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Khép Lại Quá Khứ</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/nha-co.jpg" alt="Nhà Có Rồng Có Cọp" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Nhà Có Rồng Có Cọp</a>
-                    </div>
-                    <div class="vert-wrapper">
-                        <a href="#" class="vert-card">
-                            <img src="/images/posters/tam-thai-tu.jpg" alt="Tam Thái Tử" onerror="this.src='/images/default-poster.jpg'">
-                        </a>
-                        <a href="#" class="vert-title fw-bold">Tam Thái Tử</a>
-                    </div>
+                    @{
+                        var phimBoVN = ViewBag.PhimBoVN as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in phimBoVN) {
+                            <div class="vert-wrapper">
+                                <a href="/Movies/Details/@m.Id" class="vert-card">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="vert-title fw-bold">@m.Title</a>
+                            </div>
+                        }
+                    }
                 </div>
             }
+            else if (ViewBag.CategoryName == "Thiếu nhi")
+            {
+                var top10Kids = ViewBag.ThieuNhiXuHuong as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                var kidsHero = top10Kids.FirstOrDefault();
+
+                if(kidsHero != null) {
+                <!-- Hero Banner Thiếu nhi (Image 1) -->
+                <div class="hero-banner" style="background-image: url('https://images.unsplash.com/photo-1596461404969-9ce205b206f4?auto=format&fit=crop&w=1920&q=80'); background-color: #79c536;">
+                    <div class="hero-overlay" style="background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, transparent 100%);">
+                        <div class="hero-content" style="max-width: 500px; padding-left: 20px;">
+                            <h1 style="font-size: 3rem; font-family: 'Comic Sans MS', cursive, sans-serif; color: #ffeb3b; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin-bottom: 0;">@kidsHero.Title</h1>
+                            <div class="meta-tags mb-3 mt-2">
+                                <span class="meta-tag" style="border: 1px solid rgba(255,255,255,0.6); background: rgba(0,0,0,0.5); font-weight: bold; padding: 4px 10px; border-radius: 6px;">FULLHD</span>
+                            </div>
+                            <div class="movie-info-text mb-4" style="font-size: 1.1rem; font-weight: 500; display: flex; align-items: center; gap: 8px; text-shadow: 1px 1px 2px black;">
+                                2026 &bull; @kidsHero.VideoCount/@kidsHero.VideoCount tập &bull; Việt Nam 
+                                <span style="border: 2px solid white; border-radius: 50%; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; cursor: pointer;">+</span>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <a href="/Movies/Details/@kidsHero.Id" class="btn-play-hero" style="background: #ff3c00; font-size: 1.1rem; padding: 12px 28px;"><i class="fas fa-play me-2"></i>Xem ngay</a>
+                                <a href="#" class="btn-icon-circle" style="background: rgba(0,0,0,0.5);"><i class="fas fa-heart"></i></a>
+                                <a href="#" class="btn-icon-circle" style="background: rgba(0,0,0,0.5);"><i class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+
+                <!-- Top 10 thiếu nhi xu hướng (Image 2) -->
+                <h4 class="section-title">Top 10 thiếu nhi xu hướng</h4>
+                <div class="section-carousel pb-5">
+                    @{
+                        int idx = 1;
+                        var bgGradients = new string[] {
+                            "linear-gradient(180deg, #d4a373, #a26a3c)",
+                            "linear-gradient(180deg, #60d2a4, #12895b)",
+                            "linear-gradient(180deg, #f0ba8b, #2b59c3)",
+                            "linear-gradient(180deg, #e4ebf0, #a9201f)",
+                            "linear-gradient(180deg, #b8e994, #9c6ccb)",
+                            "linear-gradient(180deg, #60a3bc, #d88e40)"
+                        };
+
+                        foreach(var m in top10Kids) {
+                            var bg = bgGradients[(idx - 1) % bgGradients.Length];
+                            <div class="top10-card" style="background: @bg; cursor: pointer;" onclick="showKidsPopup(this, event)">
+                                <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'" style="border-radius: 8px 8px 0 0; padding-bottom: 40px; background: white; object-fit: cover;">
+                                <div class="top10-number" style="z-index: 2; bottom: -5px; font-style: normal; text-shadow: none; left: -10px; color: rgba(255,255,255,0.9); font-weight: 800;">@idx</div>
+                                <div class="top10-title" style="background: transparent; z-index: 2; font-size: 0.8rem; padding: 10px 10px 10px 45px; text-shadow: 1px 1px 2px black;">@m.Title</div>
+                                
+                                <!-- Popup Modal Template for this item (Image 4 format) -->
+                                <div class="kids-popup" onclick="event.stopPropagation()">
+                                    <img src="@m.PosterUrl" alt="@m.Title" class="kids-popup-img" onerror="this.src='/images/default-poster.jpg'">
+                                    <div class="kids-popup-body">
+                                        <div class="kids-popup-actions d-flex align-items-center mb-3">
+                                            <a href="/Movies/Details/@m.Id" class="kids-popup-btn me-2"><i class="fas fa-play"></i> Xem ngay</a>
+                                            <a href="#" class="btn-icon-circle me-2" style="width: 38px; height: 38px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);"><i class="fas fa-heart"></i></a>
+                                            <a href="#" class="btn-icon-circle" style="width: 38px; height: 38px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);"><i class="fas fa-share-alt"></i></a>
+                                        </div>
+                                        <div class="kids-popup-title">@m.Title</div>
+                                        <div class="kids-popup-meta">
+                                            <span style="color: #ff3c00; font-weight: bold;"><i class="fas fa-star text-warning"></i> 4.1 (18)</span> 
+                                            <span style="border: 1px solid rgba(255,255,255,0.3); padding: 0 6px; border-radius: 4px; color: #999; font-size: 0.8rem;">FULLHD</span>
+                                        </div>
+                                        <div class="kids-popup-meta" style="color: #999; margin-bottom: 15px;">
+                                            2014 &bull; K &bull; @m.VideoCount tập &bull; Hàn Quốc
+                                        </div>
+                                        <div class="kids-popup-desc">
+                                            @m.Description
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            idx++;
+                        }
+                    }
+                </div>
+
+                <!-- Đặc sắc tháng 3 (Image 3) -->
+                <div style="background: linear-gradient(180deg, #cdecf3, #111 60%); margin: 0 -20px; padding: 30px 20px; position: relative; overflow: hidden;">
+                    <div class="d-flex align-items-center mb-3">
+                        <h4 class="section-title text-dark m-0 d-flex align-items-center" style="font-weight: bold;">Đặc sắc tháng 3 <i class="fas fa-chevron-right ms-2 fs-6 text-muted"></i></h4>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=200&h=150&fit=crop" style="position: absolute; top: 10px; right: 20px; height: 100px; opacity: 0.9; border-radius: 20px;" alt="Kids illustration">
+                    
+                    <div class="section-carousel mb-4">
+                        @{
+                            var dacSac = ViewBag.DacSacThang3 as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                            foreach(var m in dacSac) {
+                                <div class="ls-wrapper" style="width: 260px;">
+                                    <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 260px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                                        <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                    </a>
+                                    <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2" style="font-size: 1rem; color: #fff;">@m.Title</a>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+                <!-- Thể loại (Image 3 bottom) -->
+                <h4 class="section-title mt-4">Thể loại</h4>
+                <div class="section-carousel mb-5">
+                    <a href="#" class="genre-card" style="border-radius: 12px; height: 140px; background: #6b2e69;">
+                        <img src="/images/posters/phim-kids.jpg" alt="Phim" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.5;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Phim</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 12px; height: 140px; background: #000;">
+                        <img src="/images/posters/ca-nhac-kids.jpg" alt="Ca nhạc" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.5;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Ca nhạc</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 12px; height: 140px; background: #1a237e;">
+                        <img src="/images/posters/ke-chuyen-kids.jpg" alt="Kể chuyện" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.5;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Kể chuyện</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 12px; height: 140px; background: #01579b;">
+                        <img src="/images/posters/english-kids.jpg" alt="Học Tiếng Anh" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.4;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Học<br>Tiếng Anh</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 12px; height: 140px; background: #1b5e20;">
+                        <img src="/images/posters/hoc-dieu-hay.jpg" alt="Học điều hay" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.5;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Học<br>điều hay</div>
+                    </a>
+                </div>
+            }
+            else if (ViewBag.CategoryName == "Ngoại hạng Anh")
+            {
+                var highlights = ViewBag.Highlights as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                var nhaHero = highlights.FirstOrDefault();
+
+                if(nhaHero != null) {
+                <!-- Hero Banner Ngoại hạng Anh (Image 1) -->
+                <div class="hero-banner" style="background-image: url('https://images.unsplash.com/photo-1522778119026-d108c1640d18?auto=format&fit=crop&w=1920&q=80'); height: 75vh; background-position: top center; margin-top: -100px;">
+                    <div class="hero-overlay" style="background: linear-gradient(to top, #0c0c0c 0%, transparent 40%), linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 60%); align-items: flex-end; padding-bottom: 40px;">
+                        <div class="hero-content" style="max-width: 600px; margin-top: auto; margin-bottom: 0;">
+                            <img src="/images/posters/premier-league-logo.png" style="height: 40px; margin-bottom: 20px;" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png'; this.style.filter='brightness(0) invert(1)';">
+                            <h1 style="font-size: 2.2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; line-height: 1.2;">@nhaHero.Title</h1>
+                            <div class="meta-tags mb-3">
+                                <span class="meta-tag" style="background: #e50914; color: white; font-weight: bold; border: none;">Highlights</span>
+                            </div>
+                            <div class="d-flex gap-3 mt-4">
+                                <a href="/Movies/Details/@nhaHero.Id" class="btn-play-hero" style="background: #ff3c00; font-size: 1.1rem; padding: 12px 30px;"><i class="fas fa-play me-2"></i>Xem ngay</a>
+                                <a href="#" class="btn-icon-circle" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);"><i class="fas fa-heart"></i></a>
+                                <a href="#" class="btn-icon-circle" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);"><i class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+
+                <!-- Highlights (Image 2) -->
+                <div class="d-flex align-items-center mb-1 mt-2">
+                    <h4 class="section-title m-0">Highlights <i class="fas fa-chevron-right ms-2 fs-6 text-muted"></i></h4>
+                </div>
+                <div class="section-carousel pb-4">
+                    @{
+                        foreach(var m in highlights) {
+                            <div class="ls-wrapper" style="width: 280px;">
+                                <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 280px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2 text-white" style="font-size: 0.95rem;">@m.Title</a>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Trận đấu (Image 3) -->
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <h4 class="section-title m-0">Trận đấu <i class="fas fa-chevron-right ms-2 fs-6 text-muted"></i></h4>
+                </div>
+                <div class="section-carousel pb-4">
+                    @{
+                        var tranDau = ViewBag.TranDau as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in tranDau) {
+                            <div class="ls-wrapper" style="width: 280px;">
+                                <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 280px; border-radius: 8px; overflow: hidden; position: relative;">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                    @if (!string.IsNullOrEmpty(m.Description))
+                                    {
+                                        if (m.Description == "Đang phát")
+                                        {
+                                            <span style="background: #e50914; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; position: absolute; bottom: 8px; left: 8px; font-weight: bold;">@m.Description</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; position: absolute; bottom: 8px; left: 8px; border: 1px solid rgba(255,255,255,0.2);">@m.Description</span>
+                                        }
+                                    }
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2 text-white" style="font-size: 0.95rem;">@m.Title</a>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Tạp chí (Image 3 bottom) -->
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <h4 class="section-title m-0">Tạp chí <i class="fas fa-chevron-right ms-2 fs-6 text-muted"></i></h4>
+                </div>
+                <div class="section-carousel pb-5">
+                    @{
+                        var tapChi = ViewBag.TapChi as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in tapChi) {
+                            <div class="ls-wrapper" style="width: 280px;">
+                                <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 280px; border-radius: 8px; overflow: hidden;">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'">
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2 text-white" style="font-size: 0.95rem;">@m.Title</a>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+            else if (ViewBag.CategoryName == "Phim lẻ")
+            {
+                <!-- Hero Banner Phim lẻ (Image 1) -->
+                <div class="hero-banner" style="background-image: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=1920&q=80'); height: 80vh; background-position: center; margin-top: -100px;">
+                    <div class="hero-overlay" style="background: linear-gradient(to top, #0c0c0c 0%, transparent 50%), linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 60%); align-items: flex-end; padding-bottom: 60px;">
+                        <div class="hero-content" style="max-width: 600px; margin-top: auto; margin-bottom: 0;">
+                            <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; line-height: 1.2;">Xa Mãi Châu Phi</h1>
+                            <div class="meta-tags mb-3 d-flex align-items-center gap-2">
+                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;"><i class="fas fa-star text-warning"></i> 5.0 (1)</span>
+                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;">Đa ngôn ngữ</span>
+                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">FULLHD</span>
+                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;"><i class="fas fa-volume-up"></i> Dolby ATMOS</span>
+                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;">5.1</span>
+                            </div>
+                            <div class="movie-info-text mb-4" style="font-size: 1rem; color: #ddd;">
+                                1985 &bull; T13 &bull; 2 giờ 41 phút &bull; Mỹ
+                            </div>
+                            <div class="d-flex gap-3 mt-4">
+                                <a href="#" class="btn-play-hero" style="background: #ff3c00; font-size: 1.1rem; padding: 10px 24px;"><i class="fas fa-play me-2"></i>Xem ngay</a>
+                                <a href="#" class="btn-icon-circle" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);"><i class="fas fa-heart"></i></a>
+                                <a href="#" class="btn-icon-circle" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);"><i class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thể loại (Image 1 bottom) -->
+                <h4 class="section-title mt-4">Thể loại</h4>
+                <div class="section-carousel mb-4 pb-2">
+                    <a href="#" class="genre-card" style="border-radius: 8px; height: 120px; background: #000; width: 220px; flex-shrink: 0;">
+                        <img src="/images/posters/hanh-dong.jpg" alt="Hành động" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.6;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Hành động</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 8px; height: 120px; background: #000; width: 220px; flex-shrink: 0;">
+                        <img src="/images/posters/tam-ly.jpg" alt="Tâm lý" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.6;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Tâm lý</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 8px; height: 120px; background: #000; width: 220px; flex-shrink: 0;">
+                        <img src="/images/posters/kinh-di.jpg" alt="Kinh dị" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.6;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Kinh dị</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 8px; height: 120px; background: #000; width: 220px; flex-shrink: 0;">
+                        <img src="/images/posters/hai-huoc.jpg" alt="Hài hước" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.6;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Hài hước</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 8px; height: 120px; background: #000; width: 220px; flex-shrink: 0;">
+                        <img src="/images/posters/tinh-cam.jpg" alt="Tình cảm" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.6;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Tình cảm</div>
+                    </a>
+                    <a href="#" class="genre-card" style="border-radius: 8px; height: 120px; background: #000; width: 220px; flex-shrink: 0;">
+                        <img src="/images/posters/hoat-hinh.jpg" alt="Hoạt hình" onerror="this.src='/images/default-poster.jpg'" style="opacity: 0.6;">
+                        <div class="genre-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Hoạt hình</div>
+                    </a>
+                </div>
+
+                <!-- Tuyển tập của những tuyển tập (Image 2) -->
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <h4 class="section-title m-0">Tuyển tập của những tuyển tập</h4>
+                </div>
+                <div class="section-carousel pb-4">
+                    @{
+                        var tuyenTap = ViewBag.TuyenTap as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in tuyenTap) {
+                            <div class="ls-wrapper" style="width: 250px;">
+                                <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 250px; border-radius: 8px; overflow: hidden; position: relative; display: block;">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'" style="width: 100%; height: 100%; object-fit: cover;">
+                                    @if (!string.IsNullOrEmpty(m.Description))
+                                    {
+                                        <span style="background: rgba(0,0,0,0.7); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; position: absolute; bottom: 8px; right: 8px;"><i class="fas fa-play-circle me-1"></i>@m.Description</span>
+                                    }
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2 text-white" style="font-size: 0.85rem;">@m.Title</a>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Phim lẻ có Thuyết minh - Lồng tiếng (Image 2) -->
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <h4 class="section-title m-0">Phim lẻ có Thuyết minh - Lồng tiếng <i class="fas fa-chevron-right ms-2 fs-6 text-muted"></i></h4>
+                </div>
+                <div class="section-carousel pb-4">
+                    @{
+                        var thuyetMinh = ViewBag.ThuyetMinh as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in thuyetMinh) {
+                            <div class="ls-wrapper" style="width: 250px;">
+                                <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 250px; border-radius: 8px; overflow: hidden; position: relative;">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'" style="width: 100%; height: 100%; object-fit: cover;">
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2 text-white" style="font-size: 0.85rem;">@m.Title</a>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <!-- Đại lộ danh vọng Hollywood (Image 2) -->
+                <div class="d-flex align-items-center mb-1 mt-4">
+                    <h4 class="section-title m-0">Đại lộ danh vọng Hollywood</h4>
+                </div>
+                <div class="section-carousel pb-5">
+                    @{
+                        var hollywood = ViewBag.Hollywood as List<FPTPlay.Models.Movie> ?? new List<FPTPlay.Models.Movie>();
+                        foreach(var m in hollywood) {
+                            <div class="ls-wrapper" style="width: 250px;">
+                                <a href="/Movies/Details/@m.Id" class="ls-card" style="aspect-ratio: 16/9; width: 250px; border-radius: 8px; overflow: hidden; position: relative;">
+                                    <img src="@m.PosterUrl" alt="@m.Title" onerror="this.src='/images/default-poster.jpg'" style="width: 100%; height: 100%; object-fit: cover;">
+                                    @if (!string.IsNullOrEmpty(m.Description))
+                                    {
+                                        <span style="background: rgba(0,0,0,0.7); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; position: absolute; bottom: 8px; right: 8px;"><i class="fas fa-play-circle me-1"></i>@m.Description</span>
+                                    }
+                                </a>
+                                <a href="/Movies/Details/@m.Id" class="ls-title fw-bold mt-2 text-white" style="font-size: 0.85rem;">@m.Title</a>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+
             else if (Model == null || !Model.Any())
             {
                 <div class="empty-state">
@@ -917,6 +1232,56 @@
                 }
             });
         }
+
+        // Tìm kiếm chung
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.trim().toLowerCase();
+                const allCards = document.querySelectorAll('.movie-card, .top10-card, .ls-card, .landscape-wrapper, .channel-card');
+
+                allCards.forEach(card => {
+                    let text = '';
+                    const titleElem = card.querySelector('.title-overlay, .top10-title, .ls-card-title, .landscape-title');
+                    
+                    if (titleElem) {
+                        text = titleElem.textContent.toLowerCase();
+                    } else {
+                        const img = card.querySelector('img');
+                        if (img) text = (img.getAttribute('alt') || '').toLowerCase();
+                    }
+
+                    if (query === '' || text.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Kids Popup Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay-bg';
+            document.body.appendChild(overlay);
+
+            window.showKidsPopup = function(cardElem, e) {
+                e.preventDefault();
+                const popup = cardElem.querySelector('.kids-popup');
+                if(popup) {
+                    // hide all other popups
+                    document.querySelectorAll('.kids-popup.active').forEach(p => p.classList.remove('active'));
+                    overlay.classList.add('active');
+                    popup.classList.add('active');
+                }
+            };
+
+            overlay.addEventListener('click', () => {
+                document.querySelectorAll('.kids-popup.active').forEach(p => p.classList.remove('active'));
+                overlay.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>

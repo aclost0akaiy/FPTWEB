@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4D7JvEK/Rekqo7z065efuhdAY7I3koaD43il0yqC8D8=",
+  "Hash": "/wpPkJ4xh8orO49b/EacMnMbNd2ed1CwteLcuKNWRMw=",
   "Source": "FPTPlay",
   "BasePath": "_content/FPTPlay",
   "Mode": "Default",
@@ -185,6 +185,48 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\am-ap-va-ngot-ngao.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\angry-birds.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/angry-birds#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "swnfspr79p",
+      "Integrity": "NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\angry-birds.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\angry-birds-2.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/angry-birds-2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8mk6wl5k5g",
+      "Integrity": "IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\angry-birds-2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\arirang.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -248,6 +290,174 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\atv3.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\au-trung-1.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/au-trung-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6z7kyifa8f",
+      "Integrity": "nkBWRRLSB6nDYfl/5JQMeMSa+M1KzuMW+labw9/h9j0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\au-trung-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\au-trung-3.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/au-trung-3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gunifkmbsc",
+      "Integrity": "OKh2Tm+pE/8+2WHbeNY86BVKvyvzeIpzw0a++iA9g6Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\au-trung-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/avl-whu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9udk01yiuo",
+      "Integrity": "EccXZAi/vccfC/sgh2Tr9gzxXH+xURR9ISCetfLDNyw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\avl-whu.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-hl.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/avl-whu-hl#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5kf16tjasc",
+      "Integrity": "+/AnzBCF5Wrmru4Fd2/9QHqe6LdvFzlNa9c8Fh2TALc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\avl-whu-hl.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-hl-bltt.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/avl-whu-hl-bltt#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1asjazcldw",
+      "Integrity": "6cuvIfcgRiJgKAYhhtOV+KF3Iq4nux+7Zzl6OHB+kt4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\avl-whu-hl-bltt.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-xem-lai(1).jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/avl-whu-xem-lai(1)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rdbqx4ffi1",
+      "Integrity": "H71oPBcB5fgeIXeODKa7yfXmAmaxDR4SC9xq8BL1LvQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\avl-whu-xem-lai(1).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-xem-lai(2).jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/avl-whu-xem-lai(2)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qy9mmbpl3x",
+      "Integrity": "DnIcfoGP6VODCKvuhqAZxsi5ZO714Q5XiDpv+/k8qk4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\avl-whu-xem-lai(2).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ban-thang.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/ban-thang#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jkfk40wslk",
+      "Integrity": "LfCkIhtUzXyj4CBsafZ94D10qLqes0WB2Omk9FohKFQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\ban-thang.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\bao-mau-phu-thuy-2.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -267,6 +477,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\bao-mau-phu-thuy-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\brad-pitt.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/brad-pitt#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "661aaxo646",
+      "Integrity": "bpIhNDuZq3NtRuOITnMIfMGxwc8eglmFPSmt5xIn7pY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\brad-pitt.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\brighton-liverpool.jpg",
@@ -330,6 +561,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\cham-tay-vao-noi-nho.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chiwetel.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/chiwetel#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pk82puvuo1",
+      "Integrity": "6fjr9w+nvVB4unhvlkt7f4/cA/tfyzubbjLfBUW+K84=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\chiwetel.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chung-quy-bat-yeu.jpg",
@@ -498,6 +750,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\cnbc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cocomelon-1.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/cocomelon-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xxngz3bscv",
+      "Integrity": "NXxpDY/vjz4hzLtbMtGduqUB1pUfSDLHOd7buT5nq0A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\cocomelon-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cocomelon-5.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/cocomelon-5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3ht6535102",
+      "Integrity": "t3smFEgBpZB8wzDhJOz0emaSKMLkr1AfYZxkNUJz//c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\cocomelon-5.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\co-dau-than-ran.jpg",
@@ -689,6 +983,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\cuc-han.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cuc-han2.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/cuc-han2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "304s56wcbm",
+      "Integrity": "vf/b8F2GyTiNWHNlWYJtzCMFs6+Hxk9bfHuw1HfGb24=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\cuc-han2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cuc-han-ls.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -794,6 +1109,48 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\dieu-con-dang-do.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\dieu-con-dang-do2.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/dieu-con-dang-do2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hgn7wup07q",
+      "Integrity": "f6WfYOP4z7ftrSDD0OD6XqkPs5giIhf7x8raBu1Fwjk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\dieu-con-dang-do2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\don-than-nam-nu.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/don-than-nam-nu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "quhbzejwuy",
+      "Integrity": "IlrKjnMVbswFuoQrpkgiHnFzlVnhBSxhbszwfvxuhio=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\don-than-nam-nu.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\drt.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -834,6 +1191,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\dw.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\eve-che.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/eve-che#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7g59pmpnmq",
+      "Integrity": "KVvgLb3KgSX7+D8ze00nXaiFvbHu/Hlqa88lWI7Cp9U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\eve-che.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\eve-che-fan.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/eve-che-fan#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vbpi2d37pz",
+      "Integrity": "u9YAiLGZqzNwVSytCs4USHClskhScTvEQccAbhLb4G8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\eve-che-fan.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\everton-chelsea.jpg",
@@ -1004,6 +1403,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\gia-dinh-minh-vui-bat-thinh-linh.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\giang-sinh-alaska.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/giang-sinh-alaska#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xj08o4m8u3",
+      "Integrity": "zbwudzy1XY5GvSXKZjRyUpcf3ItNCQVf5CETf2lGHek=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\giang-sinh-alaska.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\giang-sinh-nam-ay.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1130,6 +1550,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\hau-cung.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hiep-si-mat-na.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/hiep-si-mat-na#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tuc9dxjaa9",
+      "Integrity": "q1Vy140OvKLldS/ibWqoia1gT5cus5P95JKi/vj2beA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\hiep-si-mat-na.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoa-ngu.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1149,6 +1590,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\hoa-ngu.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoan-quoc.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/hoan-quoc#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3pok4r02yy",
+      "Integrity": "+fUUDPq3r5q0H2TC1TrPTyOEmHE9GkY2x2laCBLqO0g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\hoan-quoc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ho-canh-cut.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/ho-canh-cut#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p2epugyvu2",
+      "Integrity": "gRGNdcO+LEFjMplXuM6zzieFOSyQt8KLyQln22Gw33o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\ho-canh-cut.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoi-uc.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/hoi-uc#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "27dc9pok1l",
+      "Integrity": "MgUrT4A4f/iCnfgkxf+FojgvG04DuOsRzUcXvUY9Dbc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\hoi-uc.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ho-so-trinh-sat.jpg",
@@ -1256,6 +1760,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\huong-vi.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\jim-carrey.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/jim-carrey#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1w7vhr4hya",
+      "Integrity": "sbZRzEOxYglBHmWWCabYYadNgQa7RbvsudjucRh/x2E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\jim-carrey.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\kamen-rider.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1275,6 +1800,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\kamen-rider.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\kate-beckinsale.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/kate-beckinsale#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "se0pmc9w6u",
+      "Integrity": "rBs93qZ5cXWT0NXEo24oboh+9BUmLtNAjL+etIn+hyo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\kate-beckinsale.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\kbs.jpg",
@@ -1361,6 +1907,48 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\khach-san-5-sao.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\Khai cuộc Ngoại hạng vòng 31.png",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/Khai cuộc Ngoại hạng vòng 31#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "icgq43h4s8",
+      "Integrity": "vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\Khai cuộc Ngoại hạng vòng 31.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\khai-cuoc.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/khai-cuoc#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "icgq43h4s8",
+      "Integrity": "vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\khai-cuoc.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\khep-lai.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1380,6 +1968,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\khep-lai.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\lee-bre.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/lee-bre#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oizyctikm8",
+      "Integrity": "UCgT7xfoAthkAgEjLojF/wRzujWU+4qgEBit/OspjSM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\lee-bre.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\leeds-brentford.jpg",
@@ -1487,6 +2096,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\luat-bong-ma.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\luat-bong-ma2.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/luat-bong-ma2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fpcs30mj6r",
+      "Integrity": "UzK9SGViDsEKfyHBPcrUF8Hw92feaF8g6PFq70QXPkY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\luat-bong-ma2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\luat-su.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1590,6 +2220,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\manu-aston-villa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\matt-damon.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/matt-damon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "37nda8dv6n",
+      "Integrity": "UU8RqnQpdXjisi+uD7sDRFQm4m1CrCz0J6onfjawNgU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\matt-damon.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\me-cun-bo-meo.jpg",
@@ -1697,6 +2348,90 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\nang-khuya.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun.jp.jfif",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/new-sun.jp#[.{fingerprint}]?.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fq5kxvktmx",
+      "Integrity": "B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\new-sun.jp.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/new-sun#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fq5kxvktmx",
+      "Integrity": "B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\new-sun.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun-data.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/new-sun-data#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mb10v7erzi",
+      "Integrity": "sqHTexpYzZo6vxSo6FLURwEP0FpY1A9wc8QkdvGqWKA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\new-sun-data.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun-full.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/new-sun-full#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uogrtx4534",
+      "Integrity": "wpGPhxk04UH3Ss5ZwjYYk7urseBOIFxPODWXC/pRG0E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\new-sun-full.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nghich-thien.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1760,6 +2495,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\nha-co.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhan-tai.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/nhan-tai#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nr6q7jggix",
+      "Integrity": "PchUzBret8TpQjWm00cTPliKIIKhEGLRYeFk8uLayDA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\nhan-tai.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhk.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1779,6 +2535,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\nhk.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhung-co-gai-khi-yeu.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/nhung-co-gai-khi-yeu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w371ejz15n",
+      "Integrity": "PERA7SVJZMtsSmxxw5YOLE5PTf28R2Eh1Yn575k2I7g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\nhung-co-gai-khi-yeu.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhung-ngoi-nha.jpg",
@@ -1823,6 +2600,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\nu-luat-su.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\oc-dao.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/oc-dao#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4snfb1aukx",
+      "Integrity": "3CoGAkvtxZzQi+XrIzherEY+I9hB37J/StBTYOfR3HQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\oc-dao.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\outdoor.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1844,6 +2642,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\outdoor.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quai-vat.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/quai-vat#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p58epmp3fl",
+      "Integrity": "M75EcKVORNbOqQPNR2/0MmQRtX/VPX+npA9tP1Anb7w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\quai-vat.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quyen-vuong.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1863,6 +2682,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\quyen-vuong.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quy-lun.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/quy-lun#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ef9d8evvj",
+      "Integrity": "KKPQN1kuNFBcGrVTKDBt96hGSpFXqtDQCiiJEZQ2SRk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\quy-lun.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\song-gio.jpg",
@@ -2012,6 +2852,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\thien-duong-mau.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\thu-2.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/thu-2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vh8df88x6o",
+      "Integrity": "Q7ujfWqp9wEKdGHylhRoBh4Ojs/JKKEp77ut1xelOEI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\thu-2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\thvl1-hd.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -2117,6 +2978,69 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\tinh-tham.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tong-hop-sau.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tong-hop-sau#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rvfc3qomjf",
+      "Integrity": "mZnTWJ3wQ1eW/vhtaAL+wiUWkENXLKK5eBkylDT3L0Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tong-hop-sau.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tong-hop-truoc.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tong-hop-truoc#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uakdgzbnj9",
+      "Integrity": "+muDUQIfR0jVexKXmpDQVjOBYUBKv65MY3L+Okc+HF4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tong-hop-truoc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tot-nfo.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tot-nfo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x7lrgcl7ev",
+      "Integrity": "LXQ3JEffet04FYGeFZ+V0rxLu/rcoWoYM0wkDbwXQP0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tot-nfo.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\truong-an-tam-quai-tham.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -2157,6 +3081,153 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\truong-tuong-tu.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-banh-my.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tuyen-tap-banh-my#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lhqqwiz4fp",
+      "Integrity": "meDxDF9nI2oziU071Hwqqs44E80yL5CvzCTsmGfv94M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tuyen-tap-banh-my.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-bi-kip.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tuyen-tap-bi-kip#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g0klf6cf9h",
+      "Integrity": "cODIGDumUirG7qmEyR4gtjMaGe4314n9MSOii5clNIg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tuyen-tap-bi-kip.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-dan-brown.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tuyen-tap-dan-brown#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y3kext5399",
+      "Integrity": "TsLvVCciWedCotc/nBxWPVQBTAMP45TwCWT9Kb1mN4k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tuyen-tap-dan-brown.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-jumanji.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tuyen-tap-jumanji#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1pq14d4snm",
+      "Integrity": "m6ozqR0BwMbQlFtukIAfZSfXf1wgj5fRNzoq6W0HnHc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tuyen-tap-jumanji.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-kung-fu.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tuyen-tap-kung-fu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hdygiwbce4",
+      "Integrity": "BZQsDtGtGAkPqsoZJzUox96n46oEwPPQogwjv7m1fEA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tuyen-tap-kung-fu.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-noi-loan.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/tuyen-tap-noi-loan#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "66kvwdzior",
+      "Integrity": "ImS3QSGkY+LqmRmHKMaOZ1WDi2qx31xPo1wgN2pXJHY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\tuyen-tap-noi-loan.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\vin-diesel.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/vin-diesel#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dqpqfk6mhn",
+      "Integrity": "O9yWQNXgo2aGGOr2RXhYXqJencg5u/cTR/s273iQIDM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\vin-diesel.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\vong-xoay-tinh-thu.jpg",
@@ -2304,6 +3375,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\vtv5-hd.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-26.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/wolfoo-26#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jzggt0odks",
+      "Integrity": "/7aJdxwcwK1yYTgm5lx8Hh1Se/Ve+K+I3V9avaRl1ik=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\wolfoo-26.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-27.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/wolfoo-27#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yv3kvnsm8t",
+      "Integrity": "UjS3+o8PrT7ziIjTFLj6toEzmZAbiSuxp2vfo8NmVJA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\wolfoo-27.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-3.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/wolfoo-3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pkz3ikag0m",
+      "Integrity": "J2foRqGwp7PoSsw7Y+UX/wluUz9K0rMAEJKd5KIPYX0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\wolfoo-3.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\js\\site.js",
@@ -3754,7 +4888,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Mar 2026 00:50:20 GMT"
+          "Value": "Sat, 28 Mar 2026 02:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3791,7 +4925,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Mar 2026 00:50:20 GMT"
+          "Value": "Sat, 28 Mar 2026 02:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3836,7 +4970,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Mar 2026 00:50:20 GMT"
+          "Value": "Sat, 28 Mar 2026 02:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3881,7 +5015,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 21 Mar 2026 00:50:20 GMT"
+          "Value": "Sat, 28 Mar 2026 02:36:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4224,6 +5358,170 @@
       ]
     },
     {
+      "Route": "images/posters/angry-birds.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:14:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/angry-birds.swnfspr79p.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:14:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "swnfspr79p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/angry-birds.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/angry-birds-2.8mk6wl5k5g.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:13:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8mk6wl5k5g"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/angry-birds-2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/angry-birds-2.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:13:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/arirang.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\arirang.jpg",
       "Selectors": [],
@@ -4470,6 +5768,662 @@
       ]
     },
     {
+      "Route": "images/posters/au-trung-1.6z7kyifa8f.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\au-trung-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nkBWRRLSB6nDYfl/5JQMeMSa+M1KzuMW+labw9/h9j0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6z7kyifa8f"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/au-trung-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nkBWRRLSB6nDYfl/5JQMeMSa+M1KzuMW+labw9/h9j0="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/au-trung-1.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\au-trung-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nkBWRRLSB6nDYfl/5JQMeMSa+M1KzuMW+labw9/h9j0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nkBWRRLSB6nDYfl/5JQMeMSa+M1KzuMW+labw9/h9j0="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/au-trung-3.gunifkmbsc.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\au-trung-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OKh2Tm+pE/8+2WHbeNY86BVKvyvzeIpzw0a++iA9g6Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gunifkmbsc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/au-trung-3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OKh2Tm+pE/8+2WHbeNY86BVKvyvzeIpzw0a++iA9g6Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/au-trung-3.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\au-trung-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OKh2Tm+pE/8+2WHbeNY86BVKvyvzeIpzw0a++iA9g6Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OKh2Tm+pE/8+2WHbeNY86BVKvyvzeIpzw0a++iA9g6Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu.9udk01yiuo.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EccXZAi/vccfC/sgh2Tr9gzxXH+xURR9ISCetfLDNyw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:24:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9udk01yiuo"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/avl-whu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EccXZAi/vccfC/sgh2Tr9gzxXH+xURR9ISCetfLDNyw="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14323"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EccXZAi/vccfC/sgh2Tr9gzxXH+xURR9ISCetfLDNyw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:24:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EccXZAi/vccfC/sgh2Tr9gzxXH+xURR9ISCetfLDNyw="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-hl.5kf16tjasc.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-hl.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+/AnzBCF5Wrmru4Fd2/9QHqe6LdvFzlNa9c8Fh2TALc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:18:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5kf16tjasc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/avl-whu-hl.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+/AnzBCF5Wrmru4Fd2/9QHqe6LdvFzlNa9c8Fh2TALc="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-hl.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-hl.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+/AnzBCF5Wrmru4Fd2/9QHqe6LdvFzlNa9c8Fh2TALc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:18:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+/AnzBCF5Wrmru4Fd2/9QHqe6LdvFzlNa9c8Fh2TALc="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-hl-bltt.1asjazcldw.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-hl-bltt.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16296"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6cuvIfcgRiJgKAYhhtOV+KF3Iq4nux+7Zzl6OHB+kt4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:19:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1asjazcldw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/avl-whu-hl-bltt.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6cuvIfcgRiJgKAYhhtOV+KF3Iq4nux+7Zzl6OHB+kt4="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-hl-bltt.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-hl-bltt.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16296"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6cuvIfcgRiJgKAYhhtOV+KF3Iq4nux+7Zzl6OHB+kt4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:19:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6cuvIfcgRiJgKAYhhtOV+KF3Iq4nux+7Zzl6OHB+kt4="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-xem-lai(1).jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-xem-lai(1).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H71oPBcB5fgeIXeODKa7yfXmAmaxDR4SC9xq8BL1LvQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:26:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H71oPBcB5fgeIXeODKa7yfXmAmaxDR4SC9xq8BL1LvQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-xem-lai(1).rdbqx4ffi1.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-xem-lai(1).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H71oPBcB5fgeIXeODKa7yfXmAmaxDR4SC9xq8BL1LvQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:26:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rdbqx4ffi1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/avl-whu-xem-lai(1).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H71oPBcB5fgeIXeODKa7yfXmAmaxDR4SC9xq8BL1LvQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-xem-lai(2).jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-xem-lai(2).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15889"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DnIcfoGP6VODCKvuhqAZxsi5ZO714Q5XiDpv+/k8qk4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:26:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DnIcfoGP6VODCKvuhqAZxsi5ZO714Q5XiDpv+/k8qk4="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/avl-whu-xem-lai(2).qy9mmbpl3x.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\avl-whu-xem-lai(2).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15889"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DnIcfoGP6VODCKvuhqAZxsi5ZO714Q5XiDpv+/k8qk4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:26:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qy9mmbpl3x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/avl-whu-xem-lai(2).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DnIcfoGP6VODCKvuhqAZxsi5ZO714Q5XiDpv+/k8qk4="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/ban-thang.jkfk40wslk.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ban-thang.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16895"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfCkIhtUzXyj4CBsafZ94D10qLqes0WB2Omk9FohKFQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:30:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jkfk40wslk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/ban-thang.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LfCkIhtUzXyj4CBsafZ94D10qLqes0WB2Omk9FohKFQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/ban-thang.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ban-thang.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16895"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LfCkIhtUzXyj4CBsafZ94D10qLqes0WB2Omk9FohKFQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:30:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LfCkIhtUzXyj4CBsafZ94D10qLqes0WB2Omk9FohKFQ="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/bao-mau-phu-thuy-2.iivoznf42r.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\bao-mau-phu-thuy-2.jpg",
       "Selectors": [],
@@ -4548,6 +6502,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-dpsv3AoymoSHgispauUUTIIUV0jPULhkeylKbi8/uA8="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/brad-pitt.661aaxo646.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\brad-pitt.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10354"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bpIhNDuZq3NtRuOITnMIfMGxwc8eglmFPSmt5xIn7pY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:43:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "661aaxo646"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/brad-pitt.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bpIhNDuZq3NtRuOITnMIfMGxwc8eglmFPSmt5xIn7pY="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/brad-pitt.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\brad-pitt.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10354"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bpIhNDuZq3NtRuOITnMIfMGxwc8eglmFPSmt5xIn7pY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:43:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bpIhNDuZq3NtRuOITnMIfMGxwc8eglmFPSmt5xIn7pY="
         }
       ]
     },
@@ -4794,6 +6830,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-20lFTyNajst6GUtDH8JBKCt1YS0XR0isIEwoTNTVHNA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/chiwetel.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chiwetel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6fjr9w+nvVB4unhvlkt7f4/cA/tfyzubbjLfBUW+K84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:44:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6fjr9w+nvVB4unhvlkt7f4/cA/tfyzubbjLfBUW+K84="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/chiwetel.pk82puvuo1.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\chiwetel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6fjr9w+nvVB4unhvlkt7f4/cA/tfyzubbjLfBUW+K84=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:44:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pk82puvuo1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/chiwetel.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6fjr9w+nvVB4unhvlkt7f4/cA/tfyzubbjLfBUW+K84="
         }
       ]
     },
@@ -5450,6 +7568,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-V+VlpZvr9zm5PIOBbk2XqIzlaZ8ODcxeHzlVEdvYsbk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/cocomelon-1.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cocomelon-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NXxpDY/vjz4hzLtbMtGduqUB1pUfSDLHOd7buT5nq0A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:10:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NXxpDY/vjz4hzLtbMtGduqUB1pUfSDLHOd7buT5nq0A="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/cocomelon-1.xxngz3bscv.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cocomelon-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14139"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NXxpDY/vjz4hzLtbMtGduqUB1pUfSDLHOd7buT5nq0A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:10:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xxngz3bscv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/cocomelon-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NXxpDY/vjz4hzLtbMtGduqUB1pUfSDLHOd7buT5nq0A="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/cocomelon-5.3ht6535102.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cocomelon-5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t3smFEgBpZB8wzDhJOz0emaSKMLkr1AfYZxkNUJz//c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3ht6535102"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/cocomelon-5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t3smFEgBpZB8wzDhJOz0emaSKMLkr1AfYZxkNUJz//c="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/cocomelon-5.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cocomelon-5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18737"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t3smFEgBpZB8wzDhJOz0emaSKMLkr1AfYZxkNUJz//c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t3smFEgBpZB8wzDhJOz0emaSKMLkr1AfYZxkNUJz//c="
         }
       ]
     },
@@ -6192,6 +8474,88 @@
       ]
     },
     {
+      "Route": "images/posters/cuc-han2.304s56wcbm.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cuc-han2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vf/b8F2GyTiNWHNlWYJtzCMFs6+Hxk9bfHuw1HfGb24=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 00:56:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "304s56wcbm"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/cuc-han2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vf/b8F2GyTiNWHNlWYJtzCMFs6+Hxk9bfHuw1HfGb24="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/cuc-han2.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cuc-han2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13508"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vf/b8F2GyTiNWHNlWYJtzCMFs6+Hxk9bfHuw1HfGb24=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 00:56:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vf/b8F2GyTiNWHNlWYJtzCMFs6+Hxk9bfHuw1HfGb24="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/cuc-han-ls.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\cuc-han-ls.jpg",
       "Selectors": [],
@@ -6602,6 +8966,170 @@
       ]
     },
     {
+      "Route": "images/posters/dieu-con-dang-do2.hgn7wup07q.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\dieu-con-dang-do2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8697"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f6WfYOP4z7ftrSDD0OD6XqkPs5giIhf7x8raBu1Fwjk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 00:57:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hgn7wup07q"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/dieu-con-dang-do2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f6WfYOP4z7ftrSDD0OD6XqkPs5giIhf7x8raBu1Fwjk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/dieu-con-dang-do2.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\dieu-con-dang-do2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8697"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f6WfYOP4z7ftrSDD0OD6XqkPs5giIhf7x8raBu1Fwjk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 00:57:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-f6WfYOP4z7ftrSDD0OD6XqkPs5giIhf7x8raBu1Fwjk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/don-than-nam-nu.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\don-than-nam-nu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IlrKjnMVbswFuoQrpkgiHnFzlVnhBSxhbszwfvxuhio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:40:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IlrKjnMVbswFuoQrpkgiHnFzlVnhBSxhbszwfvxuhio="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/don-than-nam-nu.quhbzejwuy.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\don-than-nam-nu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IlrKjnMVbswFuoQrpkgiHnFzlVnhBSxhbszwfvxuhio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:40:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "quhbzejwuy"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/don-than-nam-nu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IlrKjnMVbswFuoQrpkgiHnFzlVnhBSxhbszwfvxuhio="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/drt.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\drt.jpg",
       "Selectors": [],
@@ -6762,6 +9290,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Xq/Etz0tL5y+2mW0/LnkDHsqIMtr80pkkVI3zlCXXuo="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/eve-che.7g59pmpnmq.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\eve-che.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KVvgLb3KgSX7+D8ze00nXaiFvbHu/Hlqa88lWI7Cp9U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:25:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7g59pmpnmq"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/eve-che.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KVvgLb3KgSX7+D8ze00nXaiFvbHu/Hlqa88lWI7Cp9U="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/eve-che.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\eve-che.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KVvgLb3KgSX7+D8ze00nXaiFvbHu/Hlqa88lWI7Cp9U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:25:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KVvgLb3KgSX7+D8ze00nXaiFvbHu/Hlqa88lWI7Cp9U="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/eve-che-fan.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\eve-che-fan.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9YAiLGZqzNwVSytCs4USHClskhScTvEQccAbhLb4G8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:25:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9YAiLGZqzNwVSytCs4USHClskhScTvEQccAbhLb4G8="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/eve-che-fan.vbpi2d37pz.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\eve-che-fan.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9YAiLGZqzNwVSytCs4USHClskhScTvEQccAbhLb4G8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:25:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vbpi2d37pz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/eve-che-fan.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9YAiLGZqzNwVSytCs4USHClskhScTvEQccAbhLb4G8="
         }
       ]
     },
@@ -7422,6 +10114,88 @@
       ]
     },
     {
+      "Route": "images/posters/giang-sinh-alaska.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\giang-sinh-alaska.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zbwudzy1XY5GvSXKZjRyUpcf3ItNCQVf5CETf2lGHek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:41:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zbwudzy1XY5GvSXKZjRyUpcf3ItNCQVf5CETf2lGHek="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/giang-sinh-alaska.xj08o4m8u3.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\giang-sinh-alaska.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zbwudzy1XY5GvSXKZjRyUpcf3ItNCQVf5CETf2lGHek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:41:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xj08o4m8u3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/giang-sinh-alaska.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zbwudzy1XY5GvSXKZjRyUpcf3ItNCQVf5CETf2lGHek="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/giang-sinh-nam-ay.9roae2x634.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\giang-sinh-nam-ay.jpg",
       "Selectors": [],
@@ -7914,6 +10688,88 @@
       ]
     },
     {
+      "Route": "images/posters/hiep-si-mat-na.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hiep-si-mat-na.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q1Vy140OvKLldS/ibWqoia1gT5cus5P95JKi/vj2beA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:41:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-q1Vy140OvKLldS/ibWqoia1gT5cus5P95JKi/vj2beA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/hiep-si-mat-na.tuc9dxjaa9.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hiep-si-mat-na.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13293"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q1Vy140OvKLldS/ibWqoia1gT5cus5P95JKi/vj2beA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:41:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tuc9dxjaa9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/hiep-si-mat-na.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-q1Vy140OvKLldS/ibWqoia1gT5cus5P95JKi/vj2beA="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/hoa-ngu.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoa-ngu.jpg",
       "Selectors": [],
@@ -7992,6 +10848,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-vxkIQAYgBCIfX/z3CMu3hAyKjtJoVs47BfO8+Qd0Ns0="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/hoan-quoc.3pok4r02yy.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoan-quoc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+fUUDPq3r5q0H2TC1TrPTyOEmHE9GkY2x2laCBLqO0g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:02:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3pok4r02yy"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/hoan-quoc.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+fUUDPq3r5q0H2TC1TrPTyOEmHE9GkY2x2laCBLqO0g="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/hoan-quoc.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoan-quoc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+fUUDPq3r5q0H2TC1TrPTyOEmHE9GkY2x2laCBLqO0g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:02:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+fUUDPq3r5q0H2TC1TrPTyOEmHE9GkY2x2laCBLqO0g="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/ho-canh-cut.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ho-canh-cut.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gRGNdcO+LEFjMplXuM6zzieFOSyQt8KLyQln22Gw33o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:40:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gRGNdcO+LEFjMplXuM6zzieFOSyQt8KLyQln22Gw33o="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/ho-canh-cut.p2epugyvu2.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\ho-canh-cut.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gRGNdcO+LEFjMplXuM6zzieFOSyQt8KLyQln22Gw33o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:40:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p2epugyvu2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/ho-canh-cut.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gRGNdcO+LEFjMplXuM6zzieFOSyQt8KLyQln22Gw33o="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/hoi-uc.27dc9pok1l.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoi-uc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MgUrT4A4f/iCnfgkxf+FojgvG04DuOsRzUcXvUY9Dbc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:29:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "27dc9pok1l"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/hoi-uc.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MgUrT4A4f/iCnfgkxf+FojgvG04DuOsRzUcXvUY9Dbc="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/hoi-uc.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\hoi-uc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MgUrT4A4f/iCnfgkxf+FojgvG04DuOsRzUcXvUY9Dbc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:29:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MgUrT4A4f/iCnfgkxf+FojgvG04DuOsRzUcXvUY9Dbc="
         }
       ]
     },
@@ -8406,6 +11508,88 @@
       ]
     },
     {
+      "Route": "images/posters/jim-carrey.1w7vhr4hya.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\jim-carrey.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sbZRzEOxYglBHmWWCabYYadNgQa7RbvsudjucRh/x2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:42:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1w7vhr4hya"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/jim-carrey.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sbZRzEOxYglBHmWWCabYYadNgQa7RbvsudjucRh/x2E="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/jim-carrey.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\jim-carrey.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sbZRzEOxYglBHmWWCabYYadNgQa7RbvsudjucRh/x2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:42:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sbZRzEOxYglBHmWWCabYYadNgQa7RbvsudjucRh/x2E="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/kamen-rider.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\kamen-rider.jpg",
       "Selectors": [],
@@ -8484,6 +11668,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-nF6p9Qgi89ThI2hL0Es/6trQQ8gdYSSTacYrdrDozUw="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/kate-beckinsale.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\kate-beckinsale.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rBs93qZ5cXWT0NXEo24oboh+9BUmLtNAjL+etIn+hyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:44:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rBs93qZ5cXWT0NXEo24oboh+9BUmLtNAjL+etIn+hyo="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/kate-beckinsale.se0pmc9w6u.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\kate-beckinsale.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8976"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rBs93qZ5cXWT0NXEo24oboh+9BUmLtNAjL+etIn+hyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:44:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "se0pmc9w6u"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/kate-beckinsale.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rBs93qZ5cXWT0NXEo24oboh+9BUmLtNAjL+etIn+hyo="
         }
       ]
     },
@@ -8816,6 +12082,170 @@
       ]
     },
     {
+      "Route": "images/posters/Khai cuộc Ngoại hạng vòng 31.icgq43h4s8.png",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\Khai cuộc Ngoại hạng vòng 31.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11495"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "icgq43h4s8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/Khai cuộc Ngoại hạng vòng 31.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/Khai cuộc Ngoại hạng vòng 31.png",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\Khai cuộc Ngoại hạng vòng 31.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11495"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/khai-cuoc.icgq43h4s8.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\khai-cuoc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11495"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:33:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "icgq43h4s8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/khai-cuoc.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/khai-cuoc.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\khai-cuoc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11495"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:33:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vqqR02hQlu/CNnL80e5bVSuLQytmFeDDhC4/Qn4yRgU="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/khep-lai.ekr94i7rrt.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\khep-lai.jpg",
       "Selectors": [],
@@ -8894,6 +12324,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-MtBJV0911mPOMCPWnfovrQu+YUqymmXSYiyxV2UqtJY="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/lee-bre.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\lee-bre.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UCgT7xfoAthkAgEjLojF/wRzujWU+4qgEBit/OspjSM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:21:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UCgT7xfoAthkAgEjLojF/wRzujWU+4qgEBit/OspjSM="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/lee-bre.oizyctikm8.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\lee-bre.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UCgT7xfoAthkAgEjLojF/wRzujWU+4qgEBit/OspjSM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:21:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oizyctikm8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/lee-bre.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UCgT7xfoAthkAgEjLojF/wRzujWU+4qgEBit/OspjSM="
         }
       ]
     },
@@ -9308,6 +12820,88 @@
       ]
     },
     {
+      "Route": "images/posters/luat-bong-ma2.fpcs30mj6r.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\luat-bong-ma2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13285"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UzK9SGViDsEKfyHBPcrUF8Hw92feaF8g6PFq70QXPkY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 00:54:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fpcs30mj6r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/luat-bong-ma2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UzK9SGViDsEKfyHBPcrUF8Hw92feaF8g6PFq70QXPkY="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/luat-bong-ma2.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\luat-bong-ma2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13285"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UzK9SGViDsEKfyHBPcrUF8Hw92feaF8g6PFq70QXPkY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 00:54:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UzK9SGViDsEKfyHBPcrUF8Hw92feaF8g6PFq70QXPkY="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/luat-su.17xarlviig.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\luat-su.jpg",
       "Selectors": [],
@@ -9714,6 +13308,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-KBUYZ1JcEfPDrAC9wNJ0L89xPYCN9wVo5xnHt6jwUpM="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/matt-damon.37nda8dv6n.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\matt-damon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12143"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UU8RqnQpdXjisi+uD7sDRFQm4m1CrCz0J6onfjawNgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:43:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "37nda8dv6n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/matt-damon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UU8RqnQpdXjisi+uD7sDRFQm4m1CrCz0J6onfjawNgU="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/matt-damon.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\matt-damon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12143"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UU8RqnQpdXjisi+uD7sDRFQm4m1CrCz0J6onfjawNgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:43:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UU8RqnQpdXjisi+uD7sDRFQm4m1CrCz0J6onfjawNgU="
         }
       ]
     },
@@ -10128,6 +13804,334 @@
       ]
     },
     {
+      "Route": "images/posters/new-sun.fq5kxvktmx.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:21:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fq5kxvktmx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/new-sun.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun.jp.fq5kxvktmx.jfif",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun.jp.jfif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/pjpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:20:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fq5kxvktmx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/new-sun.jp.jfif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun.jp.jfif",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun.jp.jfif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/pjpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:20:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:21:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-B3cqKygxRrduXF3kO4/HTwP9jA3wK/VxZXVhY4/u6Jk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun-data.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun-data.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6874"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sqHTexpYzZo6vxSo6FLURwEP0FpY1A9wc8QkdvGqWKA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:20:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sqHTexpYzZo6vxSo6FLURwEP0FpY1A9wc8QkdvGqWKA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun-data.mb10v7erzi.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun-data.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6874"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sqHTexpYzZo6vxSo6FLURwEP0FpY1A9wc8QkdvGqWKA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:20:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mb10v7erzi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/new-sun-data.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sqHTexpYzZo6vxSo6FLURwEP0FpY1A9wc8QkdvGqWKA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun-full.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun-full.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wpGPhxk04UH3Ss5ZwjYYk7urseBOIFxPODWXC/pRG0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:26:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wpGPhxk04UH3Ss5ZwjYYk7urseBOIFxPODWXC/pRG0E="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/new-sun-full.uogrtx4534.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\new-sun-full.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wpGPhxk04UH3Ss5ZwjYYk7urseBOIFxPODWXC/pRG0E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:26:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uogrtx4534"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/new-sun-full.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wpGPhxk04UH3Ss5ZwjYYk7urseBOIFxPODWXC/pRG0E="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/nghich-thien.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nghich-thien.jpg",
       "Selectors": [],
@@ -10374,6 +14378,88 @@
       ]
     },
     {
+      "Route": "images/posters/nhan-tai.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhan-tai.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PchUzBret8TpQjWm00cTPliKIIKhEGLRYeFk8uLayDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:13:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PchUzBret8TpQjWm00cTPliKIIKhEGLRYeFk8uLayDA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/nhan-tai.nr6q7jggix.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhan-tai.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PchUzBret8TpQjWm00cTPliKIIKhEGLRYeFk8uLayDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:13:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nr6q7jggix"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/nhan-tai.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PchUzBret8TpQjWm00cTPliKIIKhEGLRYeFk8uLayDA="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/nhk.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhk.jpg",
       "Selectors": [],
@@ -10452,6 +14538,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-J4mp3llw0zlguiQv54JTuiSkHCGuCO0EWJOdKkwqHpA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/nhung-co-gai-khi-yeu.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhung-co-gai-khi-yeu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9744"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PERA7SVJZMtsSmxxw5YOLE5PTf28R2Eh1Yn575k2I7g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:40:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PERA7SVJZMtsSmxxw5YOLE5PTf28R2Eh1Yn575k2I7g="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/nhung-co-gai-khi-yeu.w371ejz15n.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\nhung-co-gai-khi-yeu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9744"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PERA7SVJZMtsSmxxw5YOLE5PTf28R2Eh1Yn575k2I7g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:40:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w371ejz15n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/nhung-co-gai-khi-yeu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PERA7SVJZMtsSmxxw5YOLE5PTf28R2Eh1Yn575k2I7g="
         }
       ]
     },
@@ -10620,6 +14788,88 @@
       ]
     },
     {
+      "Route": "images/posters/oc-dao.4snfb1aukx.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\oc-dao.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13337"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3CoGAkvtxZzQi+XrIzherEY+I9hB37J/StBTYOfR3HQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:14:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4snfb1aukx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/oc-dao.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3CoGAkvtxZzQi+XrIzherEY+I9hB37J/StBTYOfR3HQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/oc-dao.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\oc-dao.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13337"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3CoGAkvtxZzQi+XrIzherEY+I9hB37J/StBTYOfR3HQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:14:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3CoGAkvtxZzQi+XrIzherEY+I9hB37J/StBTYOfR3HQ="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/outdoor.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\outdoor.jpg",
       "Selectors": [],
@@ -10702,6 +14952,88 @@
       ]
     },
     {
+      "Route": "images/posters/quai-vat.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quai-vat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M75EcKVORNbOqQPNR2/0MmQRtX/VPX+npA9tP1Anb7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:14:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M75EcKVORNbOqQPNR2/0MmQRtX/VPX+npA9tP1Anb7w="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/quai-vat.p58epmp3fl.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quai-vat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M75EcKVORNbOqQPNR2/0MmQRtX/VPX+npA9tP1Anb7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:14:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p58epmp3fl"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/quai-vat.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M75EcKVORNbOqQPNR2/0MmQRtX/VPX+npA9tP1Anb7w="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/quyen-vuong.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quyen-vuong.jpg",
       "Selectors": [],
@@ -10780,6 +15112,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-cilvXNkUS4Mn2S/FAX914bPMTa20scrEl4mncEEeVa0="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/quy-lun.0ef9d8evvj.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quy-lun.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9928"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KKPQN1kuNFBcGrVTKDBt96hGSpFXqtDQCiiJEZQ2SRk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:41:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ef9d8evvj"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/quy-lun.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KKPQN1kuNFBcGrVTKDBt96hGSpFXqtDQCiiJEZQ2SRk="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/quy-lun.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\quy-lun.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9928"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KKPQN1kuNFBcGrVTKDBt96hGSpFXqtDQCiiJEZQ2SRk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:41:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KKPQN1kuNFBcGrVTKDBt96hGSpFXqtDQCiiJEZQ2SRk="
         }
       ]
     },
@@ -11358,6 +15772,88 @@
       ]
     },
     {
+      "Route": "images/posters/thu-2.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\thu-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q7ujfWqp9wEKdGHylhRoBh4Ojs/JKKEp77ut1xelOEI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:30:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q7ujfWqp9wEKdGHylhRoBh4Ojs/JKKEp77ut1xelOEI="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/thu-2.vh8df88x6o.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\thu-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q7ujfWqp9wEKdGHylhRoBh4Ojs/JKKEp77ut1xelOEI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:30:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vh8df88x6o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/thu-2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q7ujfWqp9wEKdGHylhRoBh4Ojs/JKKEp77ut1xelOEI="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/thvl1-hd.6awbdf2eyl.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\thvl1-hd.jpg",
       "Selectors": [],
@@ -11768,6 +16264,252 @@
       ]
     },
     {
+      "Route": "images/posters/tong-hop-sau.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tong-hop-sau.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15612"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mZnTWJ3wQ1eW/vhtaAL+wiUWkENXLKK5eBkylDT3L0Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:31:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mZnTWJ3wQ1eW/vhtaAL+wiUWkENXLKK5eBkylDT3L0Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tong-hop-sau.rvfc3qomjf.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tong-hop-sau.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15612"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mZnTWJ3wQ1eW/vhtaAL+wiUWkENXLKK5eBkylDT3L0Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:31:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rvfc3qomjf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tong-hop-sau.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mZnTWJ3wQ1eW/vhtaAL+wiUWkENXLKK5eBkylDT3L0Q="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tong-hop-truoc.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tong-hop-truoc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12265"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+muDUQIfR0jVexKXmpDQVjOBYUBKv65MY3L+Okc+HF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:32:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+muDUQIfR0jVexKXmpDQVjOBYUBKv65MY3L+Okc+HF4="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tong-hop-truoc.uakdgzbnj9.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tong-hop-truoc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12265"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+muDUQIfR0jVexKXmpDQVjOBYUBKv65MY3L+Okc+HF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:32:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uakdgzbnj9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tong-hop-truoc.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+muDUQIfR0jVexKXmpDQVjOBYUBKv65MY3L+Okc+HF4="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tot-nfo.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tot-nfo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15014"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LXQ3JEffet04FYGeFZ+V0rxLu/rcoWoYM0wkDbwXQP0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:19:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LXQ3JEffet04FYGeFZ+V0rxLu/rcoWoYM0wkDbwXQP0="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tot-nfo.x7lrgcl7ev.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tot-nfo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15014"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LXQ3JEffet04FYGeFZ+V0rxLu/rcoWoYM0wkDbwXQP0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:19:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x7lrgcl7ev"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tot-nfo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LXQ3JEffet04FYGeFZ+V0rxLu/rcoWoYM0wkDbwXQP0="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/truong-an-tam-quai-tham.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\truong-an-tam-quai-tham.jpg",
       "Selectors": [],
@@ -11928,6 +16670,580 @@
         {
           "Name": "integrity",
           "Value": "sha256-lW3WENxSFsFqKbp4DdjgF8EnNMYeARUYM8cx3EMBLpU="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-banh-my.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-banh-my.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15446"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"meDxDF9nI2oziU071Hwqqs44E80yL5CvzCTsmGfv94M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-meDxDF9nI2oziU071Hwqqs44E80yL5CvzCTsmGfv94M="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-banh-my.lhqqwiz4fp.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-banh-my.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15446"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"meDxDF9nI2oziU071Hwqqs44E80yL5CvzCTsmGfv94M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lhqqwiz4fp"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tuyen-tap-banh-my.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-meDxDF9nI2oziU071Hwqqs44E80yL5CvzCTsmGfv94M="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-bi-kip.g0klf6cf9h.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-bi-kip.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cODIGDumUirG7qmEyR4gtjMaGe4314n9MSOii5clNIg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:37:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g0klf6cf9h"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tuyen-tap-bi-kip.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cODIGDumUirG7qmEyR4gtjMaGe4314n9MSOii5clNIg="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-bi-kip.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-bi-kip.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cODIGDumUirG7qmEyR4gtjMaGe4314n9MSOii5clNIg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:37:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cODIGDumUirG7qmEyR4gtjMaGe4314n9MSOii5clNIg="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-dan-brown.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-dan-brown.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TsLvVCciWedCotc/nBxWPVQBTAMP45TwCWT9Kb1mN4k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TsLvVCciWedCotc/nBxWPVQBTAMP45TwCWT9Kb1mN4k="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-dan-brown.y3kext5399.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-dan-brown.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TsLvVCciWedCotc/nBxWPVQBTAMP45TwCWT9Kb1mN4k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:38:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y3kext5399"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tuyen-tap-dan-brown.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TsLvVCciWedCotc/nBxWPVQBTAMP45TwCWT9Kb1mN4k="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-jumanji.1pq14d4snm.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-jumanji.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8626"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6ozqR0BwMbQlFtukIAfZSfXf1wgj5fRNzoq6W0HnHc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:39:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1pq14d4snm"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tuyen-tap-jumanji.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6ozqR0BwMbQlFtukIAfZSfXf1wgj5fRNzoq6W0HnHc="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-jumanji.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-jumanji.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8626"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m6ozqR0BwMbQlFtukIAfZSfXf1wgj5fRNzoq6W0HnHc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:39:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m6ozqR0BwMbQlFtukIAfZSfXf1wgj5fRNzoq6W0HnHc="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-kung-fu.hdygiwbce4.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-kung-fu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BZQsDtGtGAkPqsoZJzUox96n46oEwPPQogwjv7m1fEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdygiwbce4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tuyen-tap-kung-fu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BZQsDtGtGAkPqsoZJzUox96n46oEwPPQogwjv7m1fEA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-kung-fu.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-kung-fu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BZQsDtGtGAkPqsoZJzUox96n46oEwPPQogwjv7m1fEA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BZQsDtGtGAkPqsoZJzUox96n46oEwPPQogwjv7m1fEA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-noi-loan.66kvwdzior.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-noi-loan.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ImS3QSGkY+LqmRmHKMaOZ1WDi2qx31xPo1wgN2pXJHY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:36:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "66kvwdzior"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/tuyen-tap-noi-loan.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ImS3QSGkY+LqmRmHKMaOZ1WDi2qx31xPo1wgN2pXJHY="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/tuyen-tap-noi-loan.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\tuyen-tap-noi-loan.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ImS3QSGkY+LqmRmHKMaOZ1WDi2qx31xPo1wgN2pXJHY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:36:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ImS3QSGkY+LqmRmHKMaOZ1WDi2qx31xPo1wgN2pXJHY="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/vin-diesel.dqpqfk6mhn.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\vin-diesel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8466"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O9yWQNXgo2aGGOr2RXhYXqJencg5u/cTR/s273iQIDM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:43:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dqpqfk6mhn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/vin-diesel.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9yWQNXgo2aGGOr2RXhYXqJencg5u/cTR/s273iQIDM="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/vin-diesel.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\vin-diesel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8466"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O9yWQNXgo2aGGOr2RXhYXqJencg5u/cTR/s273iQIDM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:43:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9yWQNXgo2aGGOr2RXhYXqJencg5u/cTR/s273iQIDM="
         }
       ]
     },
@@ -12502,6 +17818,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-EDnHAA25tfNvwGsh6IZGuejhAODhDBwRgGXq9BqJOWE="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/wolfoo-26.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-26.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8547"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/7aJdxwcwK1yYTgm5lx8Hh1Se/Ve+K+I3V9avaRl1ik=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:08:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/7aJdxwcwK1yYTgm5lx8Hh1Se/Ve+K+I3V9avaRl1ik="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/wolfoo-26.jzggt0odks.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-26.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8547"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/7aJdxwcwK1yYTgm5lx8Hh1Se/Ve+K+I3V9avaRl1ik=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:08:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jzggt0odks"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/wolfoo-26.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/7aJdxwcwK1yYTgm5lx8Hh1Se/Ve+K+I3V9avaRl1ik="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/wolfoo-27.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-27.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UjS3+o8PrT7ziIjTFLj6toEzmZAbiSuxp2vfo8NmVJA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UjS3+o8PrT7ziIjTFLj6toEzmZAbiSuxp2vfo8NmVJA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/wolfoo-27.yv3kvnsm8t.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-27.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UjS3+o8PrT7ziIjTFLj6toEzmZAbiSuxp2vfo8NmVJA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:09:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yv3kvnsm8t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/wolfoo-27.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UjS3+o8PrT7ziIjTFLj6toEzmZAbiSuxp2vfo8NmVJA="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/wolfoo-3.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2foRqGwp7PoSsw7Y+UX/wluUz9K0rMAEJKd5KIPYX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:13:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2foRqGwp7PoSsw7Y+UX/wluUz9K0rMAEJKd5KIPYX0="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/wolfoo-3.pkz3ikag0m.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\wolfoo-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2foRqGwp7PoSsw7Y+UX/wluUz9K0rMAEJKd5KIPYX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Mar 2026 01:13:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pkz3ikag0m"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/wolfoo-3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2foRqGwp7PoSsw7Y+UX/wluUz9K0rMAEJKd5KIPYX0="
         }
       ]
     },

@@ -1,0 +1,33 @@
+@model FPTPlay.Models.Category
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Danh mục";
+    Layout = "_AdminLayout";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card bg-dark border-secondary">
+            <div class="card-header border-secondary">
+                <h5 class="mb-0">Sửa Danh mục: @Model.Name</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label text-white">Tên Danh mục</label>
+                        <input asp-for="Name" class="form-control bg-dark text-white border-secondary" required />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Slug" class="form-label text-white">Đường dẫn không dấu (Slug)</label>
+                        <input asp-for="Slug" class="form-control bg-dark text-white border-secondary" required />
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-secondary">
+                        <button type="submit" class="btn btn-warning"><i class="fas fa-save"></i> Cập nhật thay đổi</button>
+                        <a asp-action="Index" class="btn btn-outline-light ms-2">Hủy bỏ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

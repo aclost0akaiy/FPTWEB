@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using FPTPlay.Data;
 using System.Linq;
 
@@ -14,7 +15,7 @@ namespace FPTPlay.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             // Kiểm tra quyền (đơn giản qua Session)
             var role = HttpContext.Session.GetString("UserRole");
@@ -24,9 +25,29 @@ namespace FPTPlay.Controllers
             }
 
             // Truyền một số dữ liệu thống kê cơ bản ra view
-            ViewBag.TotalMovies = _context.Movies.Count();
-            ViewBag.TotalCategories = _context.Categories.Count();
-            ViewBag.TotalUsers = _context.Users.Count();
+            ViewBag.TotalMovies = await _context.Movies.CountAsync();
+            ViewBag.TotalCategories = await _context.Categories.CountAsync();
+            ViewBag.TotalUsers = await _context.Users.CountAsync();
+
+            // Lấy 5 phim mới thêm gần đây nhất
+            ViewBag.RecentMovies = await _context.Movies
+                .Include(m => m.Category)
+                .OrderByDescending(m => m.CreatedDate)
+                .Take(5)
+                .ToListAsync();
+
+            // Thống kê số lượng phim theo danh mục (Top 5 danh mục nhiều phim nhất)
+            ViewBag.CategoryStats = await _context.Categories
+                .Select(c => new 
+                { 
+                    Name = c.Name, 
+                    Count = c.Movies.Count 
+                })
+                .OrderByDescending(c => c.Count)
+                .Take(5)
+                .ToListAsync();
+
+            ViewBag.NewReleasesCount = await _context.Movies.CountAsync(m => m.IsNewRelease);
 
             return View();
         }

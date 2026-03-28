@@ -1,0 +1,41 @@
+@model FPTPlay.Models.User
+
+@{
+    ViewData["Title"] = "Thêm Người dùng mới";
+    Layout = "_AdminLayout";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card bg-dark border-secondary">
+            <div class="card-header border-secondary">
+                <h5 class="mb-0">Thêm Tài Khoản (Người dùng)</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label text-white">Email đăng nhập</label>
+                        <input asp-for="Email" type="email" class="form-control bg-dark text-white border-secondary" required placeholder="ví dụ: abc@fpt.com" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label text-white">Mật khẩu khởi tạo</label>
+                        <input asp-for="Password" type="password" class="form-control bg-dark text-white border-secondary" required placeholder="Nhập mật khẩu" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Role" class="form-label text-white">Vai trò</label>
+                        <select asp-for="Role" class="form-select bg-dark text-white border-secondary">
+                            <option value="User">Người dùng thường (User)</option>
+                            <!-- Không cho tạo Admin dễ dàng thông qua GUI trừ khi can thiệp sâu -->
+                        </select>
+                        <div class="form-text text-muted">Mặc định tài khoản tạo từ đây luôn là User.</div>
+                    </div>
+                    
+                    <div class="mt-4 pt-3 border-top border-secondary">
+                        <button type="submit" class="btn btn-primary" style="background-color: #f15a24; border: none;"><i class="fas fa-save"></i> Lưư vào SQL Khách Hàng</button>
+                        <a asp-action="Index" class="btn btn-outline-light ms-2">Trở về danh sách</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

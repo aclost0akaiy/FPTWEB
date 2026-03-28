@@ -1,0 +1,34 @@
+@model FPTPlay.Models.Category
+
+@{
+    ViewData["Title"] = "Thêm Danh mục mới";
+    Layout = "_AdminLayout";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card bg-dark border-secondary">
+            <div class="card-header border-secondary">
+                <h5 class="mb-0">Thêm Danh mục Mới</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label text-white">Tên Danh mục</label>
+                        <input asp-for="Name" class="form-control bg-dark text-white border-secondary" required placeholder="Ví dụ: Phim Hành Động" />
+                        <div class="form-text text-muted">Ví dụ: Truyền hình, Phim bộ...</div>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Slug" class="form-label text-white">Đường dẫn không dấu (Tùy chọn)</label>
+                        <input asp-for="Slug" class="form-control bg-dark text-white border-secondary" placeholder="Tự động tạo nếu để trống" />
+                        <div class="form-text text-muted">Ví dụ: phim-hanh-dong</div>
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-secondary">
+                        <button type="submit" class="btn btn-primary" style="background-color: #f15a24; border: none;"><i class="fas fa-save"></i> Lưu thông tin</button>
+                        <a asp-action="Index" class="btn btn-outline-light ms-2">Hủy bỏ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

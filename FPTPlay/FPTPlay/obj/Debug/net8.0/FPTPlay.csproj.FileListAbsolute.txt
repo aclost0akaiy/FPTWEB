@@ -146,6 +146,12 @@ C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\scopedcss\projectb
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.csproj.Up2Date
+C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.dll
+C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\refint\FPTPlay.dll
+C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.pdb
+C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.genruntimeconfig.cache
+C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\ref\FPTPlay.dll
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets\msbuild.FPTPlay.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets\msbuild.FPTPlay.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets\msbuild.build.FPTPlay.props
@@ -153,9 +159,3 @@ C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets\ms
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FPTPlay.props
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.csproj.Up2Date
-C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.dll
-C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\refint\FPTPlay.dll
-C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.pdb
-C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\FPTPlay.genruntimeconfig.cache
-C:\Users\PC\Downloads\FPTWEB\FPTPlay\FPTPlay\obj\Debug\net8.0\ref\FPTPlay.dll

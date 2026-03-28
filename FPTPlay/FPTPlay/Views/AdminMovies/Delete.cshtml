@@ -1,0 +1,31 @@
+@model FPTPlay.Models.Movie
+
+@{
+    ViewData["Title"] = "Xóa phim";
+    Layout = "_AdminLayout";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card bg-dark border-danger">
+            <div class="card-header border-danger bg-danger text-white">
+                <h5 class="mb-0"><i class="fas fa-exclamation-triangle"></i> Xác nhận Xóa Phim</h5>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <img src="@Model.PosterUrl" style="max-height: 200px; object-fit: cover; border-radius: 8px;" class="mb-3 shadow-lg" onerror="this.src='/images/default-poster.jpg'" />
+                    <h4 class="text-white">@Model.Title</h4>
+                    <p class="text-muted">Danh mục: @(Model.Category?.Name ?? "Không có")</p>
+                </div>
+                
+                <h6 class="text-danger text-center">Bạn có chắc chắn muốn xóa bộ phim này khỏi SQL Database không? Không thể hoàn tác sau khi xóa!</h6>
+                
+                <form asp-action="Delete" class="text-center mt-4">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger btn-lg px-4"><i class="fas fa-trash"></i> Xóa phim ngay</button>
+                    <a asp-action="Index" class="btn btn-outline-light btn-lg px-4 ms-2">Hủy bỏ</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

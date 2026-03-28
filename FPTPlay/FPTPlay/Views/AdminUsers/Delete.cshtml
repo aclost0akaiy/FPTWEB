@@ -1,0 +1,29 @@
+@model FPTPlay.Models.User
+
+@{
+    ViewData["Title"] = "Xóa Tài Khoản";
+    Layout = "_AdminLayout";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card bg-dark border-danger">
+            <div class="card-header border-danger bg-danger text-white">
+                <h5 class="mb-0"><i class="fas fa-user-minus"></i> CẢNH BÁO: XÓA NGƯỜI DÙNG KHỎI SQL</h5>
+            </div>
+            <div class="card-body text-center">
+                <h4 class="text-white mb-3">ID: #@Model.Id</h4>
+                <p class="text-warning fs-5">Tài khoản: <strong>@Model.Email</strong></p>
+                <div class="alert alert-dark border-secondary text-secondary mt-3">
+                    Bằng việc nhấn "Xóa", toàn bộ lịch sử (Yêu thích/Lịch sử xem) của khách hàng này sẽ bị xóa bỏ vĩnh viễn khỏi Database! 
+                </div>
+                
+                <form asp-action="Delete" class="mt-4">
+                    <input type="hidden" asp-for="Id" />
+                    <button type="submit" class="btn btn-danger btn-lg px-4"><i class="fas fa-trash"></i> Đồng ý Xóa User</button>
+                    <a asp-action="Index" class="btn btn-outline-light btn-lg px-4 ms-2">Quay lại</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

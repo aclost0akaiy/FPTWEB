@@ -1,0 +1,70 @@
+@model IEnumerable<FPTPlay.Models.Movie>
+
+@{
+    ViewData["Title"] = "Quản lý phim";
+    Layout = "_AdminLayout";
+}
+
+<div class="card bg-dark border-secondary">
+    <div class="card-header border-secondary d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Danh sách Phim</h5>
+        <a asp-action="Create" class="btn btn-sm" style="background-color: #f15a24; color: white;"><i class="fas fa-plus"></i> Thêm phim mới</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle border-secondary">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="width: 25%;">Tiêu đề</th>
+                        <th style="width: 100px;">Poster</th>
+                        <th style="width: 20%;">Danh mục</th>
+                        <th>Hiện ở Trang Chủ</th>
+                        <th>Cá nhân hóa</th>
+                        <th style="width: 150px;">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="fw-bold">@item.Title</td>
+                                <td>
+                                    <div style="width: 60px; height: 90px; background: #000; display: flex; align-items: center; justify-content: center; border-radius: 4px; overflow: hidden;">
+                                        <img src="@item.PosterUrl" style="width: 100%; height: 100%; object-fit: contain;" alt="Poster" onerror="this.src='/images/default-poster.jpg'" />
+                                    </div>
+                                </td>
+                                <td>@(item.Category?.Name ?? "Chưa phân loại")</td>
+                                <td>
+                                    @if(item.IsNewRelease) {
+                                        <span class="badge bg-success">Có (Mới)</span>
+                                    } else {
+                                        <span class="badge bg-secondary">Không</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if(item.IsPersonalized) {
+                                        <span class="badge bg-info text-dark">Dành riêng</span>
+                                    } else {
+                                        <span class="badge bg-secondary">Không</span>
+                                    }
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i> Sửa</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center py-4">Chưa có phim nào. Hãy thêm phim mới!</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 @model List<FPTPlay.Models.Movie>
+@using Microsoft.AspNetCore.Http
 
 @{
     Layout = null;
@@ -320,8 +321,8 @@
                     <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi">Thiếu nhi</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh">Ngoại hạng Anh</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Xem thêm</a>
-                        <ul class="dropdown-menu bg-dark border-0">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Xem thêm</a>
+                        <ul class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
                             <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
                         </ul>
@@ -335,12 +336,20 @@
                     <div class="user-dropdown">
                         <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
                         <div id="userDropdownContent" class="user-dropdown-content">
-                            <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
-                            <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                            @if (Context.Session.GetString("UserEmail") != null)
+                            {
+                                <a href="/Account/Logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                                <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                                <a href="/Home/Profile"><i class="fas fa-info-circle"></i> Thông tin tài khoản</a>
+                            }
+                            else
+                            {
+                                <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                            }
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn-danger btn-sm px-3">Mua gói</a>
+                    <a href="/Home/MuaGoi" class="btn btn-danger btn-sm px-3">Mua gói</a>
                 </div>
             </div>
         </div>
@@ -444,6 +453,34 @@
                 if (!userIcon.contains(e.target) && !dropdownContent.contains(e.target)) {
                     dropdownContent.style.display = 'none';
                 }
+            });
+        }
+
+        // Tìm kiếm chung
+        const searchInput = document.querySelector('input[type="search"]');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.trim().toLowerCase();
+                const allCards = document.querySelectorAll('.tv-card-wrapper, .channel-card');
+
+                allCards.forEach(card => {
+                    let text = '';
+                    const titleElem = card.querySelector('.tv-title');
+                    
+                    if (titleElem) {
+                        text = titleElem.textContent.toLowerCase();
+                    } else {
+                        const img = card.querySelector('img');
+                        if (img) text = (img.getAttribute('alt') || '').toLowerCase();
+                        if (!text) text = (card.getAttribute('title') || '').toLowerCase();
+                    }
+
+                    if (query === '' || text.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         }
     </script>

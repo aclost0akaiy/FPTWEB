@@ -282,8 +282,8 @@
                     <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi">Thiếu nhi</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh">Ngoại hạng Anh</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Xem thêm</a>
-                        <ul class="dropdown-menu bg-dark border-0">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Xem thêm</a>
+                        <ul class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
                             <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
                         </ul>
@@ -300,16 +300,17 @@
                             @if (Context.Session.GetString("UserEmail") != null)
                             {
                                 <a href="/Account/Logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                                <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
+                                <a href="/Home/Profile"><i class="fas fa-info-circle"></i> Thông tin tài khoản</a>
                             }
                             else
                             {
                                 <a href="/Account/Login"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
                             }
-                            <a href="/Favorites"><i class="fas fa-heart"></i> Yêu thích</a>
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn-danger btn-sm px-3">Mua gói</a>
+                    <a href="/Home/MuaGoi" class="btn btn-danger btn-sm px-3">Mua gói</a>
                 </div>
             </div>
         </div>
@@ -364,7 +365,11 @@
         </div>
 
         <!-- Phần Cày phim hay mỗi ngày -->
-        <h4 class="section-title mt-5">Cày phim hay mỗi ngày <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
+        <h4 class="section-title mt-5">
+            <a href="/Home/Category?slug=phim-bo&name=Phim bộ" class="text-white text-decoration-none">
+                Phim bộ <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i>
+            </a>
+        </h4>
         <div class="position-relative">
             <div class="highlight-carousel" id="highlightCarousel">
                 @foreach (var movie in Model.DailyHighlights)

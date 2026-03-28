@@ -31,9 +31,9 @@ namespace FPTPlay.Controllers
                     .Take(8)
                     .ToListAsync(),
 
-                // Phần mới: Lấy phim thuộc category "Cày phim hay mỗi ngày"
+                // Phần mới: Lấy phim thuộc category "Phim bộ"
                 DailyHighlights = await _context.Movies
-                    .Where(m => m.Category.Slug == "cay-phim-hay-moi-ngay")
+                    .Where(m => m.Category.Slug == "phim-bo-xu-huong")
                     .Take(6)
                     .ToListAsync(),
 
@@ -53,6 +53,23 @@ namespace FPTPlay.Controllers
             };
 
             return View(model);
+        }
+
+        public async Task<IActionResult> Profile()
+        {
+            var userEmail = HttpContext.Session.GetString("UserEmail");
+            if (userEmail == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            if (user == null)
+            {
+                return RedirectToAction("Logout", "Account"); // Hoặc xử lý lỗi
+            }
+
+            return View(user);
         }
 
         public async Task<IActionResult> TruyenHinh(string tab = "noi-bat")
@@ -90,11 +107,68 @@ namespace FPTPlay.Controllers
                 .Where(m => m.Category != null && m.Category.Slug == slug)
                 .ToListAsync();
 
+            if (slug == "phim-bo")
+            {
+                ViewBag.PhimBoXuHuong = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "phim-bo-xu-huong")
+                    .ToListAsync();
+                ViewBag.DanhRieng = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "danh-rieng-phim-bo")
+                    .ToListAsync();
+                ViewBag.TVB = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "tvb")
+                    .ToListAsync();
+                ViewBag.PhimBoVN = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "phim-bo-vn")
+                    .ToListAsync();
+                ViewBag.PhimBoTheLoai = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "phim-bo-the-loai")
+                    .ToListAsync();
+            }
+            if (slug == "thieu-nhi")
+            {
+                ViewBag.ThieuNhiXuHuong = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "thieu-nhi-xu-huong")
+                    .ToListAsync();
+                ViewBag.DacSacThang3 = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "dac-sac-thang-3")
+                    .ToListAsync();
+            }
+            if (slug == "ngoai-hang-anh")
+            {
+                ViewBag.Highlights = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "nha-highlights")
+                    .ToListAsync();
+                ViewBag.TranDau = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "nha-tran-dau")
+                    .ToListAsync();
+                ViewBag.TapChi = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "nha-tap-chi")
+                    .ToListAsync();
+            }
+            if (slug == "phim-le")
+            {
+                ViewBag.TuyenTap = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "phim-le-tuyen-tap")
+                    .ToListAsync();
+                ViewBag.ThuyetMinh = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "phim-le-thuyet-minh")
+                    .ToListAsync();
+                ViewBag.Hollywood = await _context.Movies
+                    .Where(m => m.Category != null && m.Category.Slug == "phim-le-hollywood")
+                    .ToListAsync();
+            }
+
             ViewBag.CategoryName = name;
             return View(movies);
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult MuaGoi()
         {
             return View();
         }

@@ -1,0 +1,594 @@
+@{
+    Layout = null;
+    var userEmail = Context.Session.GetString("UserEmail") ?? "Khách";
+    var userPhone = "097***5680"; // Demo phone number
+    if (userEmail != "Khách")
+    {
+        userPhone = userEmail.Split('@')[0];
+    }
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gói Dịch Vụ - FPT Play</title>
+    <!-- Use Bootstrap for simple grid, FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fpt-orange: #f15a24;
+            --bg-color: #000;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 30% 30%, rgba(80, 40, 10, 0.4) 0%, #000 60%),
+                              radial-gradient(circle at 70% 30%, rgba(120, 50, 20, 0.25) 0%, #000 60%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+            background: transparent;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .header-left img {
+            height: 28px;
+            margin-right: 15px;
+        }
+
+        .header-divider {
+            width: 1px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 0 15px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            text-align: right;
+            font-size: 0.9rem;
+        }
+
+        .avatar-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #38bdf8;
+            margin-left: 15px;
+            border: 2px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Main Area */
+        .packages-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .brand-logos {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-logos h3 {
+            font-weight: 800;
+            font-style: italic;
+            font-size: 2rem;
+            margin: 0;
+            text-align: center;
+        }
+
+        .brand-home-subtitle {
+            font-size: 0.8rem;
+            color: #d89b70; /* light brown */
+            font-weight: 500;
+            text-align: center;
+            margin-top: 5px;
+            font-style: normal;
+        }
+
+        /* Pricing Table */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+        }
+
+        .col-features {
+            padding: 30px;
+        }
+
+        .col-v-vip1 {
+            background: rgba(35, 20, 10, 0.9);
+            border: 2px solid var(--fpt-orange);
+            border-radius: 16px;
+            padding: 30px;
+            margin: -20px 0; /* Highlight POP OUT */
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(241, 90, 36, 0.3);
+        }
+
+        .col-v-vip1::before {
+            content: 'Phổ biến nhất';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--fpt-orange);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .col-v-vip2 {
+            padding: 30px;
+            text-align: center;
+            background: transparent;
+        }
+
+        /* Typography & Cells */
+        .pkg-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #fff, #bbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .v-vip1-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .v-vip1-price small {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #aaa;
+            text-decoration: underline;
+        }
+
+        .v-vip2-desc {
+            font-size: 0.85rem;
+            color: #ddd;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .feature-row {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .feature-row:last-child {
+            border-bottom: none;
+        }
+
+        .col-features .feature-row {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #ddd;
+        }
+
+        .col-v-vip1 .feature-row, .col-v-vip2 .feature-row {
+            justify-content: center;
+        }
+
+        .icon-check {
+            color: var(--fpt-orange);
+            font-size: 1.1rem;
+        }
+
+        .icon-x {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .col-v-vip1 .feature-row, .col-v-vip2 .feature-row {
+            color: #eee;
+            font-weight: 600;
+        }
+
+        .col-v-vip2 .feature-row.extra-text {
+            color: #aaa;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        /* Buttons */
+        .btn-buy {
+            display: inline-block;
+            background: var(--fpt-orange);
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 0;
+            width: 80%;
+            border-radius: 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(241, 90, 36, 0.4);
+        }
+
+        .btn-buy:hover {
+            background: #d94a1a;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-register {
+            display: inline-block;
+            background: rgba(30, 30, 30, 0.8);
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 0;
+            width: 80%;
+            border-radius: 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-register:hover {
+            background: #444;
+            color: #fff;
+        }
+
+        .badge-1080 {
+            background: #333;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 3px 6px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+
+        .badge-4k {
+            background: #222;
+            color: #aaa;
+            font-size: 0.7rem;
+            padding: 3px 6px;
+            border-radius: 3px;
+            border: 1px solid #444;
+            margin-left: 5px;
+        }
+
+        /* Package Notes */
+        .package-notes {
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            font-size: 0.85rem;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .package-notes p {
+            margin: 3px 0;
+        }
+
+        .package-notes .platforms {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .package-notes .platforms i {
+            font-size: 1.3rem;
+        }
+
+        /* Footer */
+        .fpt-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: var(--bg-color);
+            padding: 50px 0;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 150px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+
+        .brand-col {
+            flex: 1.5;
+        }
+
+        .company-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--fpt-orange);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.4rem;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: var(--fpt-orange);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="/" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
+                <!-- Try FPT logo style -->
+                <i class="fas fa-play-circle" style="color: var(--fpt-orange); font-size: 1.5rem; margin-right: 8px;"></i>
+                <span style="color: var(--fpt-orange); font-weight: 800; font-size:1.3rem;">FPT Play</span>
+            </a>
+            <div class="header-divider"></div>
+            <span>Gói dịch vụ</span>
+        </div>
+        <div class="header-right">
+            <div>
+                <div style="color: #aaa;">Tài khoản: <strong style="color: white; font-size: 1rem;">@userPhone</strong></div>
+                <div style="color: var(--fpt-orange); font-weight: 600;">Chưa có gói</div>
+            </div>
+            <div class="avatar-circle">
+                <img src="/images/avatar-default.png" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=@userEmail'" alt="Avatar">
+            </div>
+        </div>
+    </header>
+
+    <div class="packages-container">
+        <div class="brand-logos">
+            <div style="width: 50%; text-align: right; padding-right: 15%;">
+                <h3>FPT Play NOW</h3>
+            </div>
+            <div style="width: 50%; text-align: left; padding-left: 10%;">
+                <h3>FPT Play <span style="font-weight: 300;">HOME</span></h3>
+                <div class="brand-home-subtitle">Dịch vụ viễn thông có hợp đồng.</div>
+            </div>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Col 1: Features -->
+            <div class="col-features">
+                <div class="feature-row" style="height: 120px; border-bottom: none;"></div> <!-- Spacer for header -->
+                <div class="feature-row">Nền tảng hỗ trợ</div>
+                <div class="feature-row" style="height: 80px;">Số thiết bị xem đồng thời</div>
+                <div class="feature-row">Bóng đá Việt</div>
+                <div class="feature-row">Bóng đá Anh</div>
+                <div class="feature-row">Phim bộ mới nhất</div>
+                <div class="feature-row">Phim bom tấn Âu Mỹ</div>
+                <div class="feature-row">Chất lượng xem <span class="badge-1080">1080p</span> <span class="badge-4k">4K (Tùy gói)</span></div>
+                <div class="feature-row" style="color: #aaa; letter-spacing: 1px; font-weight: 600;">INTERNET WIFI 6 SIÊU TỐC</div>
+            </div>
+
+            <!-- Col 2: V.VIP1 -->
+            <div class="col-v-vip1">
+                <div class="pkg-name">V.VIP1</div>
+                <div class="v-vip1-price">120.000<small>đ/tháng</small></div>
+
+                <div class="feature-row text-center flex-column justify-content-center" style="height: 60px; line-height: 1.2;">
+                    <div style="color: #aaa; font-size: 1.4rem;"><i class="fas fa-tv"></i> <i class="fas fa-hdd"></i> <i class="fas fa-mobile-alt"></i></div>
+                    <small style="font-size: 0.7rem; color: #888;">TV, Box, Mobile</small>
+                </div>
+                
+                <div class="feature-row text-center flex-column justify-content-center" style="height: 80px;">
+                    <div style="font-size: 1.5rem;">5</div>
+                    <small style="font-size: 0.8rem; color: #bbb;">(Xem NHA chỉ 1)</small>
+                </div>
+
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-times icon-x"></i></div>
+
+                <a href="#" class="btn-buy mt-5">Mua ngay</a>
+            </div>
+
+            <!-- Col 3: V.VIP2 -->
+            <div class="col-v-vip2">
+                <div class="pkg-name" style="background: linear-gradient(135deg, #d89b70, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">V.VIP2</div>
+                <div class="v-vip2-desc">Trả trước 2 tháng, đồng thời đăng ký lắp đặt Internet FPT Combo V.VIP</div>
+
+                <div class="feature-row text-center flex-column justify-content-center" style="height: 60px; line-height: 1.2;">
+                    <div style="color: #666; font-size: 1.4rem;"><i class="fas fa-tv"></i> <i class="fas fa-hdd"></i> <i class="fas fa-mobile-alt"></i></div>
+                    <small style="font-size: 0.7rem; color: #666;">TV, Box, Mobile</small>
+                </div>
+
+                <div class="feature-row text-center flex-column justify-content-center" style="height: 80px;">
+                    <div style="font-size: 1.5rem;">5</div>
+                    <small style="font-size: 0.8rem; color: #bbb;">(Xem NHA chỉ 2)</small>
+                </div>
+
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row"><i class="fas fa-check icon-check"></i></div>
+                <div class="feature-row extra-text">MẠNG MẠNH GIÁ TỐT</div>
+
+                <a href="#" class="btn-register mt-5">Đăng ký</a>
+            </div>
+        </div>
+        
+        <!-- Mua Goi Footnotes -->
+        <div class="package-notes">
+            <p>- V.VIP1 xem NHA trên 1 thiết bị V.VIP2 trên 2 thiết bị cùng lúc.</p>
+            <p>- Mỗi vòng NHA sẽ có 3-4 trận phát sóng 4K.</p>
+            <p>- Hỗ trợ xem lên đến 4K trên FPT Play Box, Smart TV và Mobile. Website chỉ 480p.</p>
+            <p>- Một số thiết bị đời cũ có thể không hỗ trợ nội dung có mã hóa bản quyền.</p>
+            <div class="platforms">
+                Các nền tảng hỗ trợ
+                <i class="fas fa-ellipsis-h" title="More"></i>
+                <i class="fas fa-tv" title="Smart TV"></i>
+                <i class="fab fa-apple" title="Apple"></i>
+                <i class="fab fa-android" title="Android"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Complete FPT Footer -->
+    <footer class="fpt-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="company-name">Công ty Cổ phần Viễn Thông FPT</div>
+                <div class="footer-logo mb-3">
+                    <i class="fas fa-play-circle" style="color: var(--fpt-orange); font-size: 2rem; margin-right: 8px;"></i>
+                    <span style="color: var(--fpt-orange); font-weight: 800; font-size:1.8rem;">FPT Play</span>
+                </div>
+                <div class="cert-logos mt-2 d-flex align-items-center">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=1" alt="DMCA" style="height: 24px; margin-right: 10px; border-radius: 4px;" />
+                    <img src="https://theme.hstatic.net/1000300454/1001115316/14/bct.png?v=712" alt="Bo Cong Thuong" style="height: 30px;" />
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Về FPT Play</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Các gói dịch vụ</a></li>
+                    <li><a href="#">Trung tâm hỗ trợ</a></li>
+                    <li><a href="#">Thông tin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dịch vụ</h4>
+                <ul>
+                    <li><a href="#">Quảng cáo</a></li>
+                    <li><a href="#">Mua gói</a></li>
+                    <li><a href="#">Bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quy định</h4>
+                <ul>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Cam kết quyền riêng tư</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="min-width: 200px;">
+                <h4>Thông tin</h4>
+                <ul>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Hotline: 19006600</a></li>
+                    <li><a href="#">Email: hotrofptplay@fpt.com</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook" style="color: #fff; background: #333; padding: 6px; border-radius: 50%; font-size: 1rem; width: 30px; height: 30px; text-align: center;"></i></a>
+                    <a href="#"><i class="fab fa-youtube" style="color: #fff; background: #333; padding: 6px; border-radius: 50%; font-size: 1rem; width: 30px; height: 30px; text-align: center;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

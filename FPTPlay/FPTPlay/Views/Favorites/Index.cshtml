@@ -182,12 +182,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="/" style="color: rgba(255,255,255,0.7);">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgba(255,255,255,0.7);">Truyền hình</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgba(255,255,255,0.7);">Phim bộ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgba(255,255,255,0.7);">Thiếu nhi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgba(255,255,255,0.7);">Ngoại hạng Anh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/TruyenHinh">Truyền hình</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=phim-bo&name=Phim bộ">Phim bộ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=thieu-nhi&name=Thiếu nhi">Thiếu nhi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Home/Category?slug=ngoai-hang-anh&name=Ngoại hạng Anh">Ngoại hạng Anh</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: rgba(255,255,255,0.7);">Xem thêm</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Xem thêm</a>
+                        <ul class="dropdown-menu bg-dark border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=phim-le&name=Phim lẻ">Phim lẻ</a></li>
+                            <li><a class="dropdown-item text-white" href="/Home/Category?slug=anime&name=Anime">Anime</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
@@ -210,7 +214,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn-danger btn-sm px-3">Mua gói</a>
+                    <a href="/Home/MuaGoi" class="btn btn-danger btn-sm px-3">Mua gói</a>
                 </div>
             </div>
         </div>
@@ -285,6 +289,32 @@
                 if (!userIcon.contains(e.target) && !dropdownContent.contains(e.target)) {
                     dropdownContent.style.display = 'none';
                 }
+            });
+        }
+
+        // Tìm kiếm chung
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.trim().toLowerCase();
+                const allCards = document.querySelectorAll('.movie-card, .movie-item-wrapper');
+
+                allCards.forEach(card => {
+                    let text = '';
+                    const titleElem = card.querySelector('.title-overlay');
+                    if (titleElem) {
+                        text = titleElem.textContent.toLowerCase();
+                    }
+
+                    // Fix display toggling for wrappers
+                    let targetElement = card.classList.contains('movie-item-wrapper') ? card : card.closest('.movie-item-wrapper') || card;
+
+                    if (query === '' || text.includes(query)) {
+                        targetElement.style.display = '';
+                    } else {
+                        targetElement.style.display = 'none';
+                    }
+                });
             });
         }
 
