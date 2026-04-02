@@ -81,6 +81,11 @@
             <div class="info-label">Tên tài khoản</div>
             <div class="info-value">@Model.Email</div>
         </div>
+
+        <div class="info-item">
+            <div class="info-label">Họ và tên</div>
+            <div class="info-value">@(string.IsNullOrEmpty(Model.FullName) ? "Chưa cập nhật" : Model.FullName)</div>
+        </div>
         
         <div class="info-item">
             <div class="info-label">UID</div>
@@ -89,7 +94,7 @@
         
         <div class="info-item">
             <div class="info-label">Số điện thoại</div>
-            <div class="info-value">@Model.Email</div>
+            <div class="info-value">@(string.IsNullOrEmpty(Model.Phone) ? "Chưa cập nhật" : Model.Phone)</div>
         </div>
 
         <div class="info-item" style="cursor: pointer;">

@@ -36,7 +36,7 @@ namespace FPTPlay.Controllers
         // POST: AdminUsers/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Email,Password,Role")] User user)
+        public async Task<IActionResult> Create([Bind("Id,Email,Password,Role,FullName,Phone")] User user)
         {
             var sessionRole = HttpContext.Session.GetString("UserRole");
             if (sessionRole != "Admin") return RedirectToAction("Login", "Account");
@@ -76,7 +76,7 @@ namespace FPTPlay.Controllers
         // POST: AdminUsers/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Email,Password,Role")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Email,Password,Role,FullName,Phone")] User user)
         {
             var sessionRole = HttpContext.Session.GetString("UserRole");
             if (sessionRole != "Admin") return RedirectToAction("Login", "Account");

@@ -657,6 +657,8 @@ CREATE TABLE Users (
     Id INT IDENTITY PRIMARY KEY,
     Email NVARCHAR(100),
     Password NVARCHAR(100),
+    FullName NVARCHAR(100) NULL,
+    Phone NVARCHAR(20) NULL,
     Role NVARCHAR(20) -- 'Admin' hoặc 'Customer'
 )
 GO
@@ -782,8 +784,8 @@ DELETE FROM Users;
 GO
 
 -- Thêm lại dữ liệu
-INSERT INTO Users (Email, Password, Role)
+INSERT INTO Users (Email, Password, FullName, Phone, Role)
 VALUES 
-('admin@gmail.com', '123', 'Admin'),
-('user@gmail.com', '123', 'Customer');
+('admin@gmail.com', '123', N'Quản trị viên', '0123456789', 'Admin'),
+('user@gmail.com', '123', N'Người dùng', '0987654321', 'Customer');
 GO

@@ -9,12 +9,18 @@ namespace FPTPlay.Models
         public int Id { get; set; }
         
         [StringLength(100)]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         
         [StringLength(100)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
+
+        [StringLength(100)]
+        public string? FullName { get; set; }
+
+        [StringLength(20)]
+        public string? Phone { get; set; }
         
         [StringLength(20)]
-        public string Role { get; set; }
+        public string? Role { get; set; }
     }
 }
