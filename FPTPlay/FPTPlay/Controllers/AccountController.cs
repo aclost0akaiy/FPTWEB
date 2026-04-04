@@ -84,5 +84,33 @@ namespace FPTPlay.Controllers
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public IActionResult DoiMatKhau()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult DoiMatKhau(string email, string oldPassword, string newPassword, string confirmPassword)
+        {
+            if (newPassword != confirmPassword)
+            {
+                ViewBag.Error = "Mật khẩu mới và xác nhận mật khẩu không khớp.";
+                return View();
+            }
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == oldPassword);
+            if (user != null)
+            {
+                user.Password = newPassword;
+                _context.SaveChanges();
+                ViewBag.Success = "Đổi mật khẩu thành công!";
+                return View();
+            }
+
+            ViewBag.Error = "Email hoặc mật khẩu cũ không chính xác.";
+            return View();
+        }
     }
 }
