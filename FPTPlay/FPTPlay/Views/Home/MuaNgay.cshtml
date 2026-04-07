@@ -1,0 +1,632 @@
+@{
+    Layout = null;
+    var userEmail = Context.Session.GetString("UserEmail") ?? "Khách";
+    var userPhone = "0974105680"; 
+    if (userEmail != "Khách")
+    {
+        userPhone = userEmail.Split('@')[0];
+    }
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán - FPT Play</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fpt-orange: #f15a24;
+            --bg-dark: #121212;
+            --bg-card: #1c1c1c;
+            --border-color: #333;
+            --text-muted: #888;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+            background: transparent;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .header-divider {
+            width: 1px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 0 15px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        .avatar-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #38bdf8;
+            margin-left: 15px;
+            border: 2px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Main Container */
+        .checkout-container {
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .back-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .back-link i {
+            background: #2a2a2a;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        .back-link:hover {
+            color: var(--fpt-orange);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Selection Cards */
+        .select-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .select-card.active {
+            border-color: var(--fpt-orange);
+        }
+
+        /* Duration Cards */
+        .duration-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .duration-info {
+            text-align: center;
+            flex: 1;
+        }
+        .duration-months {
+            color: var(--fpt-orange);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        .duration-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* Custom Radio */
+        .custom-radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #555;
+            display: inline-block;
+            position: relative;
+        }
+        .select-card.active .custom-radio {
+            border-color: var(--fpt-orange);
+        }
+        .select-card.active .custom-radio::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--fpt-orange);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Payment Method Cards */
+        .payment-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+        }
+        .payment-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #fff;
+            padding: 2px;
+        }
+        .payment-info h6 {
+            margin: 0 0 5px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .payment-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        .payment-info a {
+            color: var(--text-muted);
+            text-decoration: underline;
+        }
+
+        .view-more-payment {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #aaa;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Right Order Summary */
+        .order-summary {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+        .order-summary h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        .summary-label {
+            color: var(--text-muted);
+        }
+        .summary-value {
+            font-weight: 600;
+        }
+
+        /* Promo code */
+        .promo-input-group {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .promo-input-group input {
+            background: #111;
+            border: 1px solid var(--border-color);
+            color: #fff;
+            padding: 10px 15px;
+            flex: 1;
+            border-radius: 6px 0 0 6px;
+            font-size: 0.9rem;
+        }
+        .promo-input-group input:focus {
+            outline: none;
+            border-color: #555;
+        }
+        .promo-input-group button {
+            background: #2a2a2a;
+            border: 1px solid var(--border-color);
+            border-left: none;
+            color: #888;
+            padding: 0 15px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .promo-input-group input:not(:placeholder-shown) + button {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Toggle */
+        .auto-renew {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+        .auto-renew-note {
+            font-size: 0.7rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .form-switch .form-check-input {
+            width: 2.5em;
+            background-color: #444;
+            border-color: #444;
+        }
+        .form-switch .form-check-input:checked {
+            background-color: var(--fpt-orange);
+            border-color: var(--fpt-orange);
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+        .total-price {
+            text-align: right;
+        }
+        .total-price .amount {
+            color: var(--fpt-orange);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .total-price .vat {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .btn-checkout {
+            background: var(--fpt-orange);
+            color: #fff;
+            font-weight: 700;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+            transition: background 0.2s;
+        }
+        .btn-checkout:hover {
+            background: #d94a1a;
+        }
+
+        .terms-note {
+            font-size: 0.75rem;
+            color: #888;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .terms-note a {
+            color: var(--fpt-orange);
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="/" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
+                <i class="fas fa-play-circle" style="color: var(--fpt-orange); font-size: 1.5rem; margin-right: 8px;"></i>
+                <span style="color: var(--fpt-orange); font-weight: 800; font-size:1.3rem;">FPT Play</span>
+            </a>
+            <div class="header-divider"></div>
+            <span>Gói dịch vụ</span>
+        </div>
+        <div class="header-right">
+            <div>
+                <div style="color: #aaa;">Tài khoản: <strong style="color: white; font-size: 1rem;">@userPhone</strong></div>
+                <div style="color: var(--text-muted); font-weight: 600;">Chưa có gói</div>
+            </div>
+            <div class="avatar-circle">
+                <img src="/images/avatar-default.png" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=@userEmail'" alt="Avatar" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-container">
+        <a href="/Home/MuaGoi" class="back-link">
+            <i class="fas fa-arrow-left"></i> Kỳ hạn và thanh toán
+        </a>
+
+        <div class="row gx-5">
+            <!-- Left Column: Options -->
+            <div class="col-lg-7">
+                
+                <!-- Duration Area -->
+                <div class="mb-4">
+                    <h5 class="section-title">Chọn kỳ hạn thanh toán</h5>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="select-card duration-card active">
+                                <div class="custom-radio"></div>
+                                <div class="duration-info">
+                                    <div class="duration-months">1 Tháng</div>
+                                    <div class="duration-price">120.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="select-card duration-card">
+                                <div class="custom-radio"></div>
+                                <div class="duration-info">
+                                    <div class="duration-months" style="color: var(--text-muted);">6 Tháng</div>
+                                    <div class="duration-price">720.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Area -->
+                <div>
+                    <h5 class="section-title">Chọn phương thức thanh toán</h5>
+                    
+                    <!-- Visa/Master -->
+                    <div class="select-card payment-card active">
+                        <div class="d-flex align-items-center me-2">
+                            <div class="custom-radio"></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center p-1 bg-primary rounded" style="width:45px; height:30px;">
+                            <span class="text-white fw-bold fst-italic" style="font-size:0.7rem;">VISA</span>
+                        </div>
+                        <div class="payment-info">
+                            <h6>Thẻ Quốc Tế (Visa, Master, Amex, JCB)</h6>
+                            <p>Giảm 50% tối đa 200,000 VNĐ áp dụng cho tài khoản khách hàng là chủ thẻ quốc tế TPBank. Xem thông tin chi tiết và danh sách đầu thẻ áp dụng tại (*): <br>
+                            <a href="#">https://share.fptplay.vn/kmtpbank</a></p>
+                        </div>
+                    </div>
+
+                    <!-- ShopeePay -->
+                    <div class="select-card payment-card">
+                        <div class="d-flex align-items-center me-2">
+                            <div class="custom-radio"></div>
+                        </div>
+                        <img src="https://vnpay.vn/s1/statics.vnpay.vn/2023/11/07/logo-vnpay-600x600.jpg" alt="ShopeePay" class="payment-logo" style="background:#ee4d2d; padding:0;">
+                        <!-- Mocking ShopeePay logo w/ text -->
+                        <div class="bg-danger rounded d-flex align-items-center justify-content-center" style="width:45px;height:30px; display:none;"><span class="text-white fw-bold" style="font-size:0.6rem;">S Pay</span></div>
+                        <div class="payment-info">
+                            <h6>Ví ShopeePay</h6>
+                            <p>Giảm 20% tối đa 50,000 VNĐ cho tài khoản khách hàng lần đầu thanh toán gói dịch vụ FPT Play qua ví ShopeePay. Xem thông tin chi tiết tại: <br>
+                            <a href="#">https://share.fptplay.vn/kmspp</a></p>
+                        </div>
+                    </div>
+
+                    <!-- ZaloPay -->
+                    <div class="select-card payment-card">
+                        <div class="d-flex align-items-center me-2">
+                            <div class="custom-radio"></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center pt-1" style="width:45px;">
+                            <span class="text-success fw-bold" style="font-size:0.8rem; background:#fff; padding:2px 4px; border-radius:4px;">Zalo <br> pay</span>
+                        </div>
+                        <div class="payment-info pt-2">
+                            <h6>Zalopay</h6>
+                        </div>
+                    </div>
+
+                    <!-- MoMo -->
+                    <div class="select-card payment-card">
+                        <div class="d-flex align-items-center me-2">
+                            <div class="custom-radio"></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center" style="width:45px;">
+                            <div style="background:#a60064; color:white; font-weight:bold; font-size:0.7rem; padding:4px 6px; border-radius:8px;">mo<br>mo</div>
+                        </div>
+                        <div class="payment-info pt-2">
+                            <h6>Ví MoMo</h6>
+                        </div>
+                    </div>
+
+                    <!-- VietQR -->
+                    <div class="select-card payment-card">
+                        <div class="d-flex align-items-center me-2">
+                            <div class="custom-radio"></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center" style="width:45px;">
+                            <div style="background:#fff; color:#e00; font-weight:bold; font-size:0.6rem; padding:2px 4px; border-radius:4px; border:1px solid #ccc;">Viet<span style="color:#00a;">QR</span></div>
+                        </div>
+                        <div class="payment-info pt-2">
+                            <h6>VietQR</h6>
+                        </div>
+                    </div>
+
+                    <!-- Quét mã QR -->
+                    <div class="select-card payment-card" id="btn-pay-qrcode">
+                        <div class="d-flex align-items-center me-2">
+                            <div class="custom-radio"></div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center" style="width:45px;">
+                            <i class="fas fa-qrcode" style="font-size: 1.8rem; color: #fff;"></i>
+                        </div>
+                        <div class="payment-info pt-2">
+                            <h6>Thanh toán bằng quét mã QR</h6>
+                        </div>
+                    </div>
+
+                    <div class="view-more-payment">
+                        Xem thêm phương thức thanh toán <i class="fas fa-chevron-down ms-1"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Column: Summary -->
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="order-summary">
+                    <h5>Chi tiết giao dịch</h5>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Tài khoản</span>
+                        <span class="summary-value">@userPhone</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Dịch vụ</span>
+                        <span class="summary-value">V.VIP1</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Thời hạn</span>
+                        <span class="summary-value">1 Tháng</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Kỳ thanh toán tiếp theo</span>
+                        <span class="summary-value">04/05/2026</span>
+                    </div>
+                    <div class="summary-row mt-4">
+                        <span class="summary-label">Giá tiền</span>
+                        <span class="summary-value">120.000đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Giảm giá</span>
+                        <span class="summary-value">-</span>
+                    </div>
+
+                    <div class="promo-input-group">
+                        <input type="text" placeholder="Nhập mã khuyến mãi" />
+                        <button type="button">Áp dụng</button>
+                    </div>
+
+                    <div class="auto-renew">
+                        <span class="summary-label">Tự động gia hạn</span>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="auto-renew-note">
+                        *Thời hạn hoặc phương thức thanh toán chỉ áp dụng cho gói tự động gia hạn.
+                    </div>
+
+                    <div id="qr-section" style="display: none; text-align: center; margin-bottom: 20px;">
+                        <span class="summary-label d-block mb-3 text-white">Sử dụng thiết bị hoặc ứng dụng hỗ trợ để quét mã QR</span>
+                        <div id="qr-code-img" class="d-inline-block p-1 bg-white rounded"></div>
+                    </div>
+
+                    <div class="total-row">
+                        <span class="summary-label" style="font-size:1rem;color:#eee;">Tổng thanh toán</span>
+                        <div class="total-price">
+                            <div class="amount">120.000đ</div>
+                            <div class="vat">(Đã bao gồm VAT)</div>
+                        </div>
+                    </div>
+
+                    <!-- MOCK SUCCESS PAYMENT with JS alert and redirect to home -->
+                    <form onsubmit="finishPayment(event)">
+                        <button type="submit" class="btn-checkout">Thanh toán</button>
+                    </form>
+
+                    <div class="terms-note">
+                        Bằng việc chấp nhận thanh toán, Khách Hàng đã đồng ý với Điều kiện và 
+                        điều khoản sử dụng dịch vụ truyền hình FPT Play, và ủy quyền cho 
+                        FPT Play tự động gia hạn khi hết hạn sử dụng. <br>
+                        Xem chi tiết <a href="#">Tại đây</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Script to mock payment click and select cards -->
+    <script>
+        var qrcode = null;
+
+        function updateQRCode() {
+            var account = document.querySelectorAll('.summary-value')[0].innerText;
+            var service = document.querySelectorAll('.summary-value')[1].innerText;
+            var duration = document.querySelectorAll('.summary-value')[2].innerText;
+            var price = document.querySelectorAll('.summary-value')[4].innerText;
+            var text = `Tài khoản: ${account} | Dịch vụ: ${service} | Thời hạn: ${duration} | Tổng: ${price}`;
+            
+            var container = document.getElementById("qr-code-img");
+            var qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(text);
+            container.innerHTML = `<img src="${qrUrl}" width="150" height="150" alt="QR Code" style="display:block; margin:0 auto;"/>`;
+        }
+
+        // Handle selecting duration
+        document.querySelectorAll('.duration-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.duration-card').forEach(c => c.classList.remove('active'));
+                document.querySelectorAll('.duration-months').forEach(m => m.style.color = 'var(--text-muted)');
+                
+                this.classList.add('active');
+                this.querySelector('.duration-months').style.color = 'var(--fpt-orange)';
+
+                // Basic visual update for price
+                const textPrice = this.querySelector('.duration-price').innerText;
+                document.querySelectorAll('.amount').forEach(el => el.innerText = textPrice);
+                
+                // Also update left summary
+                const months = this.querySelector('.duration-months').innerText;
+                document.querySelectorAll('.summary-row')[2].querySelector('.summary-value').innerText = months;
+                document.querySelectorAll('.summary-row')[4].querySelector('.summary-value').innerText = textPrice;
+
+                // Update QR if visible
+                if (document.getElementById('qr-section').style.display === 'block') {
+                    updateQRCode();
+                }
+            });
+        });
+
+        // Handle selecting payment method
+        document.querySelectorAll('.payment-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+
+                // Check if QR selected
+                var qrSection = document.getElementById('qr-section');
+                if (this.id === 'btn-pay-qrcode') {
+                    qrSection.style.display = 'block';
+                    updateQRCode();
+                } else {
+                    qrSection.style.display = 'none';
+                }
+            });
+        });
+
+        function finishPayment(e) {
+            e.preventDefault();
+            alert("Thanh toán thành công gói V.VIP1!");
+            window.location.href = "/Home/Index";
+        }
+    </script>
+</body>
+</html>

@@ -28,13 +28,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FPTPlay.erh9gxet2f.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1umBH6rEDhyyeeXdCypC1XvJMDlSXNM5pl\u002BItNyLERM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221umBH6rEDhyyeeXdCypC1XvJMDlSXNM5pl\u002BItNyLERM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Mar 2026 01:20:56 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221umBH6rEDhyyeeXdCypC1XvJMDlSXNM5pl\u002BItNyLERM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Apr 2026 01:07:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FPTPlay/FPTPlay.erh9gxet2f.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FPTPlay.erh9gxet2f.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"erh9gxet2f"},{"Name":"integrity","Value":"sha256-1umBH6rEDhyyeeXdCypC1XvJMDlSXNM5pl\u002BItNyLERM="},{"Name":"label","Value":"_content/FPTPlay/FPTPlay.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221umBH6rEDhyyeeXdCypC1XvJMDlSXNM5pl\u002BItNyLERM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 31 Mar 2026 01:20:56 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1125"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221umBH6rEDhyyeeXdCypC1XvJMDlSXNM5pl\u002BItNyLERM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Apr 2026 01:07:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/7-la-bai.9je58qg987.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\7-la-bai.jpg'))</AssetFile>

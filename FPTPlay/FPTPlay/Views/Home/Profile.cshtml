@@ -102,6 +102,27 @@
             <div class="info-value">••••••</div>
             <div><i class="fas fa-chevron-right text-muted" style="font-size: 0.8rem;"></i></div>
         </div>
+
+        <h3 class="profile-title mt-5 mb-3" style="font-size: 1.3rem;">Lịch sử xem phim</h3>
+        <div class="history-list">
+            @if(ViewBag.WatchHistories != null && ((IEnumerable<dynamic>)ViewBag.WatchHistories).Any())
+            {
+                foreach(var history in ViewBag.WatchHistories)
+                {
+                    <div class="info-item" style="padding: 10px 20px;">
+                        <img src="@history.Movie.PosterUrl" style="width: 50px; height: 75px; object-fit: cover; border-radius: 4px; margin-right: 15px;" />
+                        <div class="info-value">
+                            <a href="/Movies/Details/@history.MovieId" style="color: #fff; text-decoration: none; display: block; margin-bottom: 5px;">@history.Movie.Title</a>
+                            <small class="text-muted" style="font-weight: normal;">Đã xem lúc: @history.WatchedAt.ToString("dd/MM/yyyy HH:mm")</small>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="info-item" style="justify-content: center; color: #aaa;">Chưa có lịch sử xem phim.</div>
+            }
+        </div>
     </div>
 </body>
 </html>

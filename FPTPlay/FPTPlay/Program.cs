@@ -19,6 +19,19 @@ builder.Services.AddDbContext<FPTPlayContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
+builder.Services.AddTransient<FPTPlay.Services.IEmailSender, FPTPlay.Services.EmailSender>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults.AuthenticationScheme;
+})
+.AddCookie()
+.AddGoogle(googleOptions =>
+{
+    googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"] ?? "dummy-client-id";
+    googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"] ?? "dummy-secret";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +52,7 @@ app.UseRouting();
 
 app.UseSession();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -274,6 +274,64 @@
             <div class="description">
                 @(string.IsNullOrEmpty(Model.Description) ? "Bộ phim này hiện chưa có mô tả chi tiết. Hãy cùng thưởng thức để khám phá nội dung hấp dẫn nhé!" : Model.Description)
             </div>
+
+            <!-- Bình luận và Đánh giá -->
+            <div class="mt-5">
+                <h4 class="mb-4">Bình luận & Đánh giá</h4>
+                
+                @if (Context.Session.GetString("UserEmail") != null)
+                {
+                    <form action="/Movies/AddReview" method="post" class="mb-4" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px;">
+                        <input type="hidden" name="movieId" value="@Model.Id" />
+                        <div class="mb-3 d-flex align-items-center gap-3">
+                            <label class="form-label mb-0" style="font-weight:bold;">Chấm điểm:</label>
+                            <select name="rating" class="form-select bg-dark text-white border-secondary" style="width: 150px;">
+                                <option value="5">5 Sao (Tuyệt vời)</option>
+                                <option value="4">4 Sao (Tốt)</option>
+                                <option value="3">3 Sao (Khá)</option>
+                                <option value="2">2 Sao (Trung bình)</option>
+                                <option value="1">1 Sao (Tệ)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="content" class="form-control bg-dark text-white border-secondary" rows="3" placeholder="Chia sẻ cảm nhận của bạn về bộ phim..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Gửi bình luận</button>
+                    </form>
+                }
+                else
+                {
+                    <div class="alert alert-secondary text-white border-0 mb-4" style="background: rgba(255,255,255,0.1);">
+                        Vui lòng <a href="/Account/Login" class="text-danger fw-bold text-decoration-none">Đăng nhập</a> để tham gia bình luận.
+                    </div>
+                }
+
+                <div class="reviews-list">
+                    @if(ViewBag.Reviews != null && ((IEnumerable<dynamic>)ViewBag.Reviews).Any())
+                    {
+                        foreach(var review in ViewBag.Reviews)
+                        {
+                            <div class="review-item mb-3" style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary-red);">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <strong class="text-white" style="font-size: 1.1rem;"><i class="fas fa-user-circle me-2 text-secondary"></i>@(review.User?.FullName ?? review.User?.Email ?? "Người dùng")</strong>
+                                    <span class="text-warning">
+                                        @for(int i=0; i<review.Rating; i++) { 
+                                            <i class="fas fa-star"></i> 
+                                        }
+                                    </span>
+                                </div>
+                                <p class="mb-1" style="color: #ddd; font-size: 1.05rem;">@review.Content</p>
+                                <small class="text-muted">@review.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted" style="font-style: italic;">Chưa có bình luận nào. Hãy trở thành người đầu tiên đánh giá!</p>
+                    }
+                </div>
+            </div>
+            
         </div>
     </div>
 

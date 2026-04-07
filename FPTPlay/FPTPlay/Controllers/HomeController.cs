@@ -69,6 +69,13 @@ namespace FPTPlay.Controllers
                 return RedirectToAction("Logout", "Account"); // Hoặc xử lý lỗi
             }
 
+            ViewBag.WatchHistories = await _context.WatchHistories
+                .Include(w => w.Movie)
+                .Where(w => w.UserId == user.Id)
+                .OrderByDescending(w => w.WatchedAt)
+                .Take(10)
+                .ToListAsync();
+
             return View(user);
         }
 
@@ -171,6 +178,54 @@ namespace FPTPlay.Controllers
         public IActionResult MuaGoi()
         {
             return View();
+        }
+
+        public IActionResult MuaNgay()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> AdvancedSearch(string query, int? categoryId, string sortBy = "newest", int page = 1)
+        {
+            var moviesQuery = _context.Movies.Include(m => m.Category).AsQueryable();
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                moviesQuery = moviesQuery.Where(m => m.Title.Contains(query) || (m.Description != null && m.Description.Contains(query)));
+            }
+
+            if (categoryId.HasValue && categoryId.Value > 0)
+            {
+                moviesQuery = moviesQuery.Where(m => m.CategoryId == categoryId.Value);
+            }
+
+            switch (sortBy)
+            {
+                case "views":
+                    moviesQuery = moviesQuery.OrderByDescending(m => m.Views);
+                    break;
+                case "oldest":
+                    moviesQuery = moviesQuery.OrderBy(m => m.CreatedDate);
+                    break;
+                case "newest":
+                default:
+                    moviesQuery = moviesQuery.OrderByDescending(m => m.CreatedDate);
+                    break;
+            }
+
+            // Pagination (Feature 1 implementation)
+            int pageSize = 12;
+            int totalItems = await moviesQuery.CountAsync();
+            var result = await moviesQuery.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
+
+            ViewBag.CategoriesForSearch = await _context.Categories.ToListAsync();
+            ViewBag.SearchQuery = query;
+            ViewBag.SelectedCategory = categoryId;
+            ViewBag.SortBy = sortBy;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+            return View("Search", result);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

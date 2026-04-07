@@ -51,5 +51,28 @@ namespace FPTPlay.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> ThongKe()
+        {
+            // Kiểm tra quyền
+            var role = HttpContext.Session.GetString("UserRole");
+            if (role != "Admin")
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Lấy top 10 phim có lượt xem cao nhất
+            var topMovies = await _context.Movies
+                .OrderByDescending(m => m.Views)
+                .Take(10)
+                .Select(m => new { m.Title, m.Views })
+                .ToListAsync();
+
+            // Chuyển sang JSON để script đọc được
+            ViewBag.MovieTitles = System.Text.Json.JsonSerializer.Serialize(topMovies.Select(m => m.Title));
+            ViewBag.MovieViews = System.Text.Json.JsonSerializer.Serialize(topMovies.Select(m => m.Views));
+
+            return View();
+        }
     }
 }

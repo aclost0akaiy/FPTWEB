@@ -1,4 +1,4 @@
-﻿namespace FPTPlay.Models
+namespace FPTPlay.Models
 {
     public class Movie
     {
@@ -14,5 +14,6 @@
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public string? VideoUrl { get; set; }     // đường dẫn video: /videos/ten-video.mp4
         public int? Duration { get; set; }
+        public int Views { get; set; }
     }
 }

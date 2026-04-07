@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\views\\home\\category.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\views\\home\\category.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\views\\favorites\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,8 +27,8 @@
       "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\views\\home\\category.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\views\\home\\category.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|solutionrelative:fptplay\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7F3125E-5331-4E97-94C6-28059778E15B}|FPTPlay\\FPTPlay.csproj|c:\\users\\pc\\downloads\\fptweb\\fptplay\\fptplay\\models\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -78,36 +82,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "FPTPlay\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "FPTPlay\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T02:15:25.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "FPTPlay\\Views\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "FPTPlay\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAgwNkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAgwOIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-31T01:23:52.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-31T01:23:52.982Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Controllers\\AccountController.cs",
               "RelativeToolTip": "FPTPlay\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T01:02:10.132Z"
+              "WhenOpened": "2026-03-31T01:02:10.132Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TruyenHinh.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Home\\TruyenHinh.cshtml",
               "RelativeDocumentMoniker": "FPTPlay\\Views\\Home\\TruyenHinh.cshtml",
@@ -119,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Category.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Home\\Category.cshtml",
               "RelativeDocumentMoniker": "FPTPlay\\Views\\Home\\Category.cshtml",
@@ -131,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Favorites\\Index.cshtml",
               "RelativeDocumentMoniker": "FPTPlay\\Views\\Favorites\\Index.cshtml",
@@ -143,19 +159,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "FavoritesController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Controllers\\FavoritesController.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Controllers\\FavoritesController.cs",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Controllers\\FavoritesController.cs",
               "RelativeToolTip": "FPTPlay\\Controllers\\FavoritesController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T00:28:56.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Models\\Details.cshtml",
               "RelativeDocumentMoniker": "FPTPlay\\Models\\Details.cshtml",
@@ -167,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Controllers\\MoviesController.cs",
@@ -179,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Program.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Program.cs",
@@ -191,19 +207,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "FPTPlay\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "FPTPlay\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAiwAABAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEYCAAAAAAAAAAApwAABAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-21T00:29:51.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Controllers\\HomeController.cs",
@@ -215,19 +231,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\appsettings.json",
               "RelativeDocumentMoniker": "FPTPlay\\appsettings.json",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\appsettings.json",
               "RelativeToolTip": "FPTPlay\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-03-21T00:09:37.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\ViewModels\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "FPTPlay\\ViewModels\\HomeViewModel.cs",
@@ -239,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "FPTPlayContext.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Data\\FPTPlayContext.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Data\\FPTPlayContext.cs",
@@ -251,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "FPTPlay.csproj",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\FPTPlay.csproj",
               "RelativeDocumentMoniker": "FPTPlay\\FPTPlay.csproj",
@@ -263,19 +279,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Movie.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Models\\Movie.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Models\\Movie.cs",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Models\\Movie.cs",
               "RelativeToolTip": "FPTPlay\\Models\\Movie.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T03:57:38.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Models\\Category.cs",
               "RelativeDocumentMoniker": "FPTPlay\\Models\\Category.cs",

@@ -1,0 +1,70 @@
+@{
+    ViewData["Title"] = "Thống kê lượt xem phim";
+    Layout = "_AdminLayout";
+}
+
+<div class="card bg-dark text-white border-0 mt-4" style="border-radius: 12px; background: #25262b !important;">
+    <div class="card-header border-0 d-flex justify-content-between align-items-center" style="background: transparent;">
+        <h5 class="mb-0"><i class="fas fa-chart-line" style="color: #f15a24;"></i> Top 10 Phim Nhiều Lượt Xem Nhất</h5>
+    </div>
+    <div class="card-body">
+        <canvas id="viewsChart" style="max-height: 400px;"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctx = document.getElementById('viewsChart').getContext('2d');
+            
+            var titles = @Html.Raw(ViewBag.MovieTitles);
+            var views = @Html.Raw(ViewBag.MovieViews);
+
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: titles,
+                    datasets: [{
+                        label: 'Lượt xem',
+                        data: views,
+                        backgroundColor: 'rgba(241, 90, 36, 0.7)',
+                        borderColor: 'rgba(241, 90, 36, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#adb5bd'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#adb5bd'
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#fff'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}
