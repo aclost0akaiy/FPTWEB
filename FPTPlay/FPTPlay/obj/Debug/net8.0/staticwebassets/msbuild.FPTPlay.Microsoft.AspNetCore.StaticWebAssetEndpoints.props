@@ -756,6 +756,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n5qqvm4xby"},{"Name":"integrity","Value":"sha256-FeKyh043taLiUqh1RLU\u002BIXOwS\u002BF9lcEjw5Vzye8Qbks="},{"Name":"label","Value":"_content/FPTPlay/images/posters/gai-coc-chong-van-phu.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6802"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022FeKyh043taLiUqh1RLU\u002BIXOwS\u002BF9lcEjw5Vzye8Qbks=\u0022"},{"Name":"Last-Modified","Value":"Sun, 22 Mar 2026 03:45:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/gg.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\gg.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10767"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Apr 2026 02:53:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/gg.sa7puh2grp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\gg.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sa7puh2grp"},{"Name":"integrity","Value":"sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="},{"Name":"label","Value":"_content/FPTPlay/images/posters/gg.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10767"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Apr 2026 02:53:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/gia-dinh-la-so-1-phan-3.i6snw89ktd.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\gia-dinh-la-so-1-phan-3.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -803,6 +815,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-K76CRvH9DSHqg8Gcag5FCvKmolQDhoVLbr6BooSZJpI="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"12651"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022K76CRvH9DSHqg8Gcag5FCvKmolQDhoVLbr6BooSZJpI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 22 Mar 2026 04:10:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/goog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\goog.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10767"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Apr 2026 02:57:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/goog.sa7puh2grp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\goog.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sa7puh2grp"},{"Name":"integrity","Value":"sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="},{"Name":"label","Value":"_content/FPTPlay/images/posters/goog.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10767"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Apr 2026 02:57:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FPTPlay/images/posters/gsw-dal.65f1926y0h.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\posters\gsw-dal.jpg'))</AssetFile>

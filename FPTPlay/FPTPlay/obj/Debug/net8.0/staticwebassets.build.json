@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4Kvj4gYx99LYRJUuBLWr2VQGcadBB9Dw+3Jjlx5XMwo=",
+  "Hash": "ALqcXTLrqU31FwH1+fJyr4t122/gNTlDfAeinowUxCA=",
   "Source": "FPTPlay",
   "BasePath": "_content/FPTPlay",
   "Mode": "Default",
@@ -1361,6 +1361,27 @@
       "OriginalItemSpec": "wwwroot\\images\\posters\\gai-coc-chong-van-phu.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gg.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/gg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sa7puh2grp",
+      "Integrity": "NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\gg.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gia-dinh-la-so-1-phan-3.jpg",
       "SourceId": "FPTPlay",
       "SourceType": "Discovered",
@@ -1443,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\posters\\giang-sinh-nam-ay.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\goog.jpg",
+      "SourceId": "FPTPlay",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\",
+      "BasePath": "_content/FPTPlay",
+      "RelativePath": "images/posters/goog#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sa7puh2grp",
+      "Integrity": "NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\posters\\goog.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gsw-dal.jpg",
@@ -9950,6 +9992,88 @@
       ]
     },
     {
+      "Route": "images/posters/gg.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 07 Apr 2026 02:53:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/gg.sa7puh2grp.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 07 Apr 2026 02:53:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sa7puh2grp"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/gg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="
+        }
+      ]
+    },
+    {
       "Route": "images/posters/gia-dinh-la-so-1-phan-3.i6snw89ktd.jpg",
       "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\gia-dinh-la-so-1-phan-3.jpg",
       "Selectors": [],
@@ -10274,6 +10398,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-K76CRvH9DSHqg8Gcag5FCvKmolQDhoVLbr6BooSZJpI="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/goog.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\goog.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 07 Apr 2026 02:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="
+        }
+      ]
+    },
+    {
+      "Route": "images/posters/goog.sa7puh2grp.jpg",
+      "AssetFile": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\wwwroot\\images\\posters\\goog.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 07 Apr 2026 02:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sa7puh2grp"
+        },
+        {
+          "Name": "label",
+          "Value": "images/posters/goog.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NNPIdguWzbNIBpoBKlQ3n0PnYwj2OPws5riJa3eqKJs="
         }
       ]
     },

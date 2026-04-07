@@ -60,10 +60,12 @@ wwwroot\images\posters\fpt-play.jpg
 wwwroot\images\posters\france-24.jpg
 wwwroot\images\posters\fulham-burnley.jpg
 wwwroot\images\posters\gai-coc-chong-van-phu.jpg
+wwwroot\images\posters\gg.jpg
 wwwroot\images\posters\gia-dinh-la-so-1-phan-3.jpg
 wwwroot\images\posters\gia-dinh-minh-vui-bat-thinh-linh.jpg
 wwwroot\images\posters\giang-sinh-alaska.jpg
 wwwroot\images\posters\giang-sinh-nam-ay.jpg
+wwwroot\images\posters\goog.jpg
 wwwroot\images\posters\gsw-dal.jpg
 wwwroot\images\posters\gtv.jpg
 wwwroot\images\posters\hanh-phuc.jpg
