@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Apr 2026 01:07:33 GMT"
+          "Value": "Tue, 21 Apr 2026 02:01:49 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,7 +74,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 07 Apr 2026 01:07:33 GMT"
+          "Value": "Tue, 21 Apr 2026 02:01:49 GMT"
         }
       ],
       "EndpointProperties": [
@@ -245,6 +245,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/067dec2b-e61a-4609-89e2-86c70d62866b_angry-birds-2.8mk6wl5k5g.jpg",
+      "AssetFile": "images/067dec2b-e61a-4609-89e2-86c70d62866b_angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:20:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8mk6wl5k5g"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        },
+        {
+          "Name": "label",
+          "Value": "images/067dec2b-e61a-4609-89e2-86c70d62866b_angry-birds-2.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/067dec2b-e61a-4609-89e2-86c70d62866b_angry-birds-2.jpg",
+      "AssetFile": "images/067dec2b-e61a-4609-89e2-86c70d62866b_angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:20:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        }
+      ]
+    },
+    {
+      "Route": "images/6e6e45ae-6a78-4c0a-9394-3b8238ea381b_angry-birds.jpg",
+      "AssetFile": "images/6e6e45ae-6a78-4c0a-9394-3b8238ea381b_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Apr 2026 01:24:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "images/6e6e45ae-6a78-4c0a-9394-3b8238ea381b_angry-birds.swnfspr79p.jpg",
+      "AssetFile": "images/6e6e45ae-6a78-4c0a-9394-3b8238ea381b_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Apr 2026 01:24:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "swnfspr79p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        },
+        {
+          "Name": "label",
+          "Value": "images/6e6e45ae-6a78-4c0a-9394-3b8238ea381b_angry-birds.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/a1eacb25-8ba5-470a-8122-0113a06fc075_angry-birds.jpg",
+      "AssetFile": "images/a1eacb25-8ba5-470a-8122-0113a06fc075_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 20 Apr 2026 23:58:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "images/a1eacb25-8ba5-470a-8122-0113a06fc075_angry-birds.swnfspr79p.jpg",
+      "AssetFile": "images/a1eacb25-8ba5-470a-8122-0113a06fc075_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 20 Apr 2026 23:58:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "swnfspr79p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        },
+        {
+          "Name": "label",
+          "Value": "images/a1eacb25-8ba5-470a-8122-0113a06fc075_angry-birds.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/avatars/34e9e424-6c28-491a-8805-8504ad118333_angry-birds.jpg",
+      "AssetFile": "images/avatars/34e9e424-6c28-491a-8805-8504ad118333_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Apr 2026 03:24:44 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatars/34e9e424-6c28-491a-8805-8504ad118333_angry-birds.swnfspr79p.jpg",
+      "AssetFile": "images/avatars/34e9e424-6c28-491a-8805-8504ad118333_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 14 Apr 2026 03:24:44 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "swnfspr79p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        },
+        {
+          "Name": "label",
+          "Value": "images/avatars/34e9e424-6c28-491a-8805-8504ad118333_angry-birds.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/fc690c4e-65d1-4a51-b0d6-d45c557d5fbe_angry-birds-2.8mk6wl5k5g.jpg",
+      "AssetFile": "images/fc690c4e-65d1-4a51-b0d6-d45c557d5fbe_angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:37:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8mk6wl5k5g"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        },
+        {
+          "Name": "label",
+          "Value": "images/fc690c4e-65d1-4a51-b0d6-d45c557d5fbe_angry-birds-2.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/fc690c4e-65d1-4a51-b0d6-d45c557d5fbe_angry-birds-2.jpg",
+      "AssetFile": "images/fc690c4e-65d1-4a51-b0d6-d45c557d5fbe_angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:37:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
         }
       ]
     },
@@ -13451,6 +13861,88 @@
       ]
     },
     {
+      "Route": "js/notifications.js",
+      "AssetFile": "js/notifications.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+x0BfH6stdtNN/W8gsGuyItqbUCI5SdbLAPu42kTUUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Apr 2026 00:26:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+x0BfH6stdtNN/W8gsGuyItqbUCI5SdbLAPu42kTUUw="
+        }
+      ]
+    },
+    {
+      "Route": "js/notifications.v3bnihx5y5.js",
+      "AssetFile": "js/notifications.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+x0BfH6stdtNN/W8gsGuyItqbUCI5SdbLAPu42kTUUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Apr 2026 00:26:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3bnihx5y5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+x0BfH6stdtNN/W8gsGuyItqbUCI5SdbLAPu42kTUUw="
+        },
+        {
+          "Name": "label",
+          "Value": "js/notifications.js"
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "js/site.js",
       "Selectors": [],
@@ -18203,6 +18695,498 @@
         {
           "Name": "integrity",
           "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
+        }
+      ]
+    },
+    {
+      "Route": "subs/demo-en.ewlm3rmlnn.vtt",
+      "AssetFile": "subs/demo-en.vtt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "387"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XudlEBLnh71GU06W64FwJUhlvLRcrvXwIBscFrFvvpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Apr 2026 02:05:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ewlm3rmlnn"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XudlEBLnh71GU06W64FwJUhlvLRcrvXwIBscFrFvvpI="
+        },
+        {
+          "Name": "label",
+          "Value": "subs/demo-en.vtt"
+        }
+      ]
+    },
+    {
+      "Route": "subs/demo-en.vtt",
+      "AssetFile": "subs/demo-en.vtt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "387"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XudlEBLnh71GU06W64FwJUhlvLRcrvXwIBscFrFvvpI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Apr 2026 02:05:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XudlEBLnh71GU06W64FwJUhlvLRcrvXwIBscFrFvvpI="
+        }
+      ]
+    },
+    {
+      "Route": "subs/demo-vi.1horel2q2u.vtt",
+      "AssetFile": "subs/demo-vi.vtt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pZZUzTX3qHNT6JaY+ARXI0AhM8a6g3v5XkOZJlEjLvI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Apr 2026 02:05:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1horel2q2u"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pZZUzTX3qHNT6JaY+ARXI0AhM8a6g3v5XkOZJlEjLvI="
+        },
+        {
+          "Name": "label",
+          "Value": "subs/demo-vi.vtt"
+        }
+      ]
+    },
+    {
+      "Route": "subs/demo-vi.vtt",
+      "AssetFile": "subs/demo-vi.vtt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pZZUzTX3qHNT6JaY+ARXI0AhM8a6g3v5XkOZJlEjLvI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Apr 2026 02:05:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pZZUzTX3qHNT6JaY+ARXI0AhM8a6g3v5XkOZJlEjLvI="
+        }
+      ]
+    },
+    {
+      "Route": "videos/4773657b-487b-432a-b63c-a6df0cd9ed5d_afn-hd.jpg",
+      "AssetFile": "videos/4773657b-487b-432a-b63c-a6df0cd9ed5d_afn-hd.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oJ/Qxcoxs9zv5OdlNsxYjdQtMUUxk01FfwZGmjRzWXE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Apr 2026 01:24:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oJ/Qxcoxs9zv5OdlNsxYjdQtMUUxk01FfwZGmjRzWXE="
+        }
+      ]
+    },
+    {
+      "Route": "videos/4773657b-487b-432a-b63c-a6df0cd9ed5d_afn-hd.wcllpauo3y.jpg",
+      "AssetFile": "videos/4773657b-487b-432a-b63c-a6df0cd9ed5d_afn-hd.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oJ/Qxcoxs9zv5OdlNsxYjdQtMUUxk01FfwZGmjRzWXE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 16 Apr 2026 01:24:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wcllpauo3y"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oJ/Qxcoxs9zv5OdlNsxYjdQtMUUxk01FfwZGmjRzWXE="
+        },
+        {
+          "Name": "label",
+          "Value": "videos/4773657b-487b-432a-b63c-a6df0cd9ed5d_afn-hd.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "videos/967663aa-9b45-4f0b-8c03-271873ddfd08_angry-birds-2.8mk6wl5k5g.jpg",
+      "AssetFile": "videos/967663aa-9b45-4f0b-8c03-271873ddfd08_angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 20 Apr 2026 23:58:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8mk6wl5k5g"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        },
+        {
+          "Name": "label",
+          "Value": "videos/967663aa-9b45-4f0b-8c03-271873ddfd08_angry-birds-2.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "videos/967663aa-9b45-4f0b-8c03-271873ddfd08_angry-birds-2.jpg",
+      "AssetFile": "videos/967663aa-9b45-4f0b-8c03-271873ddfd08_angry-birds-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 20 Apr 2026 23:58:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IG4qGNMpZv71UCveEVduCTDXpycJoHwGfR7WIkchZWI="
+        }
+      ]
+    },
+    {
+      "Route": "videos/c117e08f-ce06-40b5-96ae-8c7b45b3484d_angry-birds.jpg",
+      "AssetFile": "videos/c117e08f-ce06-40b5-96ae-8c7b45b3484d_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:20:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "videos/c117e08f-ce06-40b5-96ae-8c7b45b3484d_angry-birds.swnfspr79p.jpg",
+      "AssetFile": "videos/c117e08f-ce06-40b5-96ae-8c7b45b3484d_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:20:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "swnfspr79p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        },
+        {
+          "Name": "label",
+          "Value": "videos/c117e08f-ce06-40b5-96ae-8c7b45b3484d_angry-birds.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "videos/ddf846b3-8eb9-4b06-b382-5f5e73d7b1c4_angry-birds.jpg",
+      "AssetFile": "videos/ddf846b3-8eb9-4b06-b382-5f5e73d7b1c4_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:37:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        }
+      ]
+    },
+    {
+      "Route": "videos/ddf846b3-8eb9-4b06-b382-5f5e73d7b1c4_angry-birds.swnfspr79p.jpg",
+      "AssetFile": "videos/ddf846b3-8eb9-4b06-b382-5f5e73d7b1c4_angry-birds.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11601"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Apr 2026 00:37:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "swnfspr79p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NMlFbPN7N3XNaDsc/0SPKvQf8pTPci5yofJs7yaPGg8="
+        },
+        {
+          "Name": "label",
+          "Value": "videos/ddf846b3-8eb9-4b06-b382-5f5e73d7b1c4_angry-birds.jpg"
         }
       ]
     },

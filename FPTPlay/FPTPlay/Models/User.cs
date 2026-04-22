@@ -22,5 +22,9 @@ namespace FPTPlay.Models
         
         [StringLength(20)]
         public string? Role { get; set; }
+
+        public string? AvatarUrl { get; set; } = "/images/avatars/default.png";
+
+        public bool IsVip { get; set; } = false; // Phân biệt tài khoản thường và VIP
     }
 }

@@ -330,7 +330,31 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <input class="form-control bg-dark text-white border-0" type="search" placeholder="Tìm kiếm..." style="max-width: 180px;" />
-                    <i class="fas fa-bell fa-lg text-white" style="cursor: pointer;"></i>
+                    <div class="dropdown me-2" style="display:inline-block;">
+                        <i class="fas fa-bell fa-lg text-white" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="cursor: pointer; position: relative;">
+                            <span class="badge bg-danger rounded-circle" id="notificationCount" style="display:none;font-size:0.55rem;position:absolute;top:-8px;right:-8px;width:16px;height:16px;padding:2px;border:1px solid #000;">0</span>
+                        </i>
+                        <div class="dropdown-menu dropdown-menu-end shadow p-0" aria-labelledby="notificationDropdown" style="width: 450px; background-color: #212121; border: 1px solid #333; border-radius: 8px; margin-top: 15px;">
+                            <div class="p-3 border-bottom d-flex justify-content-between align-items-center" style="border-color: #333 !important;">
+                                <h6 class="mb-0 text-white fw-bold" style="font-size: 1.1rem;">THÔNG BÁO</h6>
+                                <button type="button" class="btn-close btn-close-white" style="font-size: 0.7rem;" onclick="document.getElementById('notificationDropdown').click()"></button>
+                            </div>
+                            <div class="p-3 border-bottom" style="border-color: #333 !important;">
+                                <div class="d-flex justify-content-end">
+                                    <div style="width: 180px;">
+                                        <label class="text-secondary mb-1" style="font-size: 0.85rem;">Trạng thái</label>
+                                        <select class="form-select form-select-sm text-white" id="filterStatus" style="background-color: #333; border: 1px solid #444; border-radius: 6px;">
+                                            <option value="all">Tất cả</option>
+                                            <option value="unread">Chưa đọc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="notificationList" style="max-height: 420px; overflow-y: auto; overflow-x: hidden;">
+                                <div class="text-center text-muted p-3">Đang tải...</div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Dropdown User -->
                     <div class="user-dropdown">
@@ -486,5 +510,6 @@
             });
         }
     </script>
+    <script src="~/js/notifications.js"></script>
 </body>
 </html>

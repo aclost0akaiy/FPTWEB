@@ -77,6 +77,15 @@
 
         <h2 class="profile-title">Thông tin tài khoản</h2>
 
+        <!-- Khu vực Avatar -->
+        <div class="text-center mb-4">
+            <img src="@(Model.AvatarUrl ?? "https://ui-avatars.com/api/?name=" + Uri.EscapeDataString(Model.FullName ?? Model.Email) + "&background=random")" alt="Avatar" class="rounded-circle mb-3 border border-secondary" style="width: 120px; height: 120px; object-fit: cover;" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=@Uri.EscapeDataString(Model.FullName ?? Model.Email)&background=random';" />
+            <form action="/Home/UploadAvatar" method="post" enctype="multipart/form-data">
+                <input type="file" name="avatarFile" accept="image/*" class="d-none" id="avatarInput" onchange="this.form.submit()" />
+                <button type="button" class="btn btn-sm" style="background: rgba(255,255,255,0.1); color: #fff; border: none; padding: 6px 15px; border-radius: 20px;" onclick="document.getElementById('avatarInput').click()"><i class="fas fa-camera"></i> Đổi ảnh đại diện</button>
+            </form>
+        </div>
+
         <div class="info-item">
             <div class="info-label">Tên tài khoản</div>
             <div class="info-value">@Model.Email</div>

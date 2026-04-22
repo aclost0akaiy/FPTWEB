@@ -295,7 +295,31 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <input id="searchInput" class="form-control bg-dark text-white border-0" type="search" placeholder="Tìm kiếm..." style="max-width: 180px;" />
-                    <i class="fas fa-bell fa-lg text-white" style="cursor: pointer;"></i>
+                    <div class="dropdown me-2" style="display:inline-block;">
+                        <i class="fas fa-bell fa-lg text-white" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="cursor: pointer; position: relative;">
+                            <span class="badge bg-danger rounded-circle" id="notificationCount" style="display:none;font-size:0.55rem;position:absolute;top:-8px;right:-8px;width:16px;height:16px;padding:2px;border:1px solid #000;">0</span>
+                        </i>
+                        <div class="dropdown-menu dropdown-menu-end shadow p-0" aria-labelledby="notificationDropdown" style="width: 450px; background-color: #212121; border: 1px solid #333; border-radius: 8px; margin-top: 15px;">
+                            <div class="p-3 border-bottom d-flex justify-content-between align-items-center" style="border-color: #333 !important;">
+                                <h6 class="mb-0 text-white fw-bold" style="font-size: 1.1rem;">THÔNG BÁO</h6>
+                                <button type="button" class="btn-close btn-close-white" style="font-size: 0.7rem;" onclick="document.getElementById('notificationDropdown').click()"></button>
+                            </div>
+                            <div class="p-3 border-bottom" style="border-color: #333 !important;">
+                                <div class="d-flex justify-content-end">
+                                    <div style="width: 180px;">
+                                        <label class="text-secondary mb-1" style="font-size: 0.85rem;">Trạng thái</label>
+                                        <select class="form-select form-select-sm text-white" id="filterStatus" style="background-color: #333; border: 1px solid #444; border-radius: 6px;">
+                                            <option value="all">Tất cả</option>
+                                            <option value="unread">Chưa đọc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="notificationList" style="max-height: 420px; overflow-y: auto; overflow-x: hidden;">
+                                <div class="text-center text-muted p-3">Đang tải...</div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Icon người dùng + dropdown giống ảnh 2 -->
                     <div class="user-dropdown">
@@ -349,8 +373,41 @@
     </div>
 
     <div class="container px-3 px-md-4">
+        <!-- Tiếp tục xem -->
+        @if (Model.ContinueWatching.Any())
+        {
+            <h4 class="section-title mt-2">Tiếp tục xem <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
+            <div class="position-relative">
+                <div class="highlight-carousel" id="continueWatchingCarousel">
+                    @foreach (var history in Model.ContinueWatching)
+                    {
+                        var movie = history.Movie;
+                        var durationSecs = (movie.Duration.HasValue ? movie.Duration.Value : 120) * 60;
+                        var progressPercent = history.LastPosition * 100 / durationSecs;
+                        if (progressPercent > 100) progressPercent = 100;
+                        
+                        <div class="highlight-card" style="width: 320px; aspect-ratio: 16/9;" data-bs-toggle="modal" data-bs-target="#movieModal"
+                             data-title="@movie.Title"
+                             data-poster="@movie.PosterUrl"
+                             data-desc="@(movie.Description ?? "Tiếp tục xem từ " + (history.LastPosition/60) + " phút trước")"
+                             data-rating="@(movie.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))" data-year="2026" data-episodes="Đang xem" data-lang="FPT Play" data-quality="FULLHD"
+                             data-movie-id="@movie.Id" data-video-url="@movie.VideoUrl">
+                            <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
+                            <div class="highlight-title" style="font-size: 0.95rem; z-index: 2;">@movie.Title</div>
+                            <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: rgba(255,255,255,0.3); z-index: 3;">
+                                <div style="height: 100%; background: #e50914; width: @progressPercent%;"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <button class="carousel-arrow right" onclick="document.getElementById('continueWatchingCarousel').scrollBy({left: 340, behavior: 'smooth'})">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        }
+
         <!-- Mới ra mắt -->
-        <h4 class="section-title mt-2">Mới ra mắt <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
+        <h4 class="section-title mt-5">Mới ra mắt <i class="fas fa-chevron-right ms-2" style="font-size: 0.9rem; color: #aaa;"></i></h4>
         <div class="position-relative">
             <div class="highlight-carousel" id="newReleasesCarousel">
                 @foreach (var movie in Model.NewReleases)
@@ -359,8 +416,8 @@
                          data-title="@movie.Title"
                          data-poster="@movie.PosterUrl"
                          data-desc="@(movie.Description ?? "Không có mô tả")"
-                         data-rating="5.0" data-year="2026" data-episodes="2/10" data-lang="Hàn Quốc" data-quality="FULLHD"
-                         data-movie-id="@movie.Id">
+                         data-rating="@(movie.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))" data-year="2026" data-episodes="2/10" data-lang="Hàn Quốc" data-quality="FULLHD"
+                         data-movie-id="@movie.Id" data-video-url="@movie.VideoUrl">
                         <img loading="lazy" width="300" height="450" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
                         <div class="highlight-title" style="font-size: 0.95rem;">@movie.Title</div>
                         @if (movie.VideoCount > 0)
@@ -389,8 +446,8 @@
                          data-title="@movie.Title"
                          data-poster="@movie.PosterUrl"
                          data-desc="@(movie.Description ?? "Không có mô tả")"
-                         data-rating="5.0" data-year="2026" data-episodes="Top Picks" data-lang="Mặc định" data-quality="FULLHD"
-                         data-movie-id="@movie.Id">
+                         data-rating="@(movie.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))" data-year="2026" data-episodes="Top Picks" data-lang="Mặc định" data-quality="FULLHD"
+                         data-movie-id="@movie.Id" data-video-url="@movie.VideoUrl">
                         <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
                         <div class="highlight-title" style="font-size: 0.95rem;">@movie.Title</div>
                     </div>
@@ -415,8 +472,8 @@
                          data-title="@movie.Title"
                          data-poster="@movie.PosterUrl"
                          data-desc="@(movie.Description ?? "Không có mô tả")"
-                         data-rating="3.3" data-year="2012" data-episodes="39/39" data-lang="Trung Quốc" data-quality="FULLHD"
-                         data-movie-id="@movie.Id">
+                         data-rating="@(movie.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))" data-year="2012" data-episodes="39/39" data-lang="Trung Quốc" data-quality="FULLHD"
+                         data-movie-id="@movie.Id" data-video-url="@movie.VideoUrl">
                         <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
                         <div class="highlight-title">@movie.Title</div>
                     </div>
@@ -437,8 +494,8 @@
                          data-title="@match.Title"
                          data-poster="@match.PosterUrl"
                          data-desc="Ngoại hạng Anh • 2025/26 • 9 phút • Highlights trận đấu"
-                         data-rating="4.8" data-year="2026" data-episodes="" data-lang="Premier League" data-quality="4K"
-                         data-movie-id="@match.Id">
+                         data-rating="@(match.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))" data-year="2026" data-episodes="" data-lang="Premier League" data-quality="4K"
+                         data-movie-id="@match.Id" data-video-url="@match.VideoUrl">
                         <img loading="lazy" src="@match.PosterUrl" alt="@match.Title" onerror="this.src='/images/default-poster.jpg'" />
                         <div class="highlight-title" style="font-size: 0.95rem;">@match.Title</div>
                     </div>
@@ -459,8 +516,8 @@
                          data-title="@movie.Title"
                          data-poster="@movie.PosterUrl"
                          data-desc="@(movie.Description ?? "Phim Hollywood đỉnh cao, FULLHD, 4K")"
-                         data-rating="5.0" data-year="2010" data-episodes="1h49p" data-lang="Anh" data-quality="FULLHD"
-                         data-movie-id="@movie.Id">
+                         data-rating="@(movie.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))" data-year="2010" data-episodes="1h49p" data-lang="Anh" data-quality="FULLHD"
+                         data-movie-id="@movie.Id" data-video-url="@movie.VideoUrl">
                         <img loading="lazy" src="@movie.PosterUrl" alt="@movie.Title" onerror="this.src='/images/default-poster.jpg'" />
                         <div class="highlight-title">@movie.Title</div>
                     </div>
@@ -547,6 +604,36 @@
                     window.location.href = '/Favorites/Add/' + currentMovieId;
                 };
             });
+
+            // Feature 2: Hover Video Preview
+            let previewTimeout;
+            card.addEventListener('mouseenter', function() {
+                const videoUrl = this.dataset.videoUrl;
+                if(videoUrl && videoUrl.trim() !== '') {
+                    previewTimeout = setTimeout(() => {
+                        let video = document.createElement('video');
+                        video.src = videoUrl;
+                        video.autoplay = true;
+                        video.muted = true;
+                        video.loop = true;
+                        video.className = 'preview-video';
+                        video.style.position = 'absolute';
+                        video.style.top = '0';
+                        video.style.left = '0';
+                        video.style.width = '100%';
+                        video.style.height = '100%';
+                        video.style.objectFit = 'cover';
+                        video.style.zIndex = '1';
+                        // Style poster to fit nicely if we want, or just overlay 
+                        this.appendChild(video);
+                    }, 800); // Wait 800ms before auto-playing trailer
+                }
+            });
+            card.addEventListener('mouseleave', function() {
+                clearTimeout(previewTimeout);
+                const vid = this.querySelector('.preview-video');
+                if(vid) vid.remove();
+            });
         });
 
             // Tìm kiếm phim
@@ -591,5 +678,6 @@
         }
 
     </script>
+    <script src="~/js/notifications.js"></script>
 </body>
 </html>

@@ -4,6 +4,8 @@ using FPTPlay.Models;
 using FPTPlay.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace FPTPlay.Controllers
 {
@@ -18,8 +20,25 @@ namespace FPTPlay.Controllers
 
         public async Task<IActionResult> Index()
         {
+            var userEmail = HttpContext.Session.GetString("UserEmail");
+            List<WatchHistory> watchHistories = new List<WatchHistory>();
+            if (userEmail != null)
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+                if (user != null)
+                {
+                    watchHistories = await _context.WatchHistories
+                        .Include(w => w.Movie)
+                        .Where(w => w.UserId == user.Id)
+                        .OrderByDescending(w => w.WatchedAt)
+                        .Take(6)
+                        .ToListAsync();
+                }
+            }
+
             var model = new HomeViewModel
             {
+                ContinueWatching = watchHistories,
                 NewReleases = await _context.Movies
                     .Where(m => m.IsNewRelease)
                     .OrderByDescending(m => m.CreatedDate)
@@ -77,6 +96,42 @@ namespace FPTPlay.Controllers
                 .ToListAsync();
 
             return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadAvatar(IFormFile avatarFile)
+        {
+            var userEmail = HttpContext.Session.GetString("UserEmail");
+            if (userEmail == null || avatarFile == null || avatarFile.Length == 0)
+            {
+                return RedirectToAction("Profile", "Home");
+            }
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            if (user == null)
+            {
+                return RedirectToAction("Profile", "Home");
+            }
+
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "avatars");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            // Create a unique filename
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + avatarFile.FileName;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await avatarFile.CopyToAsync(fileStream);
+            }
+
+            user.AvatarUrl = "/images/avatars/" + uniqueFileName;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Profile", "Home");
         }
 
         public async Task<IActionResult> TruyenHinh(string tab = "noi-bat")

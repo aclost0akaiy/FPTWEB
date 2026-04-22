@@ -1,0 +1,80 @@
+@model IEnumerable<FPTPlay.Models.Review>
+@{
+    ViewData["Title"] = "Quản lý bình luận";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-white">Quản lý bình luận</h2>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3 mb-3">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3 mb-3">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="table-responsive">
+    <table class="table table-dark table-hover align-middle">
+        <thead>
+            <tr>
+                <th>Tên phim</th>
+                <th>Người dùng</th>
+                <th>Điểm</th>
+                <th>Nội dung</th>
+                <th>Ngày đăng</th>
+                <th class="text-center">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var review in Model)
+                {
+                    <tr>
+                        <td style="max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                            @(review.Movie?.Title ?? "Phim đã xóa")
+                        </td>
+                        <td>
+                            <div><strong>@review.User?.FullName</strong></div>
+                            <small class="text-muted">@review.User?.Email</small>
+                        </td>
+                        <td>
+                            <span class="text-warning">
+                                @review.Rating <i class="fas fa-star"></i>
+                            </span>
+                        </td>
+                        <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            @review.Content
+                        </td>
+                        <td>
+                            @review.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                        </td>
+                        <td class="text-center">
+                            <form action="/AdminReviews/Delete/@review.Id" method="post" style="display:inline;">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này? Đánh giá trung bình của phim sẽ được cập nhật lại tự động.');">
+                                    <i class="fas fa-trash-alt"></i> Xóa
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center text-muted py-4">Chưa có bình luận nào.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

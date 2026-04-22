@@ -628,7 +628,31 @@
                 </ul>
                 <div class="d-flex align-items-center gap-3">
                     <input id="searchInput" class="form-control bg-dark text-white border-0" type="search" placeholder="Tìm kiếm..." style="max-width: 180px;" />
-                    <i class="fas fa-bell fa-lg text-white" style="cursor: pointer;"></i>
+                    <div class="dropdown me-2" style="display:inline-block;">
+                        <i class="fas fa-bell fa-lg text-white" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="cursor: pointer; position: relative;">
+                            <span class="badge bg-danger rounded-circle" id="notificationCount" style="display:none;font-size:0.55rem;position:absolute;top:-8px;right:-8px;width:16px;height:16px;padding:2px;border:1px solid #000;">0</span>
+                        </i>
+                        <div class="dropdown-menu dropdown-menu-end shadow p-0" aria-labelledby="notificationDropdown" style="width: 450px; background-color: #212121; border: 1px solid #333; border-radius: 8px; margin-top: 15px;">
+                            <div class="p-3 border-bottom d-flex justify-content-between align-items-center" style="border-color: #333 !important;">
+                                <h6 class="mb-0 text-white fw-bold" style="font-size: 1.1rem;">THÔNG BÁO</h6>
+                                <button type="button" class="btn-close btn-close-white" style="font-size: 0.7rem;" onclick="document.getElementById('notificationDropdown').click()"></button>
+                            </div>
+                            <div class="p-3 border-bottom" style="border-color: #333 !important;">
+                                <div class="d-flex justify-content-end">
+                                    <div style="width: 180px;">
+                                        <label class="text-secondary mb-1" style="font-size: 0.85rem;">Trạng thái</label>
+                                        <select class="form-select form-select-sm text-white" id="filterStatus" style="background-color: #333; border: 1px solid #444; border-radius: 6px;">
+                                            <option value="all">Tất cả</option>
+                                            <option value="unread">Chưa đọc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="notificationList" style="max-height: 420px; overflow-y: auto; overflow-x: hidden;">
+                                <div class="text-center text-muted p-3">Đang tải...</div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Icon người dùng + dropdown -->
                     <div class="user-dropdown">
@@ -692,7 +716,7 @@
                         <div class="hero-content">
                             <h1 style="font-size: 3.5rem; font-weight: 900; font-family: 'Arial Black', IMPACT, sans-serif; text-transform: uppercase; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); line-height: 1;">@phimBoHero.Title</h1>
                             <div class="meta-tags">
-                                <span class="rating" style="color: #ffc107; font-weight: bold;"><i class="fas fa-star" style="color: #ff7b00;"></i> 5.0 (1)</span>
+                                <span class="rating" style="color: #ffc107; font-weight: bold;"><i class="fas fa-star" style="color: #ff7b00;"></i> @(phimBoHero.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))</span>
                                 <span class="meta-tag">Đa ngôn ngữ</span>
                                 <span class="meta-tag" style="border: 1px solid rgba(255,255,255,0.4); background: transparent;">FULLHD</span>
                             </div>
@@ -861,7 +885,7 @@
                                         </div>
                                         <div class="kids-popup-title">@m.Title</div>
                                         <div class="kids-popup-meta">
-                                            <span style="color: #ff3c00; font-weight: bold;"><i class="fas fa-star text-warning"></i> 4.1 (18)</span> 
+                                            <span style="color: #ff3c00; font-weight: bold;"><i class="fas fa-star text-warning"></i> @(m.AverageRating.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture))</span> 
                                             <span style="border: 1px solid rgba(255,255,255,0.3); padding: 0 6px; border-radius: 4px; color: #999; font-size: 0.8rem;">FULLHD</span>
                                         </div>
                                         <div class="kids-popup-meta" style="color: #999; margin-bottom: 15px;">
@@ -1022,7 +1046,7 @@
                         <div class="hero-content" style="max-width: 600px; margin-top: auto; margin-bottom: 0;">
                             <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; line-height: 1.2;">Xa Mãi Châu Phi</h1>
                             <div class="meta-tags mb-3 d-flex align-items-center gap-2">
-                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;"><i class="fas fa-star text-warning"></i> 5.0 (1)</span>
+                                <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;"><i class="fas fa-star text-warning"></i> 5.0</span>
                                 <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;">Đa ngôn ngữ</span>
                                 <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">FULLHD</span>
                                 <span class="meta-tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 4px;"><i class="fas fa-volume-up"></i> Dolby ATMOS</span>
@@ -1285,5 +1309,6 @@
             });
         });
     </script>
+    <script src="~/js/notifications.js"></script>
 </body>
 </html>

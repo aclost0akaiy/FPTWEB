@@ -1,4 +1,4 @@
-﻿using FPTPlay.Models;
+using FPTPlay.Models;
 
 namespace FPTPlay.ViewModels
 {
@@ -10,5 +10,6 @@ namespace FPTPlay.ViewModels
         public List<Movie> SportsHighlights { get; set; } = new();     // Mới: Thể thao
         public List<Movie> HollywoodTop { get; set; } = new();         // Mới: Điện ảnh Âu Mỹ
         public List<Category> Categories { get; set; } = new();
+        public List<WatchHistory> ContinueWatching { get; set; } = new();
     }
 }

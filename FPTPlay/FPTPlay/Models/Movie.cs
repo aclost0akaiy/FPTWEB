@@ -15,5 +15,7 @@ namespace FPTPlay.Models
         public string? VideoUrl { get; set; }     // đường dẫn video: /videos/ten-video.mp4
         public int? Duration { get; set; }
         public int Views { get; set; }
+        public double AverageRating { get; set; } = 5.0;
+        public bool IsPremium { get; set; } = false; // Đánh dấu phim dành cho tài khoản VIP
     }
 }

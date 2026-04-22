@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FPTPlay.Data;
 using FPTPlay.Models;
+using Microsoft.AspNetCore.SignalR;
+using FPTPlay.Hubs;
 
 namespace FPTPlay.Controllers
 {
@@ -10,11 +12,13 @@ namespace FPTPlay.Controllers
     {
         private readonly FPTPlayContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IHubContext<NotificationHub> _hubContext;
 
-        public AdminMoviesController(FPTPlayContext context, IWebHostEnvironment env)
+        public AdminMoviesController(FPTPlayContext context, IWebHostEnvironment env, IHubContext<NotificationHub> hubContext)
         {
             _context = context;
             _env = env;
+            _hubContext = hubContext;
         }
 
         // GET: AdminMovies
@@ -85,6 +89,15 @@ namespace FPTPlay.Controllers
 
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
+
+                // Bắn thông báo Real-time 
+                await _hubContext.Clients.All.SendAsync("ReceiveNewMovie", new {
+                    title = movie.Title,
+                    message = $"Hot: {movie.Title} vừa mới ra mắt khán giả trên hệ thống!",
+                    posterUrl = movie.PosterUrl,
+                    id = movie.Id
+                });
+
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", movie.CategoryId);

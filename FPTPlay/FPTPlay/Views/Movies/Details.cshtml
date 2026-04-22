@@ -11,6 +11,7 @@
     <title>@Model.Title - FPT Play</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
 
     <style>
         :root {
@@ -134,6 +135,45 @@
             margin-top: 30px;
         }
 
+        /* VIP Pro styles */
+        .video-js .vjs-big-play-button {
+            border-color: #e50914;
+            background-color: rgba(229, 9, 20, 0.7);
+        }
+        .video-js .vjs-control-bar {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .video-js .vjs-load-progress div {
+            background: rgba(255,255,255,0.3);
+        }
+        .video-js .vjs-play-progress {
+            background-color: #e50914;
+        }
+
+        .skip-intro-btn {
+            position: absolute;
+            bottom: 70px;
+            right: 30px;
+            padding: 10px 24px;
+            background-color: rgba(20,20,20,0.85);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            z-index: 105;
+            display: none;
+            transition: all 0.3s;
+        }
+        .skip-intro-btn:hover { background-color: white; color: black; border-color: white; }
+        
+        .vip-overlay {
+            position: absolute; inset: 0; z-index: 100;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.95) 100%);
+        }
+
         /* User dropdown */
         .user-dropdown {
             position: relative;
@@ -191,8 +231,51 @@
                     <li class="nav-item"><a class="nav-link" href="#">Ngoại hạng Anh</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
+                    <!-- Notifications -->
                     <div class="user-dropdown">
-                        <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
+                        <div class="position-relative" style="cursor: pointer;" id="notiIcon">
+                            <div class="dropdown me-2" style="display:inline-block;">
+                                <i class="fas fa-bell fa-lg text-white" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" style="cursor: pointer; position: relative;">
+                                    <span class="badge bg-danger rounded-circle" id="notificationCount" style="display:none;font-size:0.55rem;position:absolute;top:-8px;right:-8px;width:16px;height:16px;padding:2px;border:1px solid #000;">0</span>
+                                </i>
+                                <div class="dropdown-menu dropdown-menu-end shadow p-0" aria-labelledby="notificationDropdown" style="width: 450px; background-color: #212121; border: 1px solid #333; border-radius: 8px; margin-top: 15px;">
+                                    <div class="p-3 border-bottom d-flex justify-content-between align-items-center" style="border-color: #333 !important;">
+                                        <h6 class="mb-0 text-white fw-bold" style="font-size: 1.1rem;">THÔNG BÁO</h6>
+                                        <button type="button" class="btn-close btn-close-white" style="font-size: 0.7rem;" onclick="document.getElementById('notificationDropdown').click()"></button>
+                                    </div>
+                                    <div class="p-3 border-bottom" style="border-color: #333 !important;">
+                                        <div class="d-flex justify-content-end">
+                                            <div style="width: 180px;">
+                                                <label class="text-secondary mb-1" style="font-size: 0.85rem;">Trạng thái</label>
+                                                <select class="form-select form-select-sm text-white" id="filterStatus" style="background-color: #333; border: 1px solid #444; border-radius: 6px;">
+                                                    <option value="all">Tất cả</option>
+                                                    <option value="unread">Chưa đọc</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="notificationList" style="max-height: 420px; overflow-y: auto; overflow-x: hidden;">
+                                        <div class="text-center text-muted p-3">Đang tải...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span id="notiBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none" style="font-size: 0.65rem;">
+                                0
+                            </span>
+                        </div>
+                        <div id="notiDropdownContent" class="user-dropdown-content" style="min-width: 250px; left: auto; right: -50px;">
+                            <div class="px-3 py-2 text-white fw-bold border-bottom border-secondary">Thông báo</div>
+                            <div id="notiList">
+                                <a href="#" class="text-muted text-center py-3"><small>Không có thông báo mới</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-dropdown">
+                        @if (Context.Session.GetString("UserAvatar") != null) {
+                            <img id="userIcon" src="@Context.Session.GetString("UserAvatar")" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer; object-fit: cover; border: 2px solid #fff;" onerror="this.src='/images/avatars/default.png'" />
+                        } else {
+                            <i id="userIcon" class="fas fa-user-circle fa-2x text-white" style="cursor: pointer;"></i>
+                        }
                         <div id="userDropdownContent" class="user-dropdown-content">
                             @if (Context.Session.GetString("UserEmail") != null)
                             {
@@ -216,13 +299,38 @@
 
     <!-- Player -->
     <div class="player-wrapper">
-        <div class="player-container">
-            @if (!string.IsNullOrEmpty(Model.VideoUrl))
+        <div class="player-container position-relative">
+            @if (Model.IsPremium && !ViewBag.IsUserVip)
             {
-                <video controls width="100%" height="100%" poster="@Model.PosterUrl" style="object-fit: contain; outline: none;">
+                <div style="width: 100%; height: 100%; background: url('@Model.PosterUrl') center/cover; filter: blur(10px);"></div>
+                <div class="vip-overlay text-center p-4">
+                    <i class="fas fa-crown mb-3" style="font-size: 5rem; color: #f1c40f; text-shadow: 0 0 20px rgba(241, 196, 15, 0.5);"></i>
+                    <h2 class="text-white fw-bold mb-3" style="font-size: 2.2rem;">Nội dung độc quyền VIP</h2>
+                    <p class="text-white-50 mb-4 fs-5" style="max-width: 600px;">Bản quyền bộ phim này thuộc gói phát sóng VIP. Hãy nâng cấp tài khoản để mở khóa, xem 4K siêu mượt không quảng cáo!</p>
+                    <a href="/Home/MuaGoi" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg" style="color: #212121; font-size: 1.2rem; transition: transform 0.2s;">
+                        <i class="fas fa-rocket me-2"></i>NÂNG CẤP VIP NGAY
+                    </a>
+                </div>
+            }
+            else if (!string.IsNullOrEmpty(Model.VideoUrl))
+            {
+                <video id="moviePlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="100%" poster="@Model.PosterUrl" data-setup='{"fluid": false}' style="width: 100%; height: 100%; object-fit: contain; outline: none; background: #000; position: absolute; inset: 0;">
                     <source src="@Model.VideoUrl" type="video/mp4" />
-                    Trình duyệt của bạn không hỗ trợ video player.
+                    <!-- Phụ đề mẫu -->
+                    <track kind="captions" src="/subs/demo-vi.vtt" srclang="vi" label="Tiếng Việt" default />
+                    <track kind="subtitles" src="/subs/demo-en.vtt" srclang="en" label="English" />
+                    <p class="vjs-no-js">Trình duyệt của bạn không hỗ trợ video player hiện đại.</p>
                 </video>
+                
+                <button class="skip-intro-btn shadow" id="skipIntroBtn">Bỏ qua Intro <i class="fas fa-forward ms-1"></i></button>
+
+                <div id="resumeOverlay" class="d-none" style="position:absolute; bottom: 85px; left: 20px; background: rgba(0,0,0,0.85); padding: 15px 20px; border-radius: 8px; border: 1px solid var(--primary-red); z-index: 110; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    <h5 class="text-white mb-2" style="font-size: 1rem;">Bạn đang xem dở tại <span id="posTimeText" class="text-warning">00:00</span></h5>
+                    <div class="d-flex gap-2 mt-3">
+                        <button id="btnResume" class="btn btn-sm btn-danger px-3 fw-bold">Xem tiếp</button>
+                        <button id="btnSkip" class="btn btn-sm btn-outline-light px-3">Bỏ qua</button>
+                    </div>
+                </div>
             }
             else
             {
@@ -245,7 +353,7 @@
         <div class="movie-details">
             <h1 class="movie-title">@Model.Title</h1>
             <div class="meta-tags">
-                <span style="color: #ffc107;"><i class="fas fa-star me-1"></i>5.0</span>
+                <span style="color: #ffc107;" title="Điểm trung bình từ @(ViewBag.Reviews?.Count ?? 0) đánh giá"><i class="fas fa-star me-1"></i>@(ViewBag.AverageRating)</span>
                 <span>@Model.CreatedDate.Year</span>
                 <span class="quality-badge">FULLHD</span>
                 @if (Model.Category != null)
@@ -315,8 +423,12 @@
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <strong class="text-white" style="font-size: 1.1rem;"><i class="fas fa-user-circle me-2 text-secondary"></i>@(review.User?.FullName ?? review.User?.Email ?? "Người dùng")</strong>
                                     <span class="text-warning">
-                                        @for(int i=0; i<review.Rating; i++) { 
-                                            <i class="fas fa-star"></i> 
+                                        @for(int i=1; i<=5; i++) {
+                                            if(i <= review.Rating) {
+                                                <i class="fas fa-star"></i> 
+                                            } else {
+                                                <i class="far fa-star"></i>
+                                            }
                                         }
                                     </span>
                                 </div>
@@ -332,10 +444,35 @@
                 </div>
             </div>
             
+            <!-- Gợi ý Phim Liên Quan -->
+            @if(ViewBag.RelatedMovies != null && ((IEnumerable<dynamic>)ViewBag.RelatedMovies).Any())
+            {
+                <div class="mt-5 mb-5 pt-4 border-top border-secondary">
+                    <h4 class="mb-4 text-warning">Bạn Có Thể Sẽ Thích</h4>
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+                        @foreach(var rel in ViewBag.RelatedMovies)
+                        {
+                            <div class="col">
+                                <a href="/Movies/Details/@rel.Id" class="text-decoration-none">
+                                    <div class="card bg-dark border-0 h-100" style="transition: transform 0.2s;">
+                                        <img src="@rel.PosterUrl" class="card-img-top rounded" alt="@rel.Title" onerror="this.src='/images/default-poster.jpg'" style="aspect-ratio: 2/3; object-fit: cover;">
+                                        <div class="card-body px-1 py-2 text-center">
+                                            <h6 class="card-title text-white text-truncate mb-0" style="font-size:0.95rem;">@rel.Title</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script src="https://vjs.zencdn.net/8.10.0/lang/vi.js"></script>
     <script>
         const userIcon = document.getElementById('userIcon');
         const dropdownContent = document.getElementById('userDropdownContent');
@@ -353,6 +490,116 @@
                 }
             });
         }
+
+        const playerElement = document.getElementById('moviePlayer');
+        let player = null;
+        let lastPos = @(ViewBag.LastPosition ?? 0);
+        let resumeHandled = false;
+
+        if (playerElement) {
+            // Khởi tạo VideoJS
+            player = videojs('moviePlayer', {
+                language: 'vi',
+                playbackRates: [0.5, 1, 1.25, 1.5, 2],
+                controlBar: {
+                    skipButtons: {
+                        forward: 10,
+                        backward: 10
+                    }
+                }
+            });
+
+            // Feature: Skip Intro (HIển thị nút Bỏ qua Intro trong khoảng 0-15s)
+            const skipIntroBtn = document.getElementById('skipIntroBtn');
+            player.on('timeupdate', function() {
+                var current = player.currentTime();
+                if (current > 0 && current < 15) { // Giả lập intro dài 15s
+                    skipIntroBtn.style.display = 'block';
+                } else {
+                    skipIntroBtn.style.display = 'none';
+                }
+            });
+
+            skipIntroBtn.addEventListener('click', function() {
+                player.currentTime(15);
+                skipIntroBtn.style.display = 'none';
+            });
+
+            // Resume logic
+            if (lastPos > 0) {
+                const overlay = document.getElementById('resumeOverlay');
+                const min = Math.floor(lastPos / 60);
+                const sec = lastPos % 60;
+                document.getElementById('posTimeText').textContent = `${min < 10 ? '0'+min : min}:${sec < 10 ? '0'+sec : sec}`;
+                overlay.classList.remove('d-none');
+
+                document.getElementById('btnResume').addEventListener('click', () => {
+                    player.currentTime(lastPos);
+                    player.play();
+                    overlay.classList.add('d-none');
+                    resumeHandled = true;
+                });
+
+                document.getElementById('btnSkip').addEventListener('click', () => {
+                    overlay.classList.add('d-none');
+                    player.play();
+                    resumeHandled = true;
+                });
+
+                player.on('play', function() {
+                    if(!resumeHandled) overlay.classList.add('d-none');
+                });
+            }
+
+            // Lưu lịch sử xem liên tục
+            setInterval(() => {
+                if (player && !player.paused()) {
+                    let pos = Math.floor(player.currentTime());
+                    fetch('/Movies/UpdateProgress', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: 'movieId=@Model.Id&lastPosition=' + pos
+                    });
+                }
+            }, 5000);
+        }
+        // Notifications
+        const notiIcon = document.getElementById('notiIcon');
+        const notiDropdown = document.getElementById('notiDropdownContent');
+        if(notiIcon && notiDropdown) {
+            notiIcon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                notiDropdown.style.display = notiDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+            document.addEventListener('click', function (e) {
+                if (!notiIcon.contains(e.target) && !notiDropdown.contains(e.target)) {
+                    notiDropdown.style.display = 'none';
+                }
+            });
+
+            // Fetch notification
+            fetch('/Home/GetUnreadNotifications')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.count > 0) {
+                        const badge = document.getElementById('notiBadge');
+                        badge.innerText = data.count;
+                        badge.classList.remove('d-none');
+                        
+                        const list = document.getElementById('notiList');
+                        list.innerHTML = '';
+                        data.items.forEach(item => {
+                            list.innerHTML += `<a href="${item.link || '#'}" style="font-size:0.9rem;">
+                                <div>${item.message}</div>
+                                <small class="text-muted">${item.time}</small>
+                            </a>`;
+                        });
+                    }
+                });
+        }
     </script>
+    <script src="~/js/notifications.js"></script>
 </body>
 </html>

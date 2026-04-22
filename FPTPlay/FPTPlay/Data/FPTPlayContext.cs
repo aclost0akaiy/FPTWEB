@@ -12,5 +12,6 @@ namespace FPTPlay.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<WatchHistory> WatchHistories { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
     }
 }

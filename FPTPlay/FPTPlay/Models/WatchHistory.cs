@@ -11,5 +11,7 @@ namespace FPTPlay.Models
         public User? User { get; set; }
 
         public DateTime WatchedAt { get; set; } = DateTime.Now;
+
+        public int LastPosition { get; set; } = 0; // Tính bằng giây
     }
 }

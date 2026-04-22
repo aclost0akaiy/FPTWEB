@@ -789,3 +789,25 @@ VALUES
 ('admin@gmail.com', '123', N'Quản trị viên', '0123456789', 'Admin'),
 ('user@gmail.com', '123', N'Người dùng', '0987654321', 'Customer');
 GO
+
+-- 1. Thêm cột phân biệt Tài khoản VIP cho bảng Users
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND name = 'IsVip')
+BEGIN
+    ALTER TABLE [dbo].[Users] ADD [IsVip] BIT NOT NULL DEFAULT 0;
+END
+GO
+-- 2. Thêm cột Đánh dấu phim Độc quyền (VIP) cho bảng Movies
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID(N'[dbo].[Movies]') AND name = 'IsPremium')
+BEGIN
+    ALTER TABLE [dbo].[Movies] ADD [IsPremium] BIT NOT NULL DEFAULT 0;
+END
+GO
+-- 3. (Tùy chọn) Chọn đại 5 phim mới nhất và đánh dấu nó là phim VIP để bạn test thử màn hình "Đòi nạp tiền"
+UPDATE [dbo].[Movies]
+SET IsPremium = 1
+WHERE Id IN (
+    SELECT TOP 5 Id 
+    FROM [dbo].[Movies] 
+    ORDER BY CreatedDate DESC
+);
+GO

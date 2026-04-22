@@ -1,5 +1,10 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\067dec2b-e61a-4609-89e2-86c70d62866b_angry-birds-2.jpg
+wwwroot\images\6e6e45ae-6a78-4c0a-9394-3b8238ea381b_angry-birds.jpg
+wwwroot\images\a1eacb25-8ba5-470a-8122-0113a06fc075_angry-birds.jpg
+wwwroot\images\avatars\34e9e424-6c28-491a-8805-8504ad118333_angry-birds.jpg
+wwwroot\images\fc690c4e-65d1-4a51-b0d6-d45c557d5fbe_angry-birds-2.jpg
 wwwroot\images\posters\7-la-bai.jpg
 wwwroot\images\posters\afn-hd.jpg
 wwwroot\images\posters\ai-tran-gian.jpg
@@ -161,6 +166,7 @@ wwwroot\images\posters\vtv5-hd.jpg
 wwwroot\images\posters\wolfoo-26.jpg
 wwwroot\images\posters\wolfoo-27.jpg
 wwwroot\images\posters\wolfoo-3.jpg
+wwwroot\js\notifications.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -219,5 +225,11 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\subs\demo-en.vtt
+wwwroot\subs\demo-vi.vtt
+wwwroot\videos\4773657b-487b-432a-b63c-a6df0cd9ed5d_afn-hd.jpg
+wwwroot\videos\967663aa-9b45-4f0b-8c03-271873ddfd08_angry-birds-2.jpg
+wwwroot\videos\c117e08f-ce06-40b5-96ae-8c7b45b3484d_angry-birds.jpg
+wwwroot\videos\ddf846b3-8eb9-4b06-b382-5f5e73d7b1c4_angry-birds.jpg
 wwwroot\videos\me-cun-bo-meo.mp4
 wwwroot\videos\thien-duong-mau.mp4

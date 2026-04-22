@@ -56,6 +56,7 @@ namespace FPTPlay.Controllers
                 {
                     HttpContext.Session.SetString("UserEmail", user.Email);
                     HttpContext.Session.SetString("UserRole", user.Role ?? "Customer");
+                    HttpContext.Session.SetString("UserAvatar", user.AvatarUrl ?? "/images/avatars/default.png");
 
                     if (user.Role == "Admin")
                     {
@@ -104,6 +105,7 @@ namespace FPTPlay.Controllers
             // Tự động đăng nhập
             HttpContext.Session.SetString("UserEmail", newUser.Email);
             HttpContext.Session.SetString("UserRole", newUser.Role);
+            HttpContext.Session.SetString("UserAvatar", newUser.AvatarUrl ?? "/images/avatars/default.png");
 
             // Gửi Email thông báo
             try
@@ -200,6 +202,7 @@ namespace FPTPlay.Controllers
 
                 HttpContext.Session.SetString("UserEmail", user.Email);
                 HttpContext.Session.SetString("UserRole", user.Role ?? "Customer");
+                HttpContext.Session.SetString("UserAvatar", user.AvatarUrl ?? "/images/avatars/default.png");
 
                 return RedirectToAction("Index", "Home");
             }

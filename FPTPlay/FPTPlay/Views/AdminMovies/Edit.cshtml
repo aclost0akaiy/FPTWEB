@@ -17,12 +17,12 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="mb-3">
-                        <label asp-for="Title" class="form-label">Tên phim</label>
-                        <input asp-for="Title" class="form-control bg-dark text-white border-secondary" required />
+                        <!-- Label ẩn đi theo yêu cầu -->
+                        <input asp-for="Title" class="form-control bg-dark text-white border-secondary" placeholder="Tên phim" required />
                     </div>
                     <div class="mb-3">
-                        <label asp-for="Description" class="form-label">Mô tả</label>
-                        <textarea asp-for="Description" class="form-control bg-dark text-white border-secondary" rows="4"></textarea>
+                        <!-- Label ẩn đi theo yêu cầu -->
+                        <textarea asp-for="Description" class="form-control bg-dark text-white border-secondary" rows="4" placeholder="Ghi chú"></textarea>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
