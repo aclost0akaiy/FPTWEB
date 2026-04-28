@@ -288,5 +288,54 @@ namespace FPTPlay.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public async Task<IActionResult> LuuLai()
+        {
+            var sessionIds = HttpContext.Session.GetString("SavedMovieIds") ?? "[]";
+            var ids = System.Text.Json.JsonSerializer.Deserialize<List<int>>(sessionIds);
+
+            if (ids == null || !ids.Any())
+            {
+                return View(new List<FPTPlay.Models.Movie>());
+            }
+
+            var movies = await _context.Movies
+                .Where(m => ids.Contains(m.Id))
+                .ToListAsync();
+
+            return View(movies);
+        }
+
+        public IActionResult AddLuuLai(int id)
+        {
+            var sessionIds = HttpContext.Session.GetString("SavedMovieIds") ?? "[]";
+            var ids = System.Text.Json.JsonSerializer.Deserialize<List<int>>(sessionIds) ?? new List<int>();
+
+            if (!ids.Contains(id))
+            {
+                ids.Add(id);
+                TempData["Message"] = "Đã lưu phim!";
+            }
+            
+            HttpContext.Session.SetString("SavedMovieIds", System.Text.Json.JsonSerializer.Serialize(ids));
+
+            return RedirectToAction("LuuLai");
+        }
+
+        [HttpPost]
+        public IActionResult RemoveLuuLai(int id)
+        {
+            var sessionIds = HttpContext.Session.GetString("SavedMovieIds") ?? "[]";
+            var ids = System.Text.Json.JsonSerializer.Deserialize<List<int>>(sessionIds) ?? new List<int>();
+
+            if (ids.Contains(id))
+            {
+                ids.Remove(id);
+                HttpContext.Session.SetString("SavedMovieIds", System.Text.Json.JsonSerializer.Serialize(ids));
+                return Json(new { success = true });
+            }
+
+            return Json(new { success = false, message = "Không tìm thấy phim trong danh sách đã lưu" });
+        }
     }
 }

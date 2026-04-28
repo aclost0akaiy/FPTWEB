@@ -104,7 +104,7 @@
               "RelativeDocumentMoniker": "FPTPlay\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\PC\\Downloads\\FPTWEB\\FPTPlay\\FPTPlay\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "FPTPlay\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwBQAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-20T23:51:51.88Z",
               "EditorCaption": ""
@@ -119,8 +119,7 @@
               "RelativeToolTip": "FPTPlay\\Migrations\\20260407005706_AddAdvancedFeatures.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAWwAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T03:19:50.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T03:19:50.027Z"
             },
             {
               "$type": "Document",
@@ -264,8 +263,7 @@
               "RelativeToolTip": "FPTPlay\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAACABAAAAAAAAAAApwKEBAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-21T00:29:51.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T00:29:51.06Z"
             },
             {
               "$type": "Document",
